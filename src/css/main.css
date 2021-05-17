@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 20vh;
+    padding-left: 200px;
+    background-color: rgb(34, 34, 34);
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: rgb(189, 189, 189);
+}
