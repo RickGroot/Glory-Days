@@ -12,6 +12,36 @@ const minor = {
 }
 ```
 
+## Requirements
+* Database
+    * Clients
+    * Caretakers
+    * Connections between users
+* API's
+    * Play music
+* Data
+    * Users
+    * Images
+    * Client mindset
+* Caretaker interactions
+    * Connect to client
+    * Add songs to playlists
+    * Add images (with texts) to songs
+    * look into clients information (mainly mood)
+    * Different types
+        * Family
+        * Healthcare workers
+* Client interactions
+    * Listen to song/playlist
+    * View memories added by caretakers
+    * Input current mood
+* Real time events
+    * Update playlist when song is added
+    * Start a memory from different device
+
+## Tablet extra functions
+Maybe add some kind of logbook which contains all the clients emotions over the passed month?
+
 # Express & Handlebars Template
 > This is an example node application that uses Express and Handlebars.
 
