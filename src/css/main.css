@@ -1,10 +1,4 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+/* body {
     padding-top: 20vh;
     padding-left: 200px;
     background-color: rgb(34, 34, 34);
@@ -16,4 +10,4 @@ h1 {
 
 p {
     color: rgb(189, 189, 189);
-}
+} */

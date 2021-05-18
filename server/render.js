@@ -5,6 +5,12 @@ function home(req, res) {
     })
 }
 
+function style(req, res) {
+    res.render('style', {
+        title: 'Styleguide'
+    })
+}
+
 function offline(req, res) {
     res.render('offline', {
         title: 'You are offline'
@@ -18,4 +24,4 @@ function error(req, res) {
 }
 
 // ------------------------------------------------------------------------------------------- Export
-module.exports = {home, offline, error}
+module.exports = {home, style, offline, error}

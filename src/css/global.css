@@ -1,0 +1,14 @@
+:root {
+    --color1: #eb6e3c;
+    --color2: #5c5040;
+    --color3: #7cbdb1;
+    --barcolor: #24343a;
+    --background-main: #fdfdfd;
+    --background-highlight: #e7dfd5;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -4,7 +4,9 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer')
 
 return gulp.src([
-        "./src/css/main.css"
+        "./src/css/main.css",
+        "./src/css/global.css",
+        "./src/css/styleguide.css"
     ])
     .pipe(autoprefixer({
         cascade: false

@@ -10,6 +10,7 @@ const hbs = exphbs.create({ extname: 'hbs', defaultLayout: 'main' })
 // ------------------------------------------------------------------------------------------- Importing files
 const {
     home,
+    style,
     offline,
     error
 } = require('./server/render');
@@ -25,6 +26,7 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', home)
+    .get('/style', style)
     .get('/offline', offline)
     .get('*', error)
 
