@@ -31,7 +31,7 @@ Om sociaal contact te leggen gebruikt Sarah de Glory Days ipad app. Hiermee kan 
 
 Zo komt Sarah erachter dat Arie tijdens de vakantie naar luxemburg in 1983 constant de CD van Michael Jackson afspeelde genaamd BAD. Sarah maakt een kopje thee voor haar zelf en gaat even zitten, ze zet vervolgens de muziek van de CD aan en ziet Arie direct opvrolijken. Arie begint uit zichzelf te praten over de vakantie. Sarah heeft voor het eerst dat ze Arie kent een gesprek met hem, ze wordt hier erg gelukkig van. Sarah blijft een kwartier lang praten met Arie en komt erachter dat Arie Michael Jackson fan is en bij een concert van hem is geweest. Dit onthoudt ze en vult ze aan onder zijn profiel in de Glory Days app. Ook zegt Arie dat hij tijdens de vakantie van 1993 op vakantie naar Spanje de opvolger van BAD afspeelde in de auto genaamd Dangerous. Ook dit vult ze aan in de Glory Days app zodat de familie hier ook van af weet. Nu kan ze de volgende keer dat ze met Arie is de Dangerous CD afspelen en het over een andere vakantie van hem hebben, alleen nu moet ze naar de volgende patiënt omdat ze anders haar ronde niet kan afmaken.
 
-## Requirements
+## Requirements (outdated)
 * Database
     * Clients
     * Caretakers
