@@ -14,10 +14,11 @@ const minor = {
 
 ## Opdracht
 Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de huidige Iphone App van Glory Days. De huidige Iphone variant is gemaakt voor familie die in samenwerking met de alzheimer patiënt zijn favoriete muziek gaat uitzoeken. Wij gaan dus aan de gang aan de Ipad variant die niet bedoeld is voor de familie maar voor de echte verzorgers van Alzheimer patiënten. Hiervoor moeten kijken naar de behoefte van verzorgers voor de applicatie. Zo is het ook voor ons de uitdaging om een al bestaande iphone variant te upscalen tot ipad variant waarbij wij de huidige stijl in acht nemen. Verders moeten wij nog kijken naar extra opties van de ipad en extra functies voor de verzorgers.
+<img align='right' src="https://github.com/RickGroot/Glory-Days/blob/main/assets/logo.png?raw=true" width="230" style="background-color: #ffffff">
 
 ## Inhoud
-
-
+* [Personalia](#personalia)
+* [User scenario](#user-scenario)
 
 ## Personalia
 ![Sarah](https://github.com/RickGroot/Glory-Days/blob/main/assets/personalia.jpg?raw=true)
