@@ -11,6 +11,7 @@ const hbs = exphbs.create({ extname: 'hbs', defaultLayout: 'main' })
 const {
     home,
     style,
+    start,
     offline,
     error
 } = require('./server/render');
@@ -27,6 +28,7 @@ app
 app
     .get('/', home)
     .get('/style', style)
+    .get('/start', start)
     .get('/offline', offline)
     .get('*', error)
 
