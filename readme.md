@@ -18,11 +18,11 @@ Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de 
 
 
 ## Inhoud
-* [Personalia](#personalia)
+* [Persona](#persona)
 * [User scenario](#user-scenario)
 
-## Personalia
-![Sarah](https://github.com/RickGroot/Glory-Days/blob/main/assets/personalia.jpg?raw=true)
+## Persona
+![Sarah](https://github.com/RickGroot/Glory-Days/blob/main/assets/persona.jpg?raw=true)
 
 ## User scenario
 Sarah doet haar dagelijkse rondje door het tehuis heen en komt langs de kamer van Arie. Arie is 85 jaar oud en heeft erg veel last van Alzheimers. Hij herkent zijn eigen familie niet meer en kan zich niets meer van zijn jeugd herinneren. Sarah vindt dit erg jammer omdat ze hierdoor nooit een gesprek heeft met Arie, terwijl hij veel leuke foto’s van zijn kinderen op vakantie heeft staan in zijn kamer.
