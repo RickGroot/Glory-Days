@@ -32,5 +32,5 @@ app
 
 // Run app on port
 app.listen(process.env.PORT || port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Glory Days development site online at http://localhost:${port}`)
 })

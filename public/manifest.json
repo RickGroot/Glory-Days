@@ -1,13 +1,13 @@
 {
-    "name": "Express & Handlebars template",
-    "short_name": "Express HBS template",
+    "name": "Glory Days",
+    "short_name": "Glory Days",
     "scope": "/",
     "start_url": "/",
     "display_override": ["window-control-overlay", "minimal-ui"],
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
-    "description": "Template for a small full stack application with node using Express and Handlebars",
+    "description": "Connect with your loved one by reliving memories through music",
     "icons": [
         {
             "src": "/img/android-chrome-192x192.png",
