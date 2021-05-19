@@ -1,16 +1,26 @@
 # Glory Days project
 ```js
-const projectName = "Glory Days"
+const projectNaam = "Glory Days"
 const website = "https://www.goodgoodnotbad.org/"
-const clientContact = ["Marnix Tellings", "Bas Hennekam"]
-const students = ["Rick Groot", "Max Mulder"]
+const opdrachtgevers = ["Marnix Tellings", "Bas Hennekam"]
+const studenten = ["Rick Groot", "Max Mulder"]
 
 const minor = {
-    name: "Web Design & Development",
-    year: 2021,
+    naam: "Web Design & Development",
+    jaar: 2021,
     coach: "Joost Faber"
 }
 ```
+
+## Opdracht
+Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de huidige Iphone App van Glory Days. De huidige Iphone variant is gemaakt voor familie die in samenwerking met de alzheimer patiënt zijn favoriete muziek gaat uitzoeken. Wij gaan dus aan de gang aan de Ipad variant die niet bedoeld is voor de familie maar voor de echte verzorgers van Alzheimer patiënten. Hiervoor moeten kijken naar de behoefte van verzorgers voor de applicatie. Zo is het ook voor ons de uitdaging om een al bestaande iphone variant te upscalen tot ipad variant waarbij wij de huidige stijl in acht nemen. Verders moeten wij nog kijken naar extra opties van de ipad en extra functies voor de verzorgers.
+
+## Inhoud
+
+
+
+## Personalia
+![Sarah](https://github.com/RickGroot/Glory-Days/blob/main/assets/personalia.jpg?raw=true)
 
 ## Requirements
 * Database
