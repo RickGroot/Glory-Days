@@ -1,10 +1,10 @@
 :root {
-    --color1: #eb6e3c;
-    --color2: #5c5040;
-    --color3: #7cbdb1;
-    --barcolor: #24343a;
-    --background-main: #fdfdfd;
-    --background-highlight: #e7dfd5;
+    --color1: #ea6f3d;
+    --color2: #5c5141;
+    --color3: #7ebdb2;
+    --barcolor: #25333a;
+    --background-main: #ffffff;
+    --background-highlight: #e7e0d6;
 }
 
 html, body {
