@@ -16,6 +16,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://use.typekit.net/zol2mal.css">
       <link rel="stylesheet" href="/css/global.css">
-      <link rel="stylesheet" href="/css/{{ css }}.css">
-      <title>{{ title }}</title>
+      {{#each css}}
+      <link rel="stylesheet" href="/css/{{this}}.css">
+      {{/each}}
+      <title>{{title}}</title>
 </head>

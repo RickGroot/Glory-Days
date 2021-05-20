@@ -1,14 +1,16 @@
+/* --------------------------------------------------------------------------------- global */
 :root {
     --color1: #ea6f3d;
     --color2: #5c5141;
     --color3: #7ebdb2;
     --barcolor: #25333a;
-    --background-main: #efefef;
+    --background-white: #ffffff;
+    --background-tint: #efefef;
     --background-highlight: #e7e0d6;
 }
 
 html {
-    background-color: var(--background-main);
+    background-color: var(--background-white);
 }
 
 html, body {
@@ -21,7 +23,33 @@ html, body {
     color: var(--color2);
 }
 
-svg {
+/* --------------------------------------------------------------------------------- headers & texts */
+h1{
+    font-size: 5em;
+    font-weight: 400;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+.paragraph{
+    font-family: 'Lato', sans-serif;
+    color: var(--color2);
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+
+.emotion{
+    font-family: 'Lato', sans-serif;
+    color: var(--color1);
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------------- elements */
+svg:last-of-type {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -29,6 +57,6 @@ svg {
     z-index: -1;
 }
   
-path {
+path:last-of-type {
       fill: var(--background-highlight);
 }

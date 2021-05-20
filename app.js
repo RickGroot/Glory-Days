@@ -5,13 +5,16 @@ const path = require('path');
 const port = process.env.PORT || 8000
 
 const app = express();
-const hbs = exphbs.create({ extname: 'hbs', defaultLayout: 'main' })
+const hbs = exphbs.create({ extname: 'hbs', defaultLayout: 'main', partialsDir: 'views/partials/' })
 
 // ------------------------------------------------------------------------------------------- Importing files
 const {
     home,
     style,
     start,
+    tehuis,
+    patientList,
+    patient,
     offline,
     error
 } = require('./server/render');
@@ -29,6 +32,9 @@ app
     .get('/', home)
     .get('/style', style)
     .get('/start', start)
+    .get('/tehuis', tehuis)
+    .get('/patient', patientList)
+    .get('/patient/:id', patient)
     .get('/offline', offline)
     .get('*', error)
 

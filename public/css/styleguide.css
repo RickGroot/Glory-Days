@@ -89,11 +89,6 @@ span::after {
     bottom: -7px;
 }
 
-h1{
-    font-size: 5em;
-    font-weight: 400;
-}
-
 article{
     position: relative;
     width: 400px;
@@ -127,25 +122,6 @@ article div {
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-h3{
-    font-family: 'Lato', sans-serif;
-    color: white;
-    font-weight: 400;
-}
-
-.plainText{
-    font-family: 'Lato', sans-serif;
-    color: var(--color2);
-    font-weight: 400;
-    margin-bottom: 3em;
-}
-
-.emotion{
-    font-family: 'Lato', sans-serif;
-    color: var(--color1);
-    text-transform: uppercase;
 }
 
 .song {

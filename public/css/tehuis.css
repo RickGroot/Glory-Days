@@ -1,0 +1,234 @@
+#pf {
+    display: block;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    margin: 100px auto 0;
+}
+
+h1{
+    font-size: 5vh;
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding: 1em;
+}
+
+#btncontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+button{
+    display: inline-flex;
+    align-items: flex-end;
+    padding: clamp(20px, 2vw, 40px);
+    width: 25vw;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 18vh;
+    color: white;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: clamp(1.5em, 2vw, 4em);
+    
+}
+
+button:nth-of-type(1){
+    background-color: var(--color1);
+
+}
+
+button:nth-of-type(2){
+    background-color: var(--color2);
+
+}
+
+svg:last-of-type {
+    height: 90vh;
+
+}
+
+.background2{
+    width: 100%;
+}
+
+
+#account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+#account p {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.5em;
+    margin: 0;
+    padding-right: 5px;
+    color: var(--color3);
+}
+
+#account img {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+}
+
+.patientlist{
+    margin-left: 50px;
+    margin-top: 10em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 75vh;
+    overflow: hidden; 
+    overflow-y: scroll;
+
+    width: 45vw;
+}
+
+.patientlist::-webkit-scrollbar {
+    background-color: var(--background-highlight); 
+    border-radius: 10px;
+    width: 10px;
+    display: none;
+}
+
+.patientlist::-webkit-scrollbar-thumb {
+    background-color: var(--color2);
+    border-radius: 10px;
+    display: none;
+}
+
+.patientlist a > section > img{
+    width:24%;
+}
+
+.patientlist a > section > p{
+    font-weight: 600;
+    margin-left: 0.5em;
+    font-family: 'Lato', sans-serif;
+}
+
+.patientlist a > section{
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 90%;
+    border-bottom: 3px solid var(--color2);
+    display: flex;
+   
+}
+
+.backIcon{
+    position: absolute !important;
+    left: 25px !important;
+    top: 10px !important;
+    z-index: 10 !important;
+    height: 7vh !important;
+}
+
+a{
+    color: var(--color2);
+}
+
+.searchIcon{
+    position: absolute;
+    left:50px;
+    top: 100px;
+    z-index: 10;
+}
+
+.searchIcon path{
+    fill: var(--color1);
+}
+
+
+.backIcon path{
+    fill: var(--color1);
+}
+
+#activities {
+    position: fixed;
+    top:100px;
+    right: 50px;
+    width: 35vw;
+}
+
+#activities h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#activities > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 50vh;
+    overflow-y: scroll;
+    padding-right: 10px;
+}
+
+#activities > div > a {
+    background-color: var(--color2);
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+#activities h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+#activities span {
+    float: right;
+}
+
+#activities > div::-webkit-scrollbar {
+    background-color: var(--background-highlight);
+    border-radius: 10px;
+    width: 10px;
+}
+
+#activities > div::-webkit-scrollbar-thumb {
+    background-color: var(--color2);
+    border-radius: 10px;
+}
+
+.background{
+    height: 100% !important;
+}
+
+button > a {
+    color: white;
+}
