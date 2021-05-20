@@ -49,6 +49,21 @@ h3{
 }
 
 /* --------------------------------------------------------------------------------- elements */
+.songPreview {
+    position: relative;
+    flex: 0 0 auto;
+    width: 200px;
+    height: 125px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 20px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+}
+
 svg:last-of-type {
     position: fixed;
     bottom: 0;
