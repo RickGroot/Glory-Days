@@ -2,16 +2,15 @@
     {{> patientheader }}
 
     <section class="over">
-        <img src="../img/tieneke.png" alt="afbeelding van patient" class="profielfoto">
+        <img src={{ pic }} alt="afbeelding van patient" class="profielfoto">
         <h3>Naam</h3>
-        <p>Tieneke van Aartsen</p>
+        <p>{{ firstName }} {{ lastName }}</p>
         <h3>Leeftijd</h3>
-        <p>75 Jaar</p>
+        <p>{{ age }} Jaar</p>
         <h3>Nationaliteit</h3>
-        <p>Nederlands</p>
-        <h3>Wie is {{patient}}?</h3>
-        <p>Tieneke is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden
-            zijn bingo en dansen. </p>
+        <p>{{ nationality }}</p>
+        <h3>Wie is {{ firstName }}?</h3>
+        <p>{{ about }}</p>
         <div>
             <svg class="notitie" width="36" height="36" viewBox="0 0 36 36" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -21,44 +20,35 @@
             </svg>
             <h3>Notities</h3>
         </div>
-
-
     </section>
 
     <section class="herinneringen">
         <section id="patientbtns">
             <button>Afspeellijsten</button>
-            <button>Reacties van {{patient}} op beluisterde nummers</button>
+            <button>Reacties van {{firstName}} op beluisterde nummers</button>
         </section>
-        <h2>Herinneringen van <br> {{patient}}</h2>
-        <h3>Herinneringen met positieve emoties voor {{patient}}</h3>
 
+        <h2>Herinneringen van <br> {{firstName}}</h2>
+        <h3>Herinneringen met positieve emoties voor {{firstName}}</h3>
         <section class="scrollArticle">
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
+            {{#each memories.positive}}
+            {{> article emotion=feeling title=title }}
+            {{/each}}
         </section>
 
-
-        <h3>herinneringen die {{patient}} als minder positief ervaarde.</h3>
+        <h3>herinneringen die {{firstName}} als minder positief ervaarde.</h3>
         <section id="scrollArticle">
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
+            {{#each memories.ok}}
+            {{> article emotion=feeling title=title }}
+            {{/each}}
         </section>
 
-
-        <h3> Herinneringen met negatieve emoties voor {{patient}}</h3>
-
+        <h3> Herinneringen met negatieve emoties voor {{firstName}}</h3>
         <section class="scrollArticle">
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
-            {{> article emotion='Gelukkig' title='Onze trouwdag' }}
+            {{#each memories.negative}}
+            {{> article emotion=feeling title=title }}
+            {{/each}}
         </section>
-
 
         <svg class="achtergrond" width="565" height="832" viewBox="0 0 565 832" fill="none"
             xmlns="http://www.w3.org/2000/svg">

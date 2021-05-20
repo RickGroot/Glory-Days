@@ -1,3 +1,7 @@
+const {
+    getData
+} = require('./getData');
+
 // ------------------------------------------------------------------------------------------- Render functions
 function home(req, res) {
     res.render('home', {
@@ -35,11 +39,19 @@ function patientList(req, res) {
 }
 
 function patient(req, res) {
-    let patient = req.params.id
+    let id = req.params.id // ---------------------------testing id, same as data.js, from the HTML link
+    let data = getData(id)
+
     res.render('patient', {
         title: patient + ' || Glory Days',
         css: ['patient', 'patientheader'],
-        patient: patient
+        firstName: data.firstName,
+        lastName: data.lastName,
+        pic: data.pic,
+        age: data.age,
+        nationality: data.nationality,
+        about: data.about,
+        memories: data.memories
     })
 }
 
