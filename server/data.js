@@ -43,7 +43,7 @@ const userData = {
             }],
             negative: [{
                 feeling: "boos",
-                title: "tweede wereldoorlog",
+                title: "de 80's",
                 image: "",
             }, {
                 feeling: "verdrietig",
