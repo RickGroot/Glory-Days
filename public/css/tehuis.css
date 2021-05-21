@@ -47,12 +47,12 @@ a{
 }
 
 button:nth-of-type(1){
-    background-color: var(--color1);
+    background-color: var(--orange);
 
 }
 
 button:nth-of-type(2){
-    background-color: var(--color2);
+    background-color: var(--khaki);
 
 }
 
@@ -84,7 +84,7 @@ svg:last-of-type {
     font-size: 0.5em;
     margin: 0;
     padding-right: 5px;
-    color: var(--color3);
+    color: var(--green);
 }
 
 #account img {
@@ -115,7 +115,7 @@ svg:last-of-type {
 }
 
 .patientlist::-webkit-scrollbar-thumb {
-    background-color: var(--color2);
+    background-color: var(--khaki);
     border-radius: 10px;
     display: none;
 }
@@ -134,7 +134,7 @@ svg:last-of-type {
     margin-top: 0.5em;
     padding-bottom: 0.5em;
     width: 90%;
-    border-bottom: 3px solid var(--color2);
+    border-bottom: 3px solid var(--khaki);
     display: flex;
    
 }
@@ -148,7 +148,7 @@ svg:last-of-type {
 }
 
 a{
-    color: var(--color2);
+    color: var(--khaki);
 }
 
 .searchIcon{
@@ -159,12 +159,12 @@ a{
 }
 
 .searchIcon path{
-    fill: var(--color1);
+    fill: var(--orange);
 }
 
 
 .backIcon path{
-    fill: var(--color1);
+    fill: var(--orange);
 }
 
 #activities {
@@ -192,7 +192,7 @@ a{
 }
 
 #activities > div > a {
-    background-color: var(--color2);
+    background-color: var(--khaki);
     max-width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -221,7 +221,7 @@ a{
 }
 
 #activities > div::-webkit-scrollbar-thumb {
-    background-color: var(--color2);
+    background-color: var(--khaki);
     border-radius: 10px;
 }
 

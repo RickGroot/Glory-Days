@@ -16,26 +16,26 @@ button {
 }
 
 button:nth-of-type(1) {
-    background-color: var(--color1);
+    background-color: var(--orange);
 }
 
 button:nth-of-type(2) {
-    background-color: var(--color2);
+    background-color: var(--khaki);
 }
 
 button:nth-of-type(3) {
-    background-color: var(--color3);
+    background-color: var(--green);
     color: var(--barcolor)
 }
 
 button:nth-of-type(4) {
-    border: solid 1px var(--color1);
-    color: var(--color1);
+    border: solid 1px var(--orange);
+    color: var(--orange);
     background-color: white;
 }
 
 button:nth-of-type(5){
-    background-color: var(--color1);
+    background-color: var(--orange);
     font-size: 2.5em;
     width: 75px;
     height: 75px;
@@ -45,7 +45,7 @@ button:nth-of-type(5){
 }
 
 button:nth-of-type(6){
-    background-color: var(--color1);
+    background-color: var(--orange);
     font-size: 3.5em;
     width: 75px;
     height: 75px;
@@ -56,8 +56,8 @@ button:nth-of-type(6){
 
 button:nth-of-type(7){
     background-color:white;
-    border: solid 3px var(--color1);
-    color: var(--color1);
+    border: solid 3px var(--orange);
+    color: var(--orange);
     font-size: 3.5em;
     width: 75px;
     height: 75px;
@@ -81,8 +81,8 @@ span::after {
     font-size: 1.2em;
     width: 20px;
     border-radius: 50%;
-    border: 1px solid var(--color1);
-    color: var(--color1);
+    border: 1px solid var(--orange);
+    color: var(--orange);
     position: absolute;
     left: 0;
     margin-left: 110%;
@@ -158,7 +158,7 @@ article div {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: var(--color1);
+    background-color: var(--orange);
 }
 
 .song > .info {

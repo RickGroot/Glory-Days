@@ -12,12 +12,20 @@ main {
     grid-area: over;
 }
 
-.herinneringen {
-    grid-area: herinneringen;
-    width: 43vw;
+.over > p{
+    font-size:clamp(1em, 1.5vw, 2em);
+}
+
+.over > h3 {
+    font-size:clamp(1em, 1.5vw, 2em);
 }
 
 
+.herinneringen {
+    grid-area: herinneringen;
+    width: 43vw;
+    margin-bottom: 50px;
+}
 
 .achtergrond {
     height: 95vh;
@@ -34,7 +42,7 @@ main {
 }
 
 .backIcon path {
-    fill: var(--color1);
+    fill: var(--orange);
 }
 
 .profielfoto {
@@ -44,7 +52,7 @@ main {
 
 .over {
     position: fixed;
-    top: 10em;
+    top: 25vh;
     left: 5em;
     max-width: 300px;
 }
@@ -59,7 +67,7 @@ p {
 }
 
 h3 {
-    color: var(--color1)
+    color: var(--orange)
 }
 
 .over div {
@@ -70,12 +78,12 @@ h3 {
 .notitie {
     position: relative !important;
     z-index: 10;
-    
+
     width: 8%;
 }
 
 .notitie path {
-    fill: var(--color1);
+    fill: var(--orange);
 
 }
 
@@ -91,26 +99,27 @@ button {
     display: inline-flex;
     align-items: flex-end;
     padding: 20px;
-    width: 200px;
+    width: 19vw;
     border-radius: 20px;
-    height: 150px;
+    height: 18vh;
     color: white;
     border: none;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     text-align: inherit;
+    font-size: clamp(1em, 1.5vw, 2em);
 }
 
 button:nth-of-type(1) {
-    background-color: var(--color3);
+    background-color: var(--green);
 }
 
 button:nth-of-type(2) {
-    background-color: var(--color2);
+    background-color: var(--khaki);
 }
 
 .herinneringen h3 {
-    color: var(--color2);
+    color: var(--khaki);
     font-weight: 300;
 }
 
@@ -120,14 +129,38 @@ button:nth-of-type(2) {
 }
 
 .herinneringen section {
+    padding-bottom: 5px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: y mandatory;
 }
 
-article:not(:first-child){
-    margin-left:1.2em
+.herinneringen > h2 {
+    font-size: clamp(2.3em, 3.4vw, 3.3em);
+ }
+
+.herinneringen > h3 {
+   font-size:  clamp(1.4em, 2.1vw, 2.3em)
+}
+
+.herinneringen section::-webkit-scrollbar {
+    background-color: var(--background-highlight);
+    border-radius: 10px;
+    height: 8px;
+}
+
+.herinneringen section::-webkit-scrollbar-thumb {
+    background-color: var(--khaki);
+    border-radius: 10px;
+}
+
+.herinneringen > section:not(:first-child) {
+    margin-bottom: 5em;
+}
+
+article:not(:first-child) {
+    margin-left: 3.0em
 }
 
 article:nth-of-type(1) {
@@ -148,15 +181,14 @@ article:nth-of-type(4) {
 
 article>div>h3 {
     color: white !important;
-    font-size: 0.9em !important;
+    font-size: clamp(0.9em, 1.4vw, 1.9em) !important;
     margin-top: 0px;
 }
 
 .emotion {
-    font-size: 0.9em;
+    font-size: clamp(0.9em, 1.6vw, 1.9em);
     margin-bottom: 3px;
 }
-
 
 article div {
     position: absolute;

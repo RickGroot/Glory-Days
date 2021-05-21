@@ -10,7 +10,8 @@ header {
     align-items: center;
     padding: 0 var(--padding-header);
     background-color: var(--background-white);
-    box-shadow:0px -15px 50px 8px rgba(0,0,0,0.87)
+    box-shadow:0px -15px 50px 8px rgba(0,0,0,0.87);
+    z-index: 3;
 }
 
 header h1 {
@@ -39,7 +40,7 @@ header > div > a > img {
 header input {
     margin-right: 10px;
     border: none;
-    border-bottom: 3px solid var(--color1);
+    border-bottom: 3px solid var(--orange);
     font-family: 'Lato', sans-serif;
     color: rgb(66, 66, 66);
     text-align: right;
@@ -54,7 +55,7 @@ header input {
 }
 
 .searchIcon > path {
-    fill: var(--color1) !important;
+    fill: var(--orange) !important;
 }
 
 .searchIcon::before {
@@ -64,5 +65,5 @@ header input {
     right: 0;
     width: 100px;
     height: 4px;
-    background-color: var(--color1);
+    background-color: var(--orange);
 }

@@ -4,6 +4,7 @@ main {
     width: 100vw;
     margin: 0;
     padding: 0;
+    background-color: var(--background-tint);
 }
 
 img {
@@ -14,7 +15,7 @@ img {
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 0;
 }
 
 .logo {
@@ -26,7 +27,6 @@ img {
 }
 
 section {
-    /* margin: 0 auto; */
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -43,15 +43,16 @@ button{
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     margin-left: 12em;
+    z-index: 0;
 }
 
 button:nth-of-type(1){
-    background-color: var(--color1);
+    background-color: var(--orange);
 
 }
 
 button:nth-of-type(2){
-    background-color: var(--color2);
+    background-color: var(--khaki);
 
 }
 

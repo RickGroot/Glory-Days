@@ -5,7 +5,11 @@ const path = require('path');
 const port = process.env.PORT || 8000
 
 const app = express();
-const hbs = exphbs.create({ extname: 'hbs', defaultLayout: 'main', partialsDir: 'views/partials/' })
+const hbs = exphbs.create({
+    extname: 'hbs',
+    defaultLayout: 'main',
+    partialsDir: ['views/partials/', 'views/elements/']
+})
 
 // ------------------------------------------------------------------------------------------- Importing files
 const {

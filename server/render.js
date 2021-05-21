@@ -43,7 +43,7 @@ function patient(req, res) {
     let data = getData(id)
 
     res.render('patient', {
-        title: patient + ' || Glory Days',
+        title: data.firstName + ' || Glory Days',
         css: ['patient', 'patientheader'],
         firstName: data.firstName,
         lastName: data.lastName,

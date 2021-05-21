@@ -30,21 +30,21 @@
 
         <h2>Herinneringen van <br> {{firstName}}</h2>
         <h3>Herinneringen met positieve emoties voor {{firstName}}</h3>
-        <section class="scrollArticle">
+        <section>
             {{#each memories.positive}}
             {{> article emotion=feeling title=title }}
             {{/each}}
         </section>
 
-        <h3>herinneringen die {{firstName}} als minder positief ervaarde.</h3>
-        <section id="scrollArticle">
+        <h3>Herinneringen die {{firstName}} als minder positief ervaarde.</h3>
+        <section>
             {{#each memories.ok}}
             {{> article emotion=feeling title=title }}
             {{/each}}
         </section>
 
         <h3> Herinneringen met negatieve emoties voor {{firstName}}</h3>
-        <section class="scrollArticle">
+        <section>
             {{#each memories.negative}}
             {{> article emotion=feeling title=title }}
             {{/each}}

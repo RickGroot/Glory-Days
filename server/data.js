@@ -1,6 +1,6 @@
 const userData = {
     1: {
-        firstName: "Tineke",
+        firstName: "Tieneke",
         lastName: "van Aartsen",
         pic: "../img/tieneke.png",
         age: 75,

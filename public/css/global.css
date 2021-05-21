@@ -1,8 +1,8 @@
 /* --------------------------------------------------------------------------------- global */
 :root {
-    --color1: #ea6f3d;
-    --color2: #5c5141;
-    --color3: #7ebdb2;
+    --orange: #ea6f3d;
+    --khaki: #5c5141;
+    --green: #7ebdb2;
     --barcolor: #25333a;
     --background-white: #ffffff;
     --background-tint: #efefef;
@@ -20,7 +20,7 @@ html, body {
     font-family: minion-pro, serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--color2);
+    color: var(--khaki);
 }
 
 /* --------------------------------------------------------------------------------- headers & texts */
@@ -37,14 +37,14 @@ h3{
 
 .paragraph{
     font-family: 'Lato', sans-serif;
-    color: var(--color2);
+    color: var(--khaki);
     font-weight: 400;
     margin-bottom: 3em;
 }
 
 .emotion{
     font-family: 'Lato', sans-serif;
-    color: var(--color1);
+    color: var(--orange);
     text-transform: uppercase;
 }
 
@@ -52,8 +52,8 @@ h3{
 .songPreview {
     position: relative;
     flex: 0 0 auto;
-    width: 200px;
-    height: 125px;
+    width: 19vw;
+    height: 18vh;
     object-fit: cover;
     background-size: cover;
     background-position: center;
