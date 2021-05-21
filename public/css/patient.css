@@ -12,25 +12,25 @@ main {
     grid-area: over;
 }
 
-.over > p{
-    font-size:clamp(1em, 1.5vw, 2em);
+.over>p {
+    font-size: clamp(1em, 1.5vw, 2em);
+    margin-bottom: 1em;
+    margin-top: 0.2em;
 }
 
-.over > h3 {
-    font-size:clamp(1em, 1.5vw, 2em);
+.over>h3 {
+    font-size: clamp(1em, 1.5vw, 2em);
+    margin-bottom: 0em
 }
-
 
 .herinneringen {
     grid-area: herinneringen;
     width: 43vw;
-    margin-bottom: 50px;
 }
 
 .achtergrond {
     height: 95vh;
     top: 125px;
-
     left: -44px !important;
 }
 
@@ -73,12 +73,12 @@ h3 {
 .over div {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .notitie {
     position: relative !important;
     z-index: 10;
-
     width: 8%;
 }
 
@@ -107,7 +107,7 @@ button {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     text-align: inherit;
-    font-size: clamp(1em, 1.5vw, 2em);
+    font-size: clamp(1em, 1.5vw, 1.2em);
 }
 
 button:nth-of-type(1) {
@@ -136,12 +136,12 @@ button:nth-of-type(2) {
     scroll-snap-type: y mandatory;
 }
 
-.herinneringen > h2 {
+.herinneringen>h2 {
     font-size: clamp(2.3em, 3.4vw, 3.3em);
- }
+}
 
-.herinneringen > h3 {
-   font-size:  clamp(1.4em, 2.1vw, 2.3em)
+.herinneringen>h3 {
+    font-size: clamp(1.4em, 2.1vw, 2.3em)
 }
 
 .herinneringen section::-webkit-scrollbar {
@@ -155,12 +155,12 @@ button:nth-of-type(2) {
     border-radius: 10px;
 }
 
-.herinneringen > section:not(:first-child) {
+.herinneringen>section:not(:first-child) {
     margin-bottom: 5em;
 }
 
 article:not(:first-child) {
-    margin-left: 3.0em
+    margin-left: calc(43vw - (2 * 19vw));
 }
 
 article:nth-of-type(1) {
@@ -176,7 +176,7 @@ article:nth-of-type(3) {
 }
 
 article:nth-of-type(4) {
-    background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/327769);
+    background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/9454911);
 }
 
 article>div>h3 {
@@ -197,4 +197,49 @@ article div {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .over>p {
+        font-size: 1em;
+    }
+
+    .over>h3 {
+        font-size: 1em;
+    }
+
+    .herinneringen>h2 {
+        font-size: 2.5em;
+    }
+
+    .herinneringen>h3 {
+        font-size: 1.5em;
+    }
+
+    .songPreview {
+        height: 35vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .over {
+        max-width: 600px;
+    }
+
+    .achtergrond {
+        top: 250px;
+        left: -75px !important;
+        height: 100vh;
+        width: 65vh;
+    }
+
+    .over>p,
+    .over>h3 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: clamp(1em, 1.5vw, 1.4em);
+    }
 }

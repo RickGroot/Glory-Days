@@ -6,9 +6,9 @@
     margin: 100px auto 0;
 }
 
-h1{
+h1 {
     font-size: 5vh;
-    display:block;
+    display: block;
     margin: 0 auto;
     text-align: center;
     width: 50%;
@@ -25,7 +25,7 @@ h1{
     margin: 0 auto;
 }
 
-button{
+button {
     display: inline-flex;
     align-items: flex-end;
     padding: clamp(20px, 2vw, 40px);
@@ -39,32 +39,27 @@ button{
     text-transform: uppercase;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
     font-size: clamp(1.5em, 2vw, 4em);
-    
 }
 
-button:nth-of-type(1){
+button:nth-of-type(1) {
     background-color: var(--orange);
-
 }
 
-button:nth-of-type(2){
+button:nth-of-type(2) {
     background-color: var(--khaki);
-
 }
 
 svg:last-of-type {
     height: 90vh;
-
 }
 
-.background2{
+.background2 {
     width: 100%;
 }
-
 
 #account {
     display: flex;
@@ -93,7 +88,7 @@ svg:last-of-type {
     border-radius: 50%;
 }
 
-.patientlist{
+.patientlist {
     margin-left: 50px;
     margin-top: 10em;
     position: relative;
@@ -101,14 +96,13 @@ svg:last-of-type {
     flex-direction: column;
     flex-wrap: nowrap;
     height: 75vh;
-    overflow: hidden; 
+    overflow: hidden;
     overflow-y: scroll;
-
-    width: 45vw;
+    width: 40vw;
 }
 
 .patientlist::-webkit-scrollbar {
-    background-color: var(--background-highlight); 
+    background-color: var(--background-highlight);
     border-radius: 10px;
     width: 10px;
     display: none;
@@ -120,26 +114,29 @@ svg:last-of-type {
     display: none;
 }
 
-.patientlist a > section > img{
-    width:24%;
+.patientlist a>section>img {
+    width: 7vw;
+    max-width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.patientlist a > section > p{
+.patientlist a>section>p {
     font-weight: 600;
     margin-left: 0.5em;
+    font-size: 0.8em;
     font-family: 'Lato', sans-serif;
 }
 
-.patientlist a > section{
-    margin-top: 0.5em;
-    padding-bottom: 0.5em;
-    width: 90%;
+.patientlist a>section {
+    padding: 0.5em 0;
+    width: 100%;
     border-bottom: 3px solid var(--khaki);
     display: flex;
-   
+    align-items: center;
 }
 
-.backIcon{
+.backIcon {
     position: absolute !important;
     left: 25px !important;
     top: 10px !important;
@@ -147,29 +144,29 @@ svg:last-of-type {
     height: 7vh !important;
 }
 
-a{
+a {
     color: var(--khaki);
 }
 
-.searchIcon{
+.searchIcon {
     position: absolute;
-    left:50px;
+    left: 50px;
     top: 100px;
     z-index: 10;
 }
 
-.searchIcon path{
+.searchIcon path {
     fill: var(--orange);
 }
 
 
-.backIcon path{
+.backIcon path {
     fill: var(--orange);
 }
 
 #activities {
     position: fixed;
-    top:100px;
+    top: 100px;
     right: 50px;
     width: 35vw;
 }
@@ -181,7 +178,7 @@ a{
     margin-bottom: 20px;
 }
 
-#activities > div {
+#activities>div {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -191,7 +188,7 @@ a{
     padding-right: 10px;
 }
 
-#activities > div > a {
+#activities>div>a {
     background-color: var(--khaki);
     max-width: 100%;
     padding: 10px;
@@ -214,21 +211,21 @@ a{
     float: right;
 }
 
-#activities > div::-webkit-scrollbar {
+#activities>div::-webkit-scrollbar {
     background-color: var(--background-highlight);
     border-radius: 10px;
     width: 10px;
 }
 
-#activities > div::-webkit-scrollbar-thumb {
+#activities>div::-webkit-scrollbar-thumb {
     background-color: var(--khaki);
     border-radius: 10px;
 }
 
-.background{
+.background {
     height: 100% !important;
 }
 
-button > a {
+button>a {
     color: white;
 }
