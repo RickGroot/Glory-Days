@@ -1,4 +1,6 @@
 // ------------------------------------------------------------------------------------------- Importing libraries
+const functions = require('firebase-functions')
+const admin = require('firebase-admin')
 const express = require('express');
 const exphbs = require('express-handlebars')
 const path = require('path');
@@ -9,6 +11,19 @@ const hbs = exphbs.create({
     extname: 'hbs',
     defaultLayout: 'main',
     partialsDir: ['views/partials/', 'views/elements/']
+})
+
+admin.initializeApp(functions.config().firebase)
+
+const db = admin.firestore()
+
+
+app.post('/savepatient', async (req,res) =>{
+    const patient = {
+        patientName = "Tieneke",
+        patientAge = "43"
+    }
+    await db.collection('patienten').add(patient)
 })
 
 // ------------------------------------------------------------------------------------------- Importing files
