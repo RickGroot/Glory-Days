@@ -1,0 +1,331 @@
+:root {
+    --nav-height: 80px;
+    --nav-width: 100px;
+}
+
+.nav {
+    z-index: 10;
+    background-color: var(--background-tint);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--nav-width);
+}
+
+.bar {
+    z-index: 10;
+    background-color: var(--background-highlight);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: var(--nav-height);
+}
+
+main {
+    margin-top: var(--nav-height);
+    margin-left: var(--nav-width);
+    position: relative;
+}
+
+#list {
+    --padding-left: 12%;
+    position: relative;
+    /* padding-top: 50px; */
+    width: 50%;
+    height: 100%;
+}
+
+#alphabet {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+    padding-left: 10px;
+}
+
+#alphabet>p {
+    margin: 0;
+    font-size: 0.7em;
+}
+
+#list h1 {
+    margin: 0;
+    padding: 50px var(--padding-left) 10px;
+    position: fixed;
+    background: linear-gradient(white 0% 80%, transparent 100%);
+    display: block;
+    z-index: 5;
+    width: calc(45% - var(--padding-left) * 2);
+}
+
+#list #users {
+    margin: 0 var(--padding-left);
+    margin-top: 80px;
+}
+
+#list .user {
+    font-family: 'Lato', sans-serif;
+    padding: 15px 0;
+    display: block;
+}
+
+#list .user article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#list .user:not(:last-child, :first-child) {
+    border-bottom: 2px solid var(--background-highlight);
+}
+
+#list .user img {
+    --size: 60px;
+    border-radius: 50%;
+    height: var(--size);
+    width: var(--size);
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#list .user h2 {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.userElement {
+    background-color: var(--background-highlight);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 8em;
+    border-top-left-radius:5% ;
+    border-bottom-left-radius:5% ;
+    width: 450px;
+    height: 600px;
+}
+
+.userElement h1 {
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+}
+
+.userElement > div:first-child > img{
+    width: 15%;
+    height: 15%;
+}
+
+.userElement > div:first-child {
+    display: flex;
+    margin-top: 0.5em;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userElement > div:first-child > a {
+    background-color: var(--orange);
+    text-decoration: none;
+    color: white;
+    width: 20%;
+    height: 35px;   
+    border-radius: 5%;
+    text-align: center; 
+    font-family: 'Lato', sans-serif;
+}
+
+.userElement > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userElement > div:nth-child(2) > a {
+    color: white;
+    position: relative;
+    width: 150px;
+    height: 75px;
+    border-radius: 5%;
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.userElement > div:nth-child(2) > a > h2{
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 0.2em;
+    font-weight: 300;
+}
+
+.userElement > div:nth-child(2) > a:nth-child(1) {
+    background-color: var(--green);
+}
+
+
+.userElement > div:nth-child(2) > a:nth-child(2) {
+    background-color: var(--khaki);
+}
+
+
+
+
+.slider {
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;  
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;  
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    display: none;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+    display: none;
+  }
+
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 350px;
+    height: 200px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+  .slides {
+      margin: 0 2em;
+  }
+
+
+
+  .author-info {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.75rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .author-info a {
+    color: white;
+  }
+  
+  .slider > a {
+    display: inline-flex;
+    width: 6.5rem;
+    height: 1.5rem; 
+    color: var(--orange);
+    font-weight: 900;
+    font-size: 1.2em;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+  }
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
+  }
+
+  .slider > a:first-child , .slider > a:nth-child(3){
+      opacity: 50%;
+  }
+  
+  .userElement > h2{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 0.2em;
+    margin-left:1em
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.container > article{
+    position: relative;
+    width: 175px;
+    height: 125px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 20px;
+    margin-bottom: 3em;
+    margin-right: 20px;
+    margin: 0 auto;
+}
+
+.container > article:nth-of-type(1) {
+    background-image: linear-gradient(0deg, rgba(36,52,58,1) 0%, rgba(36,52,58,1) 6%, rgba(36,52,58,0) 100%), url(https://source.unsplash.com/collection/1504175);
+}
+
+.container > article:nth-of-type(2) {
+    background-image: linear-gradient(0deg, rgba(36,52,58,1) 0%, rgba(36,52,58,1) 6%, rgba(36,52,58,0) 100%), url(https://source.unsplash.com/collection/3458583);
+}
+
+.container > article div {
+    position: absolute;
+    height: auto;
+    padding: 0 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container > article div h3 {
+    margin: 0 0 0.5em 0 ;
+}
+
+.emotion{
+    margin: 0;
+}

@@ -29,6 +29,9 @@ const hbs = exphbs.create({
 // ------------------------------------------------------------------------------------------- Importing files
 const {
     home,
+    userList,
+    userElement,
+    chart,
     offline,
     error
 } = require('./server/render');
@@ -44,6 +47,9 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', home)
+    .get('/userList', userList)
+    // .get('/userList/:id', userElement)
+    .get('/chart', chart)
     .get('/offline', offline)
     .get('*', error)
 

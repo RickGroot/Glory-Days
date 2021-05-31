@@ -25,8 +25,13 @@ html, body {
 
 /* --------------------------------------------------------------------------------- headers & texts */
 h1{
-    font-size: 5em;
     font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
 }
 
 h3{
@@ -39,38 +44,10 @@ h3{
     font-family: 'Lato', sans-serif;
     color: var(--khaki);
     font-weight: 400;
-    margin-bottom: 3em;
 }
 
 .emotion{
     font-family: 'Lato', sans-serif;
     color: var(--orange);
     text-transform: uppercase;
-}
-
-/* --------------------------------------------------------------------------------- elements */
-.songPreview {
-    position: relative;
-    flex: 0 0 auto;
-    width: 19vw;
-    height: 18vh;
-    object-fit: cover;
-    background-size: cover;
-    background-position: center;
-    text-transform: uppercase;
-    font-weight: 400;
-    border-radius: 20px;
-    scroll-snap-align: start;
-}
-
-svg:last-of-type {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
-  
-path:last-of-type {
-      fill: var(--background-highlight);
 }
