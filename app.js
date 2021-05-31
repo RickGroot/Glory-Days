@@ -1,6 +1,6 @@
 // ------------------------------------------------------------------------------------------- Importing libraries
-const functions = require('firebase-functions')
-const admin = require('firebase-admin')
+// const functions = require('firebase-functions')
+// const admin = require('firebase-admin')
 const express = require('express');
 const exphbs = require('express-handlebars')
 const path = require('path');
@@ -13,27 +13,22 @@ const hbs = exphbs.create({
     partialsDir: ['views/partials/', 'views/elements/']
 })
 
-admin.initializeApp(functions.config().firebase)
+// admin.initializeApp(functions.config().firebase)
 
-const db = admin.firestore()
+// const db = admin.firestore()
 
 
-app.post('/savepatient', async (req,res) =>{
-    const patient = {
-        patientName = "Tieneke",
-        patientAge = "43"
-    }
-    await db.collection('patienten').add(patient)
-})
+// app.post('/savepatient', async (req,res) =>{
+//     const patient = {
+//         patientName = "Tieneke",
+//         patientAge = "43"
+//     }
+//     await db.collection('patienten').add(patient)
+// })
 
 // ------------------------------------------------------------------------------------------- Importing files
 const {
     home,
-    style,
-    start,
-    tehuis,
-    patientList,
-    patient,
     offline,
     error
 } = require('./server/render');
@@ -49,11 +44,6 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', home)
-    .get('/style', style)
-    .get('/start', start)
-    .get('/tehuis', tehuis)
-    .get('/patient', patientList)
-    .get('/patient/:id', patient)
     .get('/offline', offline)
     .get('*', error)
 
