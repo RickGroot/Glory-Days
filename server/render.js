@@ -12,7 +12,8 @@ function home(req, res) {
 function userList(req, res) {
     res.render('userList', {
         title: 'Mijn patiënten',
-        css: ['global', 'userList'],
+        css: ['global', 'userList', 'nav'],
+        js: ['userList', 'index'],
         users: users
     })
 }
@@ -21,6 +22,7 @@ function chart(req, res) {
     res.render('chart', {
         title: 'Mijn chart',
         css: ['global', 'chart'],
+        js: ['index'],
         users: users
     })
 }

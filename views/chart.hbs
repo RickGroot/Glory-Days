@@ -10,6 +10,8 @@
               <div>
             <canvas id="myLineChart2"></canvas>
         </div>
+
+        {{> effect before='20' after='90' }}
     </section>
 
     <h1>Positiviteit</h1>
@@ -20,6 +22,9 @@
         <div>
             <canvas id="myBarChart2"></canvas>
         </div>
+
+        {{> percentage-big title='zonnepark' percentage='-6' }}
+        {{> percentage-small title='zonnepark' percentage='-5' }}
     </section>
 
     <h1>Meest ervaren emotie (gemiddeld)</h1>
@@ -28,25 +33,56 @@
             <canvas id="myBarChart"></canvas>
         </div>
 
+
+        <div>
+            <canvas id="myLineChart4"></canvas>
+        </div>
+
         <div>
             <canvas id="myPolarChart"></canvas>
         </div>
+        
+        <article class="emotionTable">
+            <div>
+            <h1>1. Gelukkig</h1>
+            <p>+1</p>
+            </div>
+            <div>
+            <h1>2. Moe</h1>
+            <p>-1</p>
+            </div>
+              <div>
+            <h1>3. Verveeld</h1>
+            <p>+1</p>
+            </div>
+            <div>
+                <h2>In vergelijking met vorige week</h2>
+            </div>
+        </article>
 
-  
     </section>
 
 
     <h1>Emoties</h1>
     <section>
         <div>
-            <canvas id="myLineChart"></canvas>
-        </div>
-        <div>
             <canvas id="myDougnutChart"></canvas>
         </div>
+
         <div>
-            <canvas id="myPolarChart"></canvas>
+            <canvas id="myBarChart4"></canvas>
         </div>
+
+        <article class="emoteTable">
+            <div>
+                <h1>Positief</h1>
+                <h2>56%</h2>
+            </div>
+            <div>
+                <h1>Negatief</h1>
+                <h2>44%</h2>
+            </div>
+        </article>
 
 
     </section>
@@ -63,6 +99,22 @@
                       <div>
             <canvas id="myLineChart3"></canvas>
         </div>
+
+           <div>
+            <canvas id="myPolarChart2"></canvas>
+        </div>
+
+        <article class="traffic">
+            <h3>Gisteren</h3>
+            <div>
+                <p>Hoogst</p>
+                <p>21:00</p>
+            </div>
+            <div>
+                <p>Laagst</p>
+                <p>13:00</p>
+            </div>
+        </article>
     </section>
 
 

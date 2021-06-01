@@ -52,6 +52,8 @@ const dataLineChart = {
         label: 'Positiviteit gedurende een sessie',
         backgroundColor: 'rgba(' + orange + ', 0.8)',
         borderColor: 'rgba(' + orange + ', 0.8)',
+        fill: true,
+        lineTension: 0.3,
         data: [10, 25, 40, 50, 80, 75, 100],
     }]
 }
@@ -112,6 +114,7 @@ const dataLineChart3 = {
     datasets: [{
         label: 'Piekuren',
         backgroundColor: 'rgba(' + orange + ', 0.8)',
+        lineTension: 0.3,
         borderColor: 'rgba(' + orange + ', 0.8)',
         data: [60, 75, 70, 30, 40, 60, 70, 50, 30, 50, 80, 90, 85, 60],
     }]
@@ -121,9 +124,42 @@ const configLineChart3 = {
     type: 'line',
     data: dataLineChart3,
     options: {
-        responsive: true
-    }
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 100
+            }
+        }
+    },
 }
+
+// -------------------------------------------------------------------------- Line Chart Config
+
+const dataLineChart4 = {
+    labels: emotions,
+    datasets: [{
+        label: 'Emoties',
+        backgroundColor: 'rgba(' + orange + ', 0.8)',
+        borderColor: 'rgba(' + orange + ', 0.8)',
+        data: [10, 15, 25, 20, 40, 35, 50, 55, 80, 70, 75, 80, 75],
+    }]
+}
+
+const configLineChart4 = {
+    type: 'line',
+    data: dataLineChart4,
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 100
+            }
+        }
+    },
+}
+
 
 // -------------------------------------------------------------------------- Doughnut Chart Config
 
@@ -245,8 +281,14 @@ const configBubbleChart = {
     type: 'bubble',
     data: dataBubbleChart,
     options: {
-        responsive: true
-    }
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 100
+            }
+        }
+    },
 };
 
 // -------------------------------------------------------------------------- Polar Chart Config
@@ -269,11 +311,41 @@ const dataPolarChart = {
             'rgba(' + bone + ', 0.8)',
         ]
     }]
-};
+}
 
 const configPolarChart = {
     type: 'polarArea',
     data: dataPolarChart,
+    options: {
+        responsive: true
+    }
+}
+
+// -------------------------------------------------------------------------- Polar Chart Config
+const dataPolarChart2 = {
+    labels: [
+        '11:00',
+        '14:00',
+        '19:00',
+        '21:00',
+        '22:00'
+    ],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [100, 80, 60, 40, 55],
+        backgroundColor: [
+            'rgba(' + orange + ', 0.8)',
+            'rgba(' + green + ', 0.8)',
+            'rgba(' + navy + ', 0.8)',
+            'rgba(' + khaki + ', 0.8)',
+            'rgba(' + bone + ', 0.8)',
+        ]
+    }]
+};
+
+const configPolarChart2 = {
+    type: 'polarArea',
+    data: dataPolarChart2,
     options: {
         responsive: true
     }
@@ -330,7 +402,8 @@ const configBarChart2 = {
         responsive: true,
         scales: {
             y: {
-                beginAtZero: true
+                min: 0,
+                max: 100
             }
         }
     },
@@ -375,9 +448,35 @@ const configBarChart3 = {
     },
 }
 
+// -------------------------------------------------------------------------- Bar Chart Config
+const dataBarChart4 = {
+    labels: [
+        'Positief',
+        'Negatief'
+    ],
+    datasets: [{
+        label: 'Emoties',
+        data: [60, 40],
+        backgroundColor: 'rgb(' + khaki + ')'
+    }]
+}
+
+const configBarChart4 = {
+    type: 'bar',
+    data: dataBarChart4,
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 100
+            }
+        }
+    },
+}
+
 
 // -------------------------------------------------------------------------- Render Charts
-
 let myLineChart = new Chart(
     document.getElementById('myLineChart'),
     configLineChart
@@ -391,6 +490,11 @@ let myLineChart2 = new Chart(
 let myLineChart3 = new Chart(
     document.getElementById('myLineChart3'),
     configLineChart3
+)
+
+let myLineChart4 = new Chart(
+    document.getElementById('myLineChart4'),
+    configLineChart4
 )
 
 let myDoughnutChart = new Chart(
@@ -413,6 +517,11 @@ let myPolarChart = new Chart(
     configPolarChart
 )
 
+let myPolarChart2 = new Chart(
+    document.getElementById('myPolarChart2'),
+    configPolarChart2
+)
+
 let myBarChart = new Chart(
     document.getElementById('myBarChart'),
     configBarChart
@@ -426,4 +535,9 @@ let myBarChart2 = new Chart(
 let myBarChart3 = new Chart(
     document.getElementById('myBarChart3'),
     configBarChart3
+)
+
+let myBarChart4 = new Chart(
+    document.getElementById('myBarChart4'),
+    configBarChart4
 )
