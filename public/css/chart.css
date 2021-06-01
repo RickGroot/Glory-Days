@@ -1,0 +1,142 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10em;
+}
+
+section>div {
+    width: 30vw;
+    padding: 2em;
+}
+
+section > article {
+
+    margin: 2em;
+}
+
+.emotionTable {
+    width: 300px;
+    height: 300px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    background-color: var(--background-highlight);
+}
+
+.emotionTable>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.emotionTable>div>p {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.emotionTable>div:nth-child(1)>p {
+    color: #6CBF74;
+}
+
+.emotionTable>div:nth-child(2)>p {
+    color: #BF6C6C;
+}
+
+
+.emotionTable>div:nth-child(3)>p {
+    color: #6CBF74;
+}
+
+
+
+.emotionTable>div>h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.emotionTable>div>h2 {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+
+
+.emotionTable>div:last-child {
+    border-top: 3px solid var(--orange);
+}
+
+
+.emoteTable {
+    width: 200px;
+    height: 200px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    background-color: var(--background-highlight);
+}
+
+.emoteTable>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 1em;
+}
+
+
+.emoteTable>div>h1 {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.emoteTable>div:first-child>h1 {
+    color: var(--orange);
+}
+
+.emoteTable>div:last-child {
+    border-bottom: 3px solid var(--orange);
+}
+
+.traffic {
+    position: relative;
+    background-color: var(--background-highlight);
+    color: var(--khaki);
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.traffic h3 {
+    color: var(--khaki);
+    margin: 0;
+}
+
+.traffic div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 15vw;
+}
+
+.traffic div:last-child {
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--orange);
+}
+
+.traffic div p:nth-child(1) {
+    font-size: 1em;
+    margin: 0;
+}
+
+.traffic div p:nth-child(2) {
+    font-size: 1.2em;
+    margin: 0;
+    color: var(--orange);
+}
