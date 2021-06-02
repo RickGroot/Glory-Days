@@ -30,7 +30,9 @@
     <div class="patientTitle">
         <div>
         <h1>Patiënten</h1>
-        <a href="">Sorteer</a>
+        {{#if sort}}
+        <a href="/patientlijst">Sorteer</a>
+        {{/if}}
         </div>
 
         <div class="search">
@@ -52,14 +54,8 @@
         </div>
     </div>
     <section id="users">
-        {{!-- <a href="" class="user">
-        <article class="">
-            <img src="" alt="">
-            <h2></h2>
-        </article>
-        </a> --}}
         {{#each users}}
-        <a href="" class="user">
+        <a href="/patientlijst/{{ @key }}" class="user{{#ifEquals @key ../item}} active{{/ifEquals}}">
             <article class="">
                 <img src="{{this.pic}}" alt="">
                 <h2>{{this.firstName}} {{this.lastName}}</h2>

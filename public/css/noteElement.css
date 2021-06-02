@@ -1,0 +1,78 @@
+.userElement {
+    --block-width: 45%;
+    --padding: 5%;
+    background-color: var(--background-highlight);
+    position: fixed;
+    padding: 1.2em var(--padding);
+    right: 0;
+    bottom: 0;
+    top: 8em;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    width: calc(50% - var(--padding) * 2);
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+    overflow:scroll;
+  }
+  
+  .userElement h1 {
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+  }
+
+  .userElement h2 {
+    font-size: 1em;
+    margin-top: 0;
+  }
+  
+  .userElement h3 {
+    font-size: 1em;
+    margin: 0;
+    font-weight: 300;
+    color: var(--khaki);
+  }
+
+  .userElement img {
+    width: var(--image-size);
+    height: var(--image-size);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1em;
+  }
+
+  section.container{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  
+  .userElement>div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .userElement .container h2 {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 0.2em;
+    flex: 0 0 100%;
+  }
+
+  .label{
+      border: 2px solid var(--orange);
+      padding: 0.3em;
+      text-transform: uppercase;
+      font-family: 'Lato', sans-serif;
+      color: var(--orange);
+      border-radius: 10px;
+      font-size: 0.8em;
+      text-align: center;
+  }
+  

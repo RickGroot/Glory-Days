@@ -10,8 +10,18 @@ const app = express();
 const hbs = exphbs.create({
     extname: 'hbs',
     defaultLayout: 'main',
-    partialsDir: ['views/partials/', 'views/elements/']
+    partialsDir: ['views/partials/', 'views/elements/'],
+    helpers: {
+        ifEquals: function (a, b, options) {
+            if (a == b) { return options.fn(this); }
+            return options.inverse(this);
+        }
+    }
 })
+
+// hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
+//     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+// })
 
 // admin.initializeApp(functions.config().firebase)
 
@@ -30,8 +40,13 @@ const hbs = exphbs.create({
 const {
     home,
     userList,
-    userElement,
+    userSort,
+    noteSort,
+    noteList,
+    dashboard,
     chart,
+    newNote,
+    memories,
     offline,
     error
 } = require('./server/render');
@@ -47,8 +62,13 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', home)
-    .get('/userList', userList)
-    // .get('/userList/:id', userElement)
+    .get('/dashboard', dashboard)
+    .get('/patientlijst', userSort)
+    .get('/notitielijst', noteSort)
+    .get('/notitielijst/add', newNote)
+    .get('/patientlijst/:id', userList)
+    .get('/notitielijst/:id', noteList)
+    .get('/herinneringen/:id', memories )
     .get('/chart', chart)
     .get('/offline', offline)
     .get('*', error)

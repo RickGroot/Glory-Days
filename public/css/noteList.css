@@ -1,0 +1,152 @@
+main {
+    margin-top: var(--nav-height);
+    position: relative;
+}
+
+#list {
+    --padding-left: 12%;
+    --title-height: 160px;
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+#list h1 {
+    margin: 0;
+    display: block;
+    z-index: 5;
+    font-size: 2em;
+}
+
+#list .noteTitle {
+    background: linear-gradient(white 0% 90%, transparent 100%);
+    position: fixed;
+    width: 50%;
+    height: var(--title-height);
+    z-index: 1;
+}
+
+#list .noteTitle>div:first-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 var(--padding-left);
+    padding-top: calc(8em - var(--nav-height));
+    margin-bottom: 0.8em;
+}
+
+#list .noteTitle>div:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 var(--padding-left);
+}
+
+#list .noteTitle>div>a {
+    padding: 12px 35px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+#list .noteTitle>div>a:first-child {
+    background-color: var(--orange);
+}
+
+
+#list .noteTitle>div:last-child>a:last-child {
+    background-color: var(--khaki);
+}
+
+#list .noteTitle .sort {
+    padding: 12px 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    background-color: var(--green);
+    font-family: 'Lato', sans-serif;
+}
+
+#list #notes {
+    margin: 0 var(--padding-left);
+    padding-top: var(--title-height);
+}
+
+#list .note {
+    font-family: 'Lato', sans-serif;
+    padding: 15px calc(var(--padding-left) * 0.2);
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+#list .note article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#list .note:not(:last-child) {
+    border-bottom: 2px solid var(--background-highlight);
+}
+
+#list .note img {
+    border-radius: 50%;
+    height: var(--image-size);
+    width: var(--image-size);
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+#list .note h2 {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#list .note p {
+    margin: 0;
+}
+
+#list .note p:first-of-type {
+    width: 85%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#list .userType {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--orange);
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+#list .userType.pro {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+#list .userType.fam {
+    border-color: var(--khaki);
+    color: var(--khaki);
+}
+
+#list .active {
+    background-color: var(--background-highlight);
+    border-radius: 10px;
+    border: none;
+}

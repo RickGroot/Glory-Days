@@ -1,0 +1,31 @@
+<section id="list">
+    <div class="noteTitle">
+        <div>
+            <h1>Notities</h1>
+            {{#if sort}}
+            <a href="/notitielijst" class="sort">Sorteer</a>
+            {{/if}}
+        </div>
+
+        <div>
+            <a href="/patientlijst">
+                Terug
+            </a>
+            <a href="/notitielijst/add">
+                Nieuwe notitie toevoegen
+            </a>
+        </div>
+    </div>
+
+    <section id="notes">
+        {{#each notes}}
+        <a href="/notitielijst/{{@key}}" class="note{{#ifEquals @key ../item}} active{{/ifEquals}}">
+            <article class="">
+                <h2>{{this.title}}</h2>
+                <p>{{this.text}}</p>
+                <p class="userType {{this.userType}}">{{this.userType}}</p>
+            </article>
+        </a>
+        {{/each}}
+    </section>
+</section>

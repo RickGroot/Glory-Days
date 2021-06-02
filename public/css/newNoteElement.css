@@ -1,0 +1,113 @@
+.userElement {
+  --block-width: 45%;
+  --padding: 5%;
+  background-color: var(--background-highlight);
+  position: fixed;
+  padding: 1.2em var(--padding);
+  right: 0;
+  bottom: 0;
+  top: 8em;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  width: calc(50% - var(--padding) * 2);
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+form {
+  position: relative;
+}
+
+input {
+  border: none;
+}
+
+form>input:first-child {
+  width: 60%;
+  height: 30px;
+  margin: 19px 0;
+  border-radius: 10px;
+}
+
+form>textarea {
+  width: calc(100% - 2 * 10px);
+  height: 410px;
+  border-radius: 10px;
+  margin-top:1.5em;
+  border: none;
+  padding: 10px;
+}
+
+button {
+  color: white;
+  border: none;
+  background-color: var(--khaki);
+  width: 150px;
+  height: 50px;
+  border-radius: 15px;
+  float: right;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+}
+
+fieldset {
+  position: absolute;
+  top: 19px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+
+fieldset input {
+  border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+fieldset > label{
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    border-radius: 10px;
+    width: 125px;
+    padding: 0.3em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+
+fieldset > label:last-child{
+    border: 2px solid var(--khaki);
+    color: var(--khaki);
+    margin-top: 10px;
+}
+
+input:checked + label {
+  background-color: var(--orange);
+  color: white;
+}
+
+fieldset input:last-of-type:checked + label {
+  background-color: var(--khaki);
+}
+
+input::placeholder, textarea{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+}
