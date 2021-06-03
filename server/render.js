@@ -42,7 +42,7 @@ function userList(req, res) {
     res.render('userList', {
         title: 'Mijn patiënten',
         userList: true,
-        css: ['global', 'userList', 'userElement', 'nav'],
+        css: ['global', 'userList', 'userelement', 'nav'],
         js: ['userList', 'index'],
         sort: true,
         users: users,
