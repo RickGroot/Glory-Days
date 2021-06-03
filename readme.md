@@ -20,46 +20,48 @@ Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de 
 ## Inhoud
 * [Persona](#persona)
 * [User scenario](#user-scenario)
+* [Job stories](#job-stories)
+* [File structure](#file-structure)
 
 ## Persona
 ![Sarah](https://github.com/RickGroot/Glory-Days/blob/main/assets/persona.jpg?raw=true)
 
 ## User scenario
-Sarah doet haar dagelijkse rondje door het tehuis heen en komt langs de kamer van Arie. Arie is 85 jaar oud en heeft erg veel last van Alzheimers. Hij herkent zijn eigen familie niet meer en kan zich niets meer van zijn jeugd herinneren. Sarah vindt dit erg jammer omdat ze hierdoor nooit een gesprek heeft met Arie, terwijl hij veel leuke foto’s van zijn kinderen op vakantie heeft staan in zijn kamer.
+Sarah komt aan bij haar tehuis genaamd zonnepark. Ze moet hier voor de rest van de week werken, ze werkt hier om de week en de andere week bij tehuis zonnestraal. Ze begint de week hier door te kijken in de GloryDays app zodat ze ziet hoe de statistieken hiervan ervoor staan.  Ze selecteert eerst haar tehuis waar ze nu is. Nu ziet ze direct alle belangrijke informatie betreft de patienten en Glory Days. 85% van de gebruikers heeft een positieve ervaring gehad, dat is een stijging van 4% ten opzichte van vorige week. Dit is goed nieuws, Sarah is nu alleen benieuwd naar de slechte ervaringen om die te verhelpen. Hierom gaat Sarah kijken in de lijst van de positieve ervaringen en sorteert ze de lijst van laag naar hoog. Ze ziet dat Arie een slechte ervaring had met 55%. Hierom gaat ze naar het profiel van Arie kijken, hier ziet ze dat zijn gebruikuren vaak om 20:00 zijn. Hierom besluit Sarah om rond 20:00 langs bij Arie te gaan en te kijken of zij hem een betere ervaring kan bieden met Glory Days.
 
-Om sociaal contact te leggen gebruikt Sarah de Glory Days ipad app. Hiermee kan ze het profiel bekijken van Arie om vervolgens zijn favoriete muziek af te spelen. De familie van Arie heeft ook al wat herinneringen tekstueel en visueel toegevoegd aan bepaalde nummers. Hierdoor kan Sarah een gesprek aanknopen met Arie over bepaalde onderwerpen terwijl ze het nummer afspeelt.
+## Job Stories
+- **Wanneer ik** het Glory Days dashboard open **wil ik** direct de positiviteit van alle patienten zien **zodat ik** kan stellen wie er een goede en slechte ervaring met de app heeft.
+- **Wanneer ik** het Glory Days dashboard open **wil ik** een lijst met alle patienten beschikbaar hebben **zodat ik** specifiek kan zoeken naar een patient
+- **Wanneer ik** het Glory Days dashboard open **wil ik** specifieke informatie kunnen vinden van specifieke patienten **zodat ik** direct kan zien hoe een patient ervoor staat m.b.t de app.
+- **Wanneer ik** het Glory Days dashboard open **wil ik** een specifiek tehuis selecteren waar ik op het moment werk **zodat ik** alle patienten van een specifiek tehuis kan inzien
+- **Wanneer ik** een grafiek bekijk van de positiviteit m.b.t de app in percentages **wil ik** een optie hebben om te sorteren **zodat ik** de grafiek kan afstellen naar mijn eigen keuzes en bijv alfabetisch alles kan inzien.
+- **Wanneer ik** het Glory Days dashboard open **wil ik** een inzicht krijgen m.b.t de stijging of daling in positiviteit **zodat ik** direct kan zien of de afgelopen week goed beviel of niet.
 
-Zo komt Sarah erachter dat Arie tijdens de vakantie naar luxemburg in 1983 constant de CD van Michael Jackson afspeelde genaamd BAD. Sarah maakt een kopje thee voor haar zelf en gaat even zitten, ze zet vervolgens de muziek van de CD aan en ziet Arie direct opvrolijken. Arie begint uit zichzelf te praten over de vakantie. Sarah heeft voor het eerst dat ze Arie kent een gesprek met hem, ze wordt hier erg gelukkig van. Sarah blijft een kwartier lang praten met Arie en komt erachter dat Arie Michael Jackson fan is en bij een concert van hem is geweest. Dit onthoudt ze en vult ze aan onder zijn profiel in de Glory Days app. Ook zegt Arie dat hij tijdens de vakantie van 1993 op vakantie naar Spanje de opvolger van BAD afspeelde in de auto genaamd Dangerous. Ook dit vult ze aan in de Glory Days app zodat de familie hier ook van af weet. Nu kan ze de volgende keer dat ze met Arie is de Dangerous CD afspelen en het over een andere vakantie van hem hebben, alleen nu moet ze naar de volgende patiënt omdat ze anders haar ronde niet kan afmaken.
+## File structure
+> *app.js*  
 
-## Requirements (outdated)
-* Database
-    * Clients
-    * Caretakers
-    * Connections between users
-* API's
-    * Play music
-* Data
-    * Users
-    * Images
-    * Client mindset
-* Caretaker interactions
-    * Connect to client
-    * Add songs to playlists
-    * Add images (with texts) to songs
-    * look into clients information (mainly mood)
-    * Different types
-        * Family
-        * Healthcare workers
-* Client interactions
-    * Listen to song/playlist
-    * View memories added by caretakers
-    * Input current mood
-* Real time events
-    * Update playlist when song is added
-    * Start a memory from different device
+Start of the application, located at the root of this project.
 
-## Tablet extra functions
-Maybe add some kind of logbook which contains all the clients emotions over the passed month?
+> *package.json*  
+
+Holds all scripts and packages that are used for this project.
+
+> */views*  
+
+Contains all handlebars views, elements and partials. Some elements and partials are divided into subfolders.
+
+> */server*  
+
+This folder is used for all server side code. It contains the render.js file, and helper files for the server.
+
+> */public*  
+
+Contains all client-side files. This folder is divided to multiple subfolders, css, js and img. These folders contain all the files that are used client-side and that coud be stored in cache.
+
+> */assets*  
+
+Has all the files that make this repo shine.
+
 
 # Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
