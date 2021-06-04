@@ -17,6 +17,7 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
     align-items: center;
     justify-content: center;
     margin-top: 175px;
@@ -63,6 +64,12 @@ main {
     border: none;
     border-bottom: 2px solid var(--orange);
     width: 100%;
+    color: var(--orange);
+    font-weight: 700;
+}
+
+#list .search form input::placeholder{
+    color: var(--orange);
 }
 
 #list .patientTitle{
@@ -132,4 +139,8 @@ main {
     background-color: var(--background-highlight);
     border-radius: 10px;
     border: none;
+}
+
+#list .active > article > h2 {
+    font-weight: 900;
 }

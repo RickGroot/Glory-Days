@@ -1,0 +1,47 @@
+img{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: var(--nav-height)
+}
+
+h1{
+    text-align: center;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+
+
+a {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    border-radius: 10%;
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-color: var(--orange);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 2em;
+}
+
+a:nth-child(2){
+    background-color: var(--khaki);
+}
+
+a > h1 {
+    font-size:0.9em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 0.5em;
+    font-weight: 300;
+}

@@ -1,7 +1,10 @@
 const {
     users,
-    notes
+    nursing,
+    notes,
+    userData
 } = require('./data');
+
 // ------------------------------------------------------------------------------------------- Render functions
 // -------------------------------- Home page
 function home(req, res) {
@@ -22,7 +25,16 @@ function dashboard(req, res) {
     })
 }
 
-
+// -------------------------------- Pick location page
+function location(req, res) {
+    res.render('location', {
+        title: 'Glory Days Dashboard',
+        dashboard: true,
+        css: ['global', 'location'],
+        js: ['graphs'],
+        nursing: nursing
+    })
+}
 
 // -------------------------------- Userlist with sort options
 function userSort(req, res) {
@@ -81,7 +93,7 @@ function noteList(req, res) {
     })
 }
 
-// -------------------------------- Notelist with user selected
+// -------------------------------- Add a new note
 function newNote(req, res) {
     res.render('newNote', {
         title: 'Mijn patiënten',
@@ -93,15 +105,22 @@ function newNote(req, res) {
     })
 }
 
-// -------------------------------- Notelist with user selected
+// -------------------------------- Memories of user
 function memories(req, res) {
+    let data = userData[1]
+    
     res.render('memories', {
-        title: 'Mijn patiënten',
-        userList: true,
+        title: data.firstName + ' || Glory Days',
+        patient: true,
         css: ['memories', 'nav'],
         js: ['userList', 'index'],
-        sort: true,
-        notes: notes
+        firstName: data.firstName,
+        lastName: data.lastName,
+        pic: data.pic,
+        age: data.age,
+        nationality: data.nationality,
+        about: data.about,
+        memories: data.memories
     })
 }
 
@@ -143,5 +162,6 @@ module.exports = {
     dashboard,
     memories,
     offline,
+    location,
     error
 }

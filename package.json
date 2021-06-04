@@ -9,12 +9,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
-    "watch": "concurrently --kill-others \"npm run watch:css\" \"npm run watch:js\"",
-    "watch:css": "chokidar \"src/css/*.css\" --c \"npm run build:css\"",
-    "watch:js": "chokidar \"src/js/*.js\" --c \"npm run build:js\"",
-    "build:css": "node scripts/build-css.js",
-    "build:js": "node scripts/build-js.js"
+    "dev": "nodemon app.js"
   },
   "author": "Rick Groot",
   "license": "MIT",
@@ -22,16 +17,11 @@
     "chart.js": "^3.3.2",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
+    "firebase": "^8.6.3",
+    "firestore-export-import": "^0.15.0",
     "node": "^16.1.0"
   },
   "devDependencies": {
-    "chokidar-cli": "^2.1.0",
-    "concurrently": "^6.1.0",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-minify": "^3.1.0",
     "nodemon": "^2.0.7"
   },
   "browserslist": [

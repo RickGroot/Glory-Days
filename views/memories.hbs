@@ -1,0 +1,73 @@
+<nav>
+    <ul>
+        <li {{#if dashboard }} class="active" {{/if}}><a href="/bloemenveld/dashboard">Dashboard <br> Zonnepark</a></li>
+        <li {{#if userList }} class="active" {{/if}}><a href="/patientlijst">patiënten</a></li>
+        <li {{#if location }} class="active" {{/if}}><a href="">Locatie wijzigen</a></li>
+        <li {{#if patient }} class="active" {{/if}}><a href="/patientlijst">Tieneke</a></li>
+    </ul>
+    <ul>
+        <li><a href="">Jij</a></li>
+        <li><img src="/img/tieneke.png" alt=""></li>
+    </ul>
+</nav>  
+
+<main>
+
+
+    <section class="over">
+        <img src={{ pic }} alt="afbeelding van patient" class="profielfoto">
+        <h3>Naam</h3>
+        <p>{{ firstName }} {{ lastName }}</p>
+        <h3>Leeftijd</h3>
+        <p>{{ age }} Jaar</p>
+        <h3>Nationaliteit</h3>
+        <p>{{ nationality }}</p>
+        <h3>Wie is {{ firstName }}?</h3>
+        <p>{{ about }}</p>
+        <div>
+            <svg class="notitie" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M35.1144 5.67901L30.309 0.888889C29.7145 0.296296 28.9714 0 28.1787 0C27.3861 0 26.5934 0.296296 26.0485 0.888889L22.8284 4.09877C22.1844 3.90123 21.4413 4.04938 20.9459 4.49383L19.5587 5.87654C19.0138 6.41975 18.9147 7.25926 19.212 7.95062L3.65632 23.4568C3.60678 23.5062 3.55724 23.5556 3.55724 23.6049C3.55724 23.6049 3.55724 23.6049 3.55724 23.6543C3.5077 23.7037 3.5077 23.7531 3.45816 23.8025L0.683906 32.1975L0.0894234 33.9753C0.0894234 34.0247 0.0894232 34.0741 0.0398829 34.0741C-0.0591976 34.5679 0.039883 34.963 0.188504 35.2099C0.238044 35.3086 0.287584 35.4074 0.337125 35.4568C0.634366 35.8025 1.08023 36 1.57563 36C1.62517 36 1.67471 36 1.72425 36C1.82333 36 1.87287 36 1.92241 36C1.97195 36 2.02149 36 2.02149 35.9506L3.26 35.5556L12.1772 32.642C12.3259 32.5926 12.4249 32.5432 12.524 32.4444L28.1292 16.8889C28.3274 16.9877 28.5255 16.9877 28.7732 16.9877C29.2686 16.9877 29.7145 16.7901 30.0613 16.4444L31.4484 15.0617C31.9933 14.5185 32.0924 13.7778 31.8447 13.1358L35.0648 9.92593C36.3033 8.79012 36.3033 6.8642 35.1144 5.67901ZM11.9791 30.4691L9.45253 27.9506L24.2651 13.1358L26.7916 15.6543L11.9791 30.4691ZM22.977 11.8519L8.16448 26.6667L5.63793 24.0988L20.4505 9.33333L22.977 11.8519ZM3.85448 33.4321L2.61598 32.1975L4.74621 25.7778L10.2947 31.3086L3.85448 33.4321ZM29.12 14.9136C29.0705 14.8642 29.0705 14.8148 29.0209 14.8148L21.3422 7.11111C21.2431 7.01235 21.1936 6.96296 21.0945 6.91358L22.1844 5.77778L30.0613 13.6296C30.1108 13.679 30.1603 13.7284 30.2099 13.7284L29.12 14.9136ZM33.8263 8.69136L30.7053 11.8025L24.2155 5.28395L27.3366 2.17284C27.7824 1.72839 28.5751 1.72839 29.0209 2.17284L33.8263 6.96296C34.2722 7.45679 34.2722 8.19753 33.8263 8.69136Z"
+                    fill="#EA6F3D" />
+            </svg>
+            <h3>Notities</h3>
+        </div>
+    </section>
+
+    <section class="herinneringen">
+        <section id="patientbtns">
+            <button>Afspeellijsten</button>
+            <button>Reacties van {{firstName}} op beluisterde nummers</button>
+        </section>
+
+        <h2>Herinneringen van <br> {{firstName}}</h2>
+        <h3>Herinneringen met positieve emoties voor {{firstName}}</h3>
+        <section>
+            {{#each memories.positive}}
+            {{> article emotion=feeling title=title }}
+            {{/each}}
+        </section>
+
+        <h3>Herinneringen die {{firstName}} als minder positief ervaarde.</h3>
+        <section>
+            {{#each memories.ok}}
+            {{> article emotion=feeling title=title }}
+            {{/each}}
+        </section>
+
+        <h3> Herinneringen met negatieve emoties voor {{firstName}}</h3>
+        <section>
+            {{#each memories.negative}}
+            {{> article emotion=feeling title=title }}
+            {{/each}}
+        </section>
+
+        <svg class="achtergrond" width="565" height="832" viewBox="0 0 565 832" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M185.565 2.42433C259.236 -10.0944 335.309 27.4047 391.477 79.5507C444.961 129.205 454.758 208.6 482.466 278.065C513.622 356.175 575.253 427.005 563.539 510.916C551.203 599.288 486.229 668.086 420.279 723.554C352.033 780.953 272.594 826.34 185.565 828.815C97.1519 831.33 -207.583 845.437 -265 774C-319.828 705.784 -306.499 580.654 -333 495.5C-359.733 409.601 -393.039 348.158 -363 263.5C-332.486 177.505 -52.6301 187.766 22.5468 142.243C84.7469 104.578 114.862 14.4389 185.565 2.42433Z"
+                fill="#E7E0D6" />
+        </svg>
+
+</main>

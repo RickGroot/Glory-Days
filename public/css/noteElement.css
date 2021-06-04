@@ -1,22 +1,25 @@
 .userElement {
     --block-width: 45%;
+    --title-height: 80px;
     --padding: 5%;
-    background-color: var(--background-highlight);
+    --padding-scroll: 20px;
+    /* background-color: var(--background-highlight); */
     position: fixed;
-    padding: 1.2em var(--padding);
-    right: 0;
-    bottom: 0;
-    top: 8em;
+    padding-left: 0;
+    padding-right: calc(var(--padding) - var(--padding-scroll));
+    right: 20px;
+    bottom: var(--padding);
+    top: calc(var(--nav-height) + var(--padding));
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
-    width: calc(50% - var(--padding) * 2);
+    width: calc(50% - var(--padding));
     height: 590px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     font-family: 'Lato', sans-serif;
-    overflow:scroll;
+    overflow-y:scroll;
   }
   
   .userElement h1 {
@@ -53,10 +56,39 @@
   }
   
   .userElement>div:first-child {
+    position: fixed;
+    width: inherit;
+    height: var(--title-height);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 5;
+    background: linear-gradient(white 0% 80%, transparent 100%);
+  }
+
+  .userElement::-webkit-scrollbar {
+    background-color: var(--background-highlight);
+    background: transparent;
+    border-radius: 10px;
+    padding: 30px 0;
+    height: 60vh;
+    width: 8px;
+}
+
+.userElement::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: var(--title-height);
+}
+
+.userElement::-webkit-scrollbar-thumb {
+    background-color: var(--khaki);
+    border-radius: 10px;
+}
+
+.tekst{
+    padding-top: var(--title-height);
+    margin: 0 0 1em 0;
   }
   
   .userElement .container h2 {

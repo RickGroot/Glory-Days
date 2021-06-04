@@ -1,15 +1,19 @@
 <section class="userElement">
-    <form action="">
-        <input type="text" placeholder="Titel..." required>
+    <form action="/notitielijst">
+       <h1>Nieuwe notitie</h1>
+        <div>
+            <label for="title">Titel</label>
+            <input type="text" placeholder="Titel..." id="title" required>
+        </div>
 
         <fieldset>
             <input type="checkbox" id="pro" name="pro" required>
             <label for="pro">Voor PRO</label>
-            <input type="checkbox" id="fam" name="fam" required>
+            <input type="checkbox" id="fam" name="fam">
             <label for="fam">Voor FAM</label>
         </fieldset>
 
-        <textarea name="text" id="text" cols="30" rows="10" placeholder="Tekst..." required></textarea>
+        <p class="textareacontainer"><strong>Notitie invoeren:</strong> <span class="textarea" role="textbox" contenteditable></span></p>
 
         <button>Toevoegen</button>
     </form>

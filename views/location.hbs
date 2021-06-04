@@ -1,0 +1,14 @@
+<main>
+    <img src="../img/profile.jpg" alt="Sarah de stoephoer">
+    <h1>Goedemorgen, in welk tehuis bevindt je je nu?
+    </h1>
+
+    <div>
+        {{#each nursing}}
+        <a href="/{{this.nursinghome}}/dashboard">
+            <h1> {{this.nursinghome}} </h1>
+        </a>
+        {{/each}}
+    </div>
+
+</main>

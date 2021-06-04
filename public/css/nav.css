@@ -45,4 +45,6 @@ nav ul:last-child li:last-child {
 nav ul li img {
     width: var(--image-size);
     height: var(--image-size);
+    border-radius: 50%;
+    object-fit: cover;
 }

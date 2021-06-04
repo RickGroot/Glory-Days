@@ -1,20 +1,28 @@
 .userElement {
   --block-width: 45%;
   --padding: 5%;
-  background-color: var(--background-highlight);
+  /* background-color: var(--background-highlight); */
   position: fixed;
-  padding: 1.2em var(--padding);
+  padding: 0 var(--padding) 0 0;
   right: 0;
   bottom: 0;
   top: 8em;
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
-  width: calc(50% - var(--padding) * 2);
+  width: calc(50% - var(--padding));
   height: 590px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
+  padding-top: 0;
+}
+
+.userElement > form > h1{
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 2em;
+  margin-bottom: 0.4em;
 }
 
 form {
@@ -23,22 +31,71 @@ form {
 
 input {
   border: none;
+  border-bottom: 2px solid var(--orange);
+  width: 100%;
+  color: var(--khaki);
+  font-weight: 400;
 }
 
-form>input:first-child {
+form>div {
   width: 60%;
-  height: 30px;
-  margin: 19px 0;
-  border-radius: 10px;
+}
+
+form>div>input {
+  height: 40px;
+  margin: 0;
+}
+
+form>div>label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+input::placeholder {
+  color: var(--orange);
+  font-weight: 300;
+  font-size: 1.2em;
 }
 
 form>textarea {
   width: calc(100% - 2 * 10px);
-  height: 410px;
-  border-radius: 10px;
+  height: auto;
   margin-top:1.5em;
   border: none;
   padding: 10px;
+  border: none;
+  border-bottom: 2px solid var(--orange);
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.textareacontainer{
+  margin-top: 50px;
+}
+
+.textareacontainer > strong {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size:1.5em;
+}
+
+.textarea {
+  margin-top: 1em;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  max-height: 400px;
+  line-height: 20px;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 2px solid var(--orange);
+}
+
+.textarea[contenteditable]:empty::before {
+  content: "Tekst...";
+  color: var(--orange);
 }
 
 button {
@@ -56,7 +113,7 @@ button {
 
 fieldset {
   position: absolute;
-  top: 19px;
+  top: 60px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -105,9 +162,4 @@ input:checked + label {
 
 fieldset input:last-of-type:checked + label {
   background-color: var(--khaki);
-}
-
-input::placeholder, textarea{
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
 }

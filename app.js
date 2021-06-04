@@ -1,6 +1,8 @@
 // ------------------------------------------------------------------------------------------- Importing libraries
-// const functions = require('firebase-functions')
-// const admin = require('firebase-admin')
+const firebase = require('firebase/app')
+require("firebase/database")
+// const auth = require("firebase/auth")
+
 const express = require('express');
 const exphbs = require('express-handlebars')
 const path = require('path');
@@ -19,23 +21,6 @@ const hbs = exphbs.create({
     }
 })
 
-// hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
-//     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-// })
-
-// admin.initializeApp(functions.config().firebase)
-
-// const db = admin.firestore()
-
-
-// app.post('/savepatient', async (req,res) =>{
-//     const patient = {
-//         patientName = "Tieneke",
-//         patientAge = "43"
-//     }
-//     await db.collection('patienten').add(patient)
-// })
-
 // ------------------------------------------------------------------------------------------- Importing files
 const {
     home,
@@ -46,10 +31,12 @@ const {
     dashboard,
     chart,
     newNote,
+    location,
     memories,
     offline,
     error
 } = require('./server/render');
+const firebaseConfig = require('./server/config')
 
 // ------------------------------------------------------------------------------------------- Express config
 app
@@ -62,18 +49,24 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', home)
-    .get('/dashboard', dashboard)
+    .get('/:nursinghome/dashboard', dashboard)
     .get('/patientlijst', userSort)
     .get('/notitielijst', noteSort)
     .get('/notitielijst/add', newNote)
     .get('/patientlijst/:id', userList)
+    .get('/locatie', location)
     .get('/notitielijst/:id', noteList)
-    .get('/herinneringen/:id', memories )
+    .get('/herinneringen/:id', memories)
     .get('/chart', chart)
     .get('/offline', offline)
     .get('*', error)
 
-// Run app on port
+// ------------------------------------------------------------------------------------------- Firebase init
+firebase.initializeApp(firebaseConfig)
+let database = firebase.database()
+console.log(database)
+
+// ------------------------------------------------------------------------------------------- Run app on port
 app.listen(process.env.PORT || port, () => {
     console.log(`Glory Days development site online at http://localhost:${port}`)
 })

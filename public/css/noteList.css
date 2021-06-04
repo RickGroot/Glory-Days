@@ -150,3 +150,7 @@ main {
     border-radius: 10px;
     border: none;
 }
+
+#list .active > article > h2 {
+    font-weight: 900;
+}

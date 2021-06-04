@@ -1,0 +1,322 @@
+/* --------------------------------------------------------------------------------- global */
+:root {
+    --orange: #ea6f3d;
+    --khaki: #5c5141;
+    --green: #7ebdb2;
+    --barcolor: #25333a;
+    --background-white: #ffffff;
+    --background-tint: #efefef;
+    --background-highlight: #e7e0d6;
+}
+
+html {
+    background-color: var(--background-white);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: minion-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--khaki);
+}
+
+/* --------------------------------------------------------------------------------- headers & texts */
+h1{
+    font-size: 5em;
+    font-weight: 400;
+}
+
+h3{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+.paragraph{
+    font-family: 'Lato', sans-serif;
+    color: var(--khaki);
+    font-weight: 400;
+    margin-bottom: 3em;
+}
+
+.emotion{
+    font-family: 'Lato', sans-serif;
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------------- elements */
+.songPreview {
+    position: relative;
+    flex: 0 0 auto;
+    width: 19vw;
+    height: 18vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 20px;
+    scroll-snap-align: start;
+}
+
+svg:last-of-type {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+  
+path:last-of-type {
+      fill: var(--background-highlight);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 12vh 1fr;
+    gap: 9vh 0px;
+    grid-template-areas:
+        "header header"
+        "over herinneringen"
+}
+
+.over {
+    grid-area: over;
+}
+
+.over>p {
+    font-size: clamp(1em, 1.5vw, 2em);
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+}
+
+.over>h3 {
+    font-size: clamp(1em, 1.5vw, 2em);
+    margin-bottom: 0em
+}
+
+.herinneringen {
+    grid-area: herinneringen;
+    width: 43vw;
+}
+
+.achtergrond {
+    height: 95vh;
+    top: 125px;
+    left: -44px !important;
+}
+
+.backIcon {
+    position: relative !important;
+    z-index: 10 !important;
+    top: 10px;
+    left: 10px;
+}
+
+.backIcon path {
+    fill: var(--orange);
+}
+
+.profielfoto {
+    width: 40%;
+    margin-left: 3em;
+}
+
+.over {
+    position: fixed;
+    top: 25vh;
+    left: 5em;
+    max-width: 300px;
+}
+
+p {
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+.over>p:last-of-type {
+    font-weight: 400;
+}
+
+h3 {
+    color: var(--orange)
+}
+
+.over div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.notitie {
+    position: relative !important;
+    z-index: 10;
+    width: 8%;
+}
+
+.notitie path {
+    fill: var(--orange);
+
+}
+
+#patientbtns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    display: inline-flex;
+    align-items: flex-end;
+    padding: 20px;
+    width: 19vw;
+    border-radius: 20px;
+    height: 18vh;
+    color: white;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-align: inherit;
+    font-size: clamp(1em, 1.5vw, 1.2em);
+}
+
+button:nth-of-type(1) {
+    background-color: var(--green);
+}
+
+button:nth-of-type(2) {
+    background-color: var(--khaki);
+}
+
+.herinneringen h3 {
+    color: var(--khaki);
+    font-weight: 300;
+}
+
+.herinneringen h2 {
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+.herinneringen section {
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.herinneringen>h2 {
+    font-size: clamp(2.3em, 3.4vw, 3.3em);
+}
+
+.herinneringen>h3 {
+    font-size: clamp(1.4em, 2.1vw, 2.3em)
+}
+
+.herinneringen section::-webkit-scrollbar {
+    background-color: var(--background-highlight);
+    border-radius: 10px;
+    height: 8px;
+}
+
+.herinneringen section::-webkit-scrollbar-thumb {
+    background-color: var(--khaki);
+    border-radius: 10px;
+}
+
+.herinneringen>section:not(:first-child) {
+    margin-bottom: 5em;
+}
+
+article:not(:first-child) {
+    margin-left: calc(43vw - (2 * 19vw));
+}
+
+article:nth-of-type(1) {
+    background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/1504175);
+}
+
+article:nth-of-type(2) {
+    background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/3458583);
+}
+
+article:nth-of-type(3) {
+    background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/327760);
+}
+
+article:nth-of-type(4) {
+    background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/9454911);
+}
+
+article>div>h3 {
+    color: white !important;
+    font-size: clamp(0.9em, 1.4vw, 1.9em) !important;
+    margin-top: 0px;
+}
+
+.emotion {
+    font-size: clamp(0.9em, 1.6vw, 1.9em);
+    margin-bottom: 3px;
+}
+
+article div {
+    position: absolute;
+    height: auto;
+    padding: 0 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .over>p {
+        font-size: 1em;
+    }
+
+    .over>h3 {
+        font-size: 1em;
+    }
+
+    .herinneringen>h2 {
+        font-size: 2.5em;
+    }
+
+    .herinneringen>h3 {
+        font-size: 1.5em;
+    }
+
+    .songPreview {
+        height: 35vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .over {
+        max-width: 600px;
+    }
+
+    .achtergrond {
+        top: 250px;
+        left: -75px !important;
+        height: 100vh;
+        width: 65vh;
+    }
+
+    .over>p,
+    .over>h3 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: clamp(1em, 1.5vw, 1.4em);
+    }
+}
