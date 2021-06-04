@@ -1,6 +1,8 @@
 // ------------------------------------------------------------------------------------------- Importing libraries
-// const firebase = require('firebase/app')
-// require("firebase/database")
+require('dotenv').config()
+require("firebase/database")
+const firebase = require('firebase/app')
+// const auth = require("firebase/auth")
 
 const express = require('express');
 const exphbs = require('express-handlebars')
@@ -35,7 +37,7 @@ const {
     offline,
     error
 } = require('./server/render');
-// const firebaseConfig = require('./server/config')
+const firebaseConfig = require('./server/config')
 
 // ------------------------------------------------------------------------------------------- Express config
 app
@@ -61,9 +63,14 @@ app
     .get('*', error)
 
 // ------------------------------------------------------------------------------------------- Firebase init
-// firebase.initializeApp(firebaseConfig)
-// let database = firebase.database()
-// console.log(database)
+firebase.initializeApp(firebaseConfig)
+let database = firebase.database()
+const ref = database.ref('nursingHome/bloemenveld')
+ref.on('value', snapshot => {
+    console.log(snapshot.val())
+}, errorObject => {
+    console.log(erorObject.name)
+})
 
 // ------------------------------------------------------------------------------------------- Run app on port
 app.listen(process.env.PORT || port, () => {
