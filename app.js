@@ -13,7 +13,7 @@ const app = express();
 const hbs = exphbs.create({
     extname: 'hbs',
     defaultLayout: 'main',
-    partialsDir: ['views/partials/', 'views/elements/'],
+    partialsDir: ['views/partials', 'views/elements', 'views/partials/lists', 'views/partials/listBlocks'],
     helpers: {
         ifEquals: function (a, b, options) {
             if (a == b) { return options.fn(this); }
@@ -27,6 +27,7 @@ const {
     home,
     userList,
     userSort,
+    userSessions,
     noteSort,
     noteList,
     dashboard,
@@ -54,6 +55,7 @@ app
     .get('/patientlijst', userSort)
     .get('/notitielijst', noteSort)
     .get('/notitielijst/add', newNote)
+    .get('/patientlijst/sessies/:id', userSessions)
     .get('/patientlijst/:id', userList)
     .get('/locatie', location)
     .get('/notitielijst/:id', noteList)

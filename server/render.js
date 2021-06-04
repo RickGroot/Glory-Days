@@ -38,12 +38,12 @@ function location(req, res) {
 
 // -------------------------------- Userlist with sort options
 function userSort(req, res) {
-    res.render('userSort', {
+    res.render('userList', {
         title: 'Mijn patiënten',
         userList: true,
+        sort: true,
         css: ['global', 'userList', 'sort', 'nav'],
         js: ['userList', 'index'],
-        sort: false,
         users: users
     })
 }
@@ -54,12 +54,27 @@ function userList(req, res) {
     res.render('userList', {
         title: 'Mijn patiënten',
         userList: true,
+        sortbtn: true,
         css: ['global', 'userList', 'userelement', 'nav'],
         js: ['userList', 'index'],
-        sort: true,
         users: users,
         data: users[userKey],
         item: userKey
+    })
+}
+
+// -------------------------------- Userlist with user memories
+function userSessions(req, res) {
+    let userKey = req.params.id
+    res.render('userList', {
+        title: 'Herrinering patiënten',
+        userList: true,
+        session: true,
+        css: ['global', 'userList', 'userSessions', 'nav'],
+        js: ['userList', 'index'],
+        users: users,
+        data: users[userKey],
+        userKey: userKey
     })
 }
 
@@ -67,12 +82,12 @@ function userList(req, res) {
 function noteSort(req, res) {
     let userKey = req.params.patient
     
-    res.render('noteSort', {
+    res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
+        sort: true,
         css: ['global', 'noteList', 'sort', 'nav'],
         js: ['userList', 'index'],
-        sort: false,
         notes: notes
     })
 }
@@ -84,9 +99,9 @@ function noteList(req, res) {
     res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
+        sortbtn: true,
         css: ['global', 'noteList', 'noteElement', 'nav'],
         js: ['userList', 'index'],
-        sort: true,
         notes: notes,
         data: notes[noteKey],
         item: noteKey
@@ -95,12 +110,13 @@ function noteList(req, res) {
 
 // -------------------------------- Add a new note
 function newNote(req, res) {
-    res.render('newNote', {
+    res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
+        sortbtn: true,
+        newnote: true,
         css: ['global', 'noteList', 'newNoteElement', 'nav'],
         js: ['userList', 'index'],
-        sort: true,
         notes: notes
     })
 }
@@ -155,6 +171,7 @@ module.exports = {
     home,
     userList,
     userSort,
+    userSessions,
     noteSort,
     noteList,
     newNote,

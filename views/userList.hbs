@@ -2,5 +2,15 @@
 
 <main>
 {{> patientList }}
+{{#if item}}
 {{> userElement }}
+{{/if}}
+
+{{#if sort}}
+{{> patientSortElement}}
+{{/if}}
+
+{{#if session}}
+{{> userSessionsElement}}
+{{/if}}
 </main>

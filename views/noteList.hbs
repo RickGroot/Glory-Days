@@ -2,5 +2,15 @@
 
 <main>
 {{> noteListElement }}
+{{#if item}}
 {{> noteElement }}
+{{/if}}
+
+{{#if sort}}
+{{> noteSortElement}}
+{{/if}}
+
+{{#if newnote}}
+{{> newNoteElement}}
+{{/if}}
 </main>

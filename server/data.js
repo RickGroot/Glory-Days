@@ -1,5 +1,5 @@
 const users = {
-    1: {firstName: "Tieneke", lastName: "van Aartsen", pic: "../img/tieneke.png"},
+    1: {firstName: "Tieneke", lastName: "van Aartsen", pic: "https://github.com/RickGroot/Glory-Days/blob/main/public/img/tieneke.png?raw=true"},
     2: {firstName: "Arnold", lastName: "Medaille", pic: "https://images.unsplash.com/photo-1514425623522-e08e404b4a03?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80"},
     3: {firstName: "Laura", lastName: "van Weerwolf", pic: "https://images.unsplash.com/photo-1537735319956-df7db4b6a4e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=371&q=80"},
     4: {firstName: "Martha", lastName: "Augustijn", pic: "https://images.unsplash.com/photo-1494438043283-22a3c46831a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"},
@@ -36,7 +36,7 @@ let userData = {
     1: {
         firstName: "Tieneke",
         lastName: "van Aartsen",
-        pic: "../img/tieneke.png",
+        pic: "https://github.com/RickGroot/Glory-Days/blob/main/public/img/tieneke.png?raw=true",
         age: 75,
         nationality: "Nederlands",
         about: "Tieneke is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
