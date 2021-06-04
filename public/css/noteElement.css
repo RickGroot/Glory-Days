@@ -7,7 +7,7 @@
     position: fixed;
     padding-left: 0;
     padding-right: calc(var(--padding) - var(--padding-scroll));
-    right: 20px;
+    right: var(--padding-scroll);
     bottom: var(--padding);
     top: calc(var(--nav-height) + var(--padding));
     border-top-left-radius: 5%;

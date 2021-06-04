@@ -1,41 +1,79 @@
 .sessionElement {
     --block-width: 45%;
+    --title-height: 80px;
     --padding: 5%;
-    /* background-color: var(--background-highlight); */
+    --padding-scroll: 20px;
     position: fixed;
-    padding: 0 var(--padding) 0 0;
-    right: 0;
+    padding-left: 0;
+    padding-right: calc(var(--padding) - var(--padding-scroll));
+    right: var(--padding-scroll);
     bottom: var(--padding);
     top: calc(var(--nav-height) + var(--padding));
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
     width: calc(50% - var(--padding));
-    /* height: 590px; */
+    font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-  }
-  
-  .sessionElement>div:first-child>img {
+    overflow-y: scroll;
+}
+
+.sessionElement::-webkit-scrollbar {
+    background-color: var(--background-highlight);
+    background: transparent;
+    border-radius: 10px;
+    padding: 50px 0;
+    width: 8px;
+}
+
+.sessionElement::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: var(--title-height);
+
+}
+
+.sessionElement::-webkit-scrollbar-thumb {
+    background-color: var(--khaki);
+    border-radius: 10px;
+}
+
+.sessionElement>div:first-child>img {
     width: var(--image-size);
     height: var(--image-size);
     border-radius: 50%;
     object-fit: cover;
     margin-right: 1em;
-  }
-  
-  .sessionElement>div:first-child {
+}
+
+.sessionElement>div:first-child {
+    position: fixed;
+    width: inherit;
+    height: 60px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  .sessionElement>div:first-child>a {
+    z-index: 5;
+    background: linear-gradient(white 0% 80%, transparent 100%);
+}
+
+.sessionElement > div > h1 {
+  font-weight: 900;
+}
+
+.sessionElement > section > div:nth-child(2) > h1{
+  font-weight: 900;
+  font-size: 1.5em
+}
+
+.sessionElement>div:first-child>a {
     background-color: var(--orange);
     text-decoration: none;
     color: white;
     padding: 0 5px;
+    margin-right: 5px;
     height: 35px;
     line-height: 33px;
     border-radius: 10px;
@@ -44,16 +82,16 @@
     font-size: 0.9em;
     font-weight: 300;
     margin-left: auto;
-  }
-  
-  .sessionElement>div:nth-child(2) {
+}
+
+.sessionElement>div:nth-child(2) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .sessionElement>div:nth-child(2)>a {
+}
+
+.sessionElement>div:nth-child(2)>a {
     color: white;
     position: relative;
     width: var(--block-width);
@@ -61,42 +99,43 @@
     border-radius: 10px;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-  
-  }
-  
-  .sessionElement>div:nth-child(2)>a>h2 {
+
+}
+
+.sessionElement>div:nth-child(2)>a>h2 {
     font-size: 1em;
     position: absolute;
     bottom: 0;
     left: 0;
     margin-left: 1em;
     font-weight: 300;
-  }
-  
-  .sessionElement>div:nth-child(2)>a:nth-child(1) {
+}
+
+.sessionElement>div:nth-child(2)>a:nth-child(1) {
     background-color: var(--green);
-  }
-  
-  
-  .sessionElement>div:nth-child(2)>a:nth-child(2) {
+}
+
+.sessionElement>div:nth-child(2)>a:nth-child(2) {
     background-color: var(--khaki);
-  }
+}
 
-  .sessionElement > section {
-      display: flex;
-      flex-direction: row;
-      font-family: 'Lato', sans-serif;
-      background-color: var(--background-highlight);
-      border-radius: 15px;
-  }
+.sessionElement>section {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--background-highlight);
+    border-radius: 15px;
+    margin: 2em 0;
+}
 
-  .sessionElement > section > div > img {
-      width: 75%;
-      display: block;
-      margin: 0 auto;
-  }
+.sessionElement>section>div>img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+}
 
-  .sessionElement > section > div:first-child,  .sessionElement > section > div:last-child   {
+.sessionElement>section>div:first-child,
+.sessionElement>section>div:last-child {
     background-color: #EFAC8E;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -104,14 +143,15 @@
     height: auto;
 }
 
-.sessionElement > section > div:last-child {
+.sessionElement>section>div:last-child {
     background-color: #94A7A4;
 }
 
-.sessionElement > section > div:first-child > h1, .sessionElement > section > div:last-child > h1 {
+.sessionElement>section>div:first-child>h1,
+.sessionElement>section>div:last-child>h1 {
     text-align: center;
     background-color: var(--navy);
-    padding: 5px; 
+    padding: 5px;
     margin: -0.15em 0;
     color: white;
     font-weight: 700;
@@ -119,7 +159,7 @@
     text-transform: uppercase;
 }
 
-.sessionElement > section > div:nth-child(2) {
+.sessionElement>section>div:nth-child(2) {
     color: var(--khaki);
     padding: 5px;
     display: flex;
@@ -129,16 +169,88 @@
     text-align: center;
 }
 
-.sessionElement > section > div:nth-child(2) > h1:first-child {
+.sessionElement>section>div:nth-child(2)>h1:first-child {
     margin: 0;
 }
 
-.sessionElement > section > div:nth-child(2) > h2 {
+.sessionElement>section>div:nth-child(2)>h2 {
     margin-top: 5px;
     margin-bottom: auto;
     font-size: 1.5em;
 }
 
-.sessionElement > section > div:nth-child(2) > h1:last-child {
+.sessionElement>section>div:nth-child(2)>h1:last-child {
     margin: 0;
+}
+
+.sessionElement>section:first-of-type {
+    margin-top: 5em;
+}
+
+.slider>a {
+    display: inline-flex;
+    height: 1.5rem;
+    color: var(--khaki);
+    font-weight: 400;
+    font-size: 1em;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.slider>a:active {
+    top: 1px;
+}
+
+.slider {
+    width: 100px;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides h1 {
+    margin-bottom: 0;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    display: none;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    display: none;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+    display: none;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 10px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
 }

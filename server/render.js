@@ -54,6 +54,7 @@ function userList(req, res) {
     res.render('userList', {
         title: 'Mijn patiënten',
         userList: true,
+        userElem: true,
         sortbtn: true,
         css: ['global', 'userList', 'userelement', 'nav'],
         js: ['userList', 'index'],
@@ -69,12 +70,13 @@ function userSessions(req, res) {
     res.render('userList', {
         title: 'Herrinering patiënten',
         userList: true,
+        sortbtn: true,
         session: true,
         css: ['global', 'userList', 'userSessions', 'nav'],
         js: ['userList', 'index'],
         users: users,
         data: users[userKey],
-        userKey: userKey
+        item: userKey
     })
 }
 
@@ -123,7 +125,8 @@ function newNote(req, res) {
 
 // -------------------------------- Memories of user
 function memories(req, res) {
-    let data = userData[1]
+    let key = 1
+    let data = userData[key]
     
     res.render('memories', {
         title: data.firstName + ' || Glory Days',
@@ -136,7 +139,8 @@ function memories(req, res) {
         age: data.age,
         nationality: data.nationality,
         about: data.about,
-        memories: data.memories
+        memories: data.memories,
+        item: key
     })
 }
 
