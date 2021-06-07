@@ -5,20 +5,20 @@
                 "1": {
                     "firstName": "Tieneke",
                     "lastName": "van Aartsen",
-                    "pic": "../img/tienekevaartsen",
+                    "pic": "https://github.com/RickGroot/Glory-Days/blob/styleguide/public/img/tieneke.png?raw=true",
                     "age": "75",
                     "nationality": "Nederlands",
                     "about": "Tieneke is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
                     "memories": {
                         "positive": [{
                             "feeling": "gelukkig",
-                            "title": "onze trouwdag",
-                            "image": "/path/to/image"
-                        },{
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
                             "feeling": "blij",
                             "title": "vakantie",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "vrolijk",
                             "title": "dagja spa",
                             "image": "/path/to/image"
@@ -27,11 +27,11 @@
                             "feeling": "tevreden",
                             "title": "dagje rondreizen",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "kalm",
                             "title": "tv kijken",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "gelukkig",
                             "title": "city trip",
                             "image": "/path/to/image"
@@ -40,15 +40,67 @@
                             "feeling": "boos",
                             "title": "ruzie",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "verdrietig",
                             "title": "overleiden Janno",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "moe",
                             "title": "bergwandeling",
                             "image": "/path/to/image"
                         }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+
                     },
                     "notes": {
                         "1": {
@@ -88,8 +140,127 @@
                     "age": "82",
                     "nationality": "Nederlands",
                     "about": "Arnold is oud, opa en partner. Hij is altijd in voor een feestje. Zijn favoriete bezigheden zijn bingo en zwemmen.",
-                    "memories": {},
-                    "notes": {}
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
                 },
                 "3": {
                     "firstName": "Laura",
@@ -98,13 +269,1041 @@
                     "age": "77",
                     "nationality": "Nederlands",
                     "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
-                    "memories": {},
-                    "notes": {}
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "4": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "5": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "6": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "7": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "8": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "9": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
+                },
+                "10": {
+                    "firstName": "Laura",
+                    "lastName": "van der Boom",
+                    "pic": "../img/lauravdboom",
+                    "age": "77",
+                    "nationality": "Nederlands",
+                    "about": "Laura is een gezellige moeder, oma en partner. Ze is altijd in voor een feestje. Haar favoriete bezigheden zijn bingo en dansen.",
+                    "memories": {
+                        "positive": [{
+                            "feeling": "gelukkig",
+                            "title": "Vakantie Bakoe",
+                            "image": "https://i.redd.it/96dye8khwn371.jpg"
+                        }, {
+                            "feeling": "blij",
+                            "title": "vakantie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "vrolijk",
+                            "title": "dagja spa",
+                            "image": "/path/to/image"
+                        }],
+                        "ok": [{
+                            "feeling": "tevreden",
+                            "title": "dagje rondreizen",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "kalm",
+                            "title": "tv kijken",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "gelukkig",
+                            "title": "city trip",
+                            "image": "/path/to/image"
+                        }],
+                        "negative": [{
+                            "feeling": "boos",
+                            "title": "ruzie",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "verdrietig",
+                            "title": "overleiden Janno",
+                            "image": "/path/to/image"
+                        }, {
+                            "feeling": "moe",
+                            "title": "bergwandeling",
+                            "image": "/path/to/image"
+                        }]
+                    },
+                    "sessions": {
+                        "1": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "2": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        },
+                        "3": {
+                            "startfeeling": "sad",
+                            "endfeeling": "happy",
+                            "date": "27-05",
+                            "duration": "3 min",
+                            "songs": [{
+                                "artist": "Frank Sinatra",
+                                "song": "Thats Life"
+                            }, {
+                                "artist": "Beatles",
+                                "song": "USSR"
+                            }, {
+                                "artist": "Warren G",
+                                "song": "This DJ"
+                            }]
+                        }
+
+                    },
+                    "notes": {
+                        "1": {
+                            "title": "Tieneke vindt het lastig",
+                            "author": "Jopie Staalfabriek",
+                            "date": "30-05",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "2": {
+                            "title": "Kort verslag van 02-06",
+                            "author": "Sarah van Hoogenboom",
+                            "date": "02-06",
+                            "userType": "pro",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "3": {
+                            "title": "Nieuw nummer gevonden",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        },
+                        "4": {
+                            "title": "Draai dit niet af",
+                            "author": "Jan van Aartsen",
+                            "date": "02-06",
+                            "userType": "fam",
+                            "text": "Hier komt het hele bericht te staan"
+                        }
+                    }
                 }
-                
             }
         },
-        "bloemenveld":{
+        "bloemenveld": {
             "users": {
                 "1": {
                     "firstName": "Tieneke",
@@ -118,11 +1317,11 @@
                             "feeling": "gelukkig",
                             "title": "onze trouwdag",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "blij",
                             "title": "vakantie",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "vrolijk",
                             "title": "dagja spa",
                             "image": "/path/to/image"
@@ -131,11 +1330,11 @@
                             "feeling": "tevreden",
                             "title": "dagje rondreizen",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "kalm",
                             "title": "tv kijken",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "gelukkig",
                             "title": "city trip",
                             "image": "/path/to/image"
@@ -144,11 +1343,11 @@
                             "feeling": "boos",
                             "title": "ruzie",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "verdrietig",
                             "title": "overleiden Janno",
                             "image": "/path/to/image"
-                        },{
+                        }, {
                             "feeling": "moe",
                             "title": "bergwandeling",
                             "image": "/path/to/image"
@@ -205,7 +1404,6 @@
                     "memories": {},
                     "notes": {}
                 }
-                
             }
         }
     }

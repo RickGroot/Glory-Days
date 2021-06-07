@@ -1,9 +1,10 @@
 const {
-    users,
-    nursing,
-    notes,
     userData
 } = require('./data');
+
+const {
+    getData
+} = require('./getData')
 
 // ------------------------------------------------------------------------------------------- Render functions
 // -------------------------------- Home page
@@ -17,16 +18,21 @@ function home(req, res) {
 // -------------------------------- Dashboard page
 
 function dashboard(req, res) {
+    let location = req.params.location
+
     res.render('dashboard', {
         title: 'Glory Days Dashboard',
         dashboard: true,
+        location: location,
         css: ['global', 'dashboard', 'nav'],
         js: ['graphs'],
     })
 }
 
 // -------------------------------- Pick location page
-function location(req, res) {
+async function location(req, res) {
+    let nursing = await getData()
+
     res.render('location', {
         title: 'Glory Days Dashboard',
         dashboard: true,
@@ -37,11 +43,16 @@ function location(req, res) {
 }
 
 // -------------------------------- Userlist with sort options
-function userSort(req, res) {
+async function userSort(req, res) {
+    let location = req.params.location
+    let data = await getData()
+    let users = data[location].users
+
     res.render('userList', {
         title: 'Mijn patiënten',
         userList: true,
         sort: true,
+        location: location,
         css: ['global', 'userList', 'sort', 'nav'],
         js: ['userList', 'index'],
         users: users
@@ -49,98 +60,135 @@ function userSort(req, res) {
 }
 
 // -------------------------------- Userlist with user selected
-function userList(req, res) {
-    let userKey = req.params.id
+async function userList(req, res) {
+    let location = req.params.location
+    let userKey = req.params.patient
+    let data = await getData()
+    let users = data[location].users
+
     res.render('userList', {
         title: 'Mijn patiënten',
         userList: true,
         userElem: true,
         sortbtn: true,
+        location: location,
         css: ['global', 'userList', 'userelement', 'nav'],
         js: ['userList', 'index'],
         users: users,
         data: users[userKey],
-        item: userKey
+        userKey: userKey,
     })
 }
 
-// -------------------------------- Userlist with user memories
-function userSessions(req, res) {
-    let userKey = req.params.id
+// -------------------------------- Userlist with user sessions
+async function userSessions(req, res) {
+    let location = req.params.location
+    let userKey = req.params.patient
+    let data = await getData()
+    let users = data[location].users
+    let sessions = data[location].users[userKey].sessions
+
     res.render('userList', {
         title: 'Herrinering patiënten',
         userList: true,
         sortbtn: true,
         session: true,
+        location: location,
         css: ['global', 'userList', 'userSessions', 'nav'],
         js: ['userList', 'index'],
         users: users,
         data: users[userKey],
-        item: userKey
+        userKey: userKey,
+        sessions: sessions
     })
 }
 
 // -------------------------------- Notelist with sort options
-function noteSort(req, res) {
+async function noteSort(req, res) {
+    let location = req.params.location
     let userKey = req.params.patient
+    let data = await getData()
+    let notes = data[location].users[userKey].notes
     
     res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
         sort: true,
+        location: location,
         css: ['global', 'noteList', 'sort', 'nav'],
         js: ['userList', 'index'],
-        notes: notes
+        notes: notes,
+        userKey: userKey,
     })
 }
 
-// -------------------------------- Notelist with user selected
-function noteList(req, res) {
+// -------------------------------- Notelist with note selected
+async function noteList(req, res) {
+    let location = req.params.location
     let noteKey = req.params.id
+    let userKey = req.params.patient
+    let data = await getData()
+    let notes = data[location].users[userKey].notes
 
     res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
         sortbtn: true,
+        noteElem: true,
+        location: location,
         css: ['global', 'noteList', 'noteElement', 'nav'],
         js: ['userList', 'index'],
         notes: notes,
         data: notes[noteKey],
-        item: noteKey
+        userKey: userKey,
+        noteKey: noteKey
     })
 }
 
 // -------------------------------- Add a new note
-function newNote(req, res) {
+async function newNote(req, res) {
+    let location = req.params.location
+    let noteKey = req.params.id
+    let userKey = req.params.patient
+    let data = await getData()
+    let notes = data[location].users[userKey].notes
+
     res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
         sortbtn: true,
         newnote: true,
+        location: location,
         css: ['global', 'noteList', 'newNoteElement', 'nav'],
         js: ['userList', 'index'],
-        notes: notes
+        notes: notes,
+        userKey: userKey,
+        noteKey: noteKey
     })
 }
 
 // -------------------------------- Memories of user
-function memories(req, res) {
-    let key = 1
-    let data = userData[key]
+async function memories(req, res) {
+    let location = req.params.location
+    let userKey = req.params.patient
+    let data = await getData()
+    let userData = data[location].users[userKey]
     
     res.render('memories', {
-        title: data.firstName + ' || Glory Days',
+        title: userData.firstName + ' || Glory Days',
         patient: true,
+        location: location,
+        memories: true,
         css: ['memories', 'nav'],
         js: ['userList', 'index'],
-        firstName: data.firstName,
-        lastName: data.lastName,
-        pic: data.pic,
-        age: data.age,
-        nationality: data.nationality,
-        about: data.about,
-        memories: data.memories,
-        item: key
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        pic: userData.pic,
+        age: userData.age,
+        nationality: userData.nationality,
+        about: userData.about,
+        memories: userData.memories,
+        userKey: userKey,
     })
 }
 

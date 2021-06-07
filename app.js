@@ -1,9 +1,4 @@
 // ------------------------------------------------------------------------------------------- Importing libraries
-require('dotenv').config()
-require("firebase/database")
-const firebase = require('firebase/app')
-// const auth = require("firebase/auth")
-
 const express = require('express');
 const exphbs = require('express-handlebars')
 const path = require('path');
@@ -38,7 +33,6 @@ const {
     offline,
     error
 } = require('./server/render');
-const firebaseConfig = require('./server/config')
 
 // ------------------------------------------------------------------------------------------- Express config
 app
@@ -51,28 +45,18 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', home)
-    .get('/:nursinghome/dashboard', dashboard)
-    .get('/patientlijst', userSort)
-    .get('/notitielijst', noteSort)
-    .get('/notitielijst/add', newNote)
-    .get('/patientlijst/sessies/:id', userSessions)
-    .get('/patientlijst/:id', userList)
+    .get('/:location/dashboard', dashboard)
+    .get('/:location/patientlijst', userSort)
+    .get('/:location/notitielijst/:patient', noteSort)
+    .get('/:location/notitielijst/:patient/add', newNote)
+    .get('/:location/notitielijst/:patient/:id', noteList)
+    .get('/:location/patientlijst/sessies/:patient', userSessions)
+    .get('/:location/patientlijst/:patient', userList)
     .get('/locatie', location)
-    .get('/notitielijst/:id', noteList)
-    .get('/herinneringen/:id', memories)
+    .get('/:location/herinneringen/:patient', memories)
     .get('/chart', chart)
     .get('/offline', offline)
     .get('*', error)
-
-// ------------------------------------------------------------------------------------------- Firebase init
-firebase.initializeApp(firebaseConfig)
-let database = firebase.database()
-const ref = database.ref('nursingHome/bloemenveld')
-ref.on('value', snapshot => {
-    console.log(snapshot.val())
-}, errorObject => {
-    console.log(erorObject.name)
-})
 
 // ------------------------------------------------------------------------------------------- Run app on port
 app.listen(process.env.PORT || port, () => {

@@ -41,7 +41,7 @@ section > article{
     padding: 15px 20px;
     width: 260px;
     position: relative;
-    background-color: var(--background-highlight);
+    border: 3px solid var(--background-highlight);
     font-family: 'Lato', sans-serif;
     border-radius: 10px;
     text-transform: uppercase;
@@ -84,7 +84,7 @@ section > article{
     padding: 15px 20px;
     font-family: 'Lato', sans-serif;
     border-radius: 10px;
-    background-color: var(--background-highlight);
+    border: 3px solid var(--background-highlight);
 }
 
 .emotionTable>div {
@@ -166,7 +166,7 @@ section > article{
 
 .traffic {
     position: relative;
-    background-color: var(--background-highlight);
+    border: 3px solid var(--background-highlight);
     color: var(--khaki);
     text-transform: uppercase;
     padding: 15px 20px;

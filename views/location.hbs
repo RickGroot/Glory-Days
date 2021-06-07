@@ -5,8 +5,8 @@
 
     <div>
         {{#each nursing}}
-        <a href="/{{this.nursinghome}}/dashboard">
-            <h1> {{this.nursinghome}} </h1>
+        <a href="/{{@key}}/dashboard">
+            <h1> {{@key}} </h1>
         </a>
         {{/each}}
     </div>

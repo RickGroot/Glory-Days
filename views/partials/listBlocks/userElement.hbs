@@ -2,14 +2,14 @@
     <div>
         <img src="{{data.pic}}" alt="">
         <h1>{{data.firstName}} {{data.lastName}}</h1>
-        <a href="/notitielijst">Notitie</a>
+        <a href="/{{location}}/notitielijst/{{userKey}}">Notitie</a>
     </div>
 
     <div>
-        <a href="/herinneringen/{{item}}">
+        <a href="/{{location}}/herinneringen/{{userKey}}">
             <h2>Herinneringen</h2>
         </a>
-        <a href="/patientlijst/sessies/{{item}}">
+        <a href="/{{location}}/patientlijst/sessies/{{userKey}}">
             <h2>Bekijk Sessies</h2>
         </a>
     </div>

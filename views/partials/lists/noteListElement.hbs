@@ -3,23 +3,22 @@
         <div>
             <h1>Notities</h1>
             {{#if sortbtn}}
-            <a href="/notitielijst" class="sort">Sorteer</a>
+            <a href="/{{location}}/notitielijst/{{userKey}}" class="sort">Sorteer</a>
             {{/if}}
         </div>
 
         <div>
-            <a href="/patientlijst">
+            <a href="/{{location}}/patientlijst/{{userKey}}">
                 Terug
             </a>
-            <a href="/notitielijst/add">
+            <a href="/{{location}}/notitielijst/{{userKey}}/add">
                 Nieuwe notitie toevoegen
             </a>
         </div>
     </div>
-
     <section id="notes">
         {{#each notes}}
-        <a href="/notitielijst/{{@key}}" class="note{{#ifEquals @key ../item}} active{{/ifEquals}}">
+        <a href="{{#if ../noteElem}}.{{/if}}{{#if ../newnote}}.{{/if}}./{{location}}{{../userKey}}/{{@key}}" class="note{{#ifEquals @key ../noteKey}} active{{/ifEquals}}">
             <article class="">
                 <h2>{{this.title}}</h2>
                 <p>{{this.text}}</p>

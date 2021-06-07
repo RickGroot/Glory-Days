@@ -1,8 +1,9 @@
 <nav>
     <ul>
-        <li {{#if dashboard }} class="active" {{/if}}><a href="/Bloemenveld/dashboard">Dashboard <br> Zonnepark</a></li>
-        <li {{#if userList }} class="active" {{/if}}><a href="/patientlijst">patiënten</a></li>
-        <li {{#if location }} class="active" {{/if}}><a href="/locatie">Locatie wijzigen</a></li>
+        <li {{#if dashboard }} class="active" {{/if}}><a href="/{{location}}/dashboard">Dashboard <br> Zonnepark</a></li>
+        <li {{#if userList }} class="active" {{/if}}><a href="/{{location}}/patientlijst">patiënten</a></li>
+        <li><a href="/locatie">Locatie wijzigen</a></li>
+        {{#if memories}}<li class="active"><a href="/{{location}}/patientlijst/{{userKey}}">{{firstName}}</a></li>{{/if}}
     </ul>
     <ul>
         <li><a href="">Jij</a></li>

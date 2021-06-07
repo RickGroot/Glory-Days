@@ -123,8 +123,12 @@ main {
 }
 
 .profielfoto {
-    width: 40%;
+    width: 100px;
+    height: 100px;
     margin-left: 3em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .over {
