@@ -149,3 +149,13 @@ main {
     font-weight: 900;
     /* font-size: 1.4em; */
 }
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    #alphabet > p{
+        margin: 0.52em 0;
+    }
+
+    #list .patientTitle > div > a{
+        padding: 10px 30px;
+    } 
+  }

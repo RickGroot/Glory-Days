@@ -17,16 +17,17 @@
 
     <div class="slider">
 
-        <a href="#slide-1">Informatie</a>
-        <a href="#slide-2">Positiviteit</a>
-        <a href="#slide-3">Schermtijd</a>
+        <a href="#slide-1" id="aSlide-1" class="sliderActive">Informatie</a>
+        <a href="#slide-2" id="aSlide-2">Positiviteit</a>
+        <a href="#slide-3" id="aSlide-3">Schermtijd</a>
 
         <div class="slides">
+
             <div id="slide-1">
-                <canvas id="polarChart"></canvas>
+                <canvas id="lineChart"></canvas>
             </div>
             <div id="slide-2">
-                <canvas id="lineChart"></canvas>
+                <canvas id="polarChart"></canvas>
             </div>
             <div id="slide-3">
                 <canvas id="barChart"></canvas>
@@ -37,15 +38,17 @@
     <div class="container">
         <h2>Positieve Herinneringen</h2>
         <article>
+            <img src="{{data.memories.positive.0.image}}" alt="">
             <div>
-                <p class="emotion">Gelukkig</p>
-                <h3>Onze trouwdag</h3>
+                <p class="emotion">{{data.memories.positive.0.feeling}}</p>
+                <h3>{{data.memories.positive.0.title}}</h3>
             </div>
         </article>
         <article>
+            <img src="{{data.memories.positive.1.image}}" alt="">
             <div>
-                <p class="emotion">Blij</p>
-                <h3>Feestdagen met fam</h3>
+                <p class="emotion">{{data.memories.positive.1.feeling}}</p>
+                <h3>{{data.memories.positive.1.title}}</h3>
             </div>
         </article>
     </div>

@@ -138,3 +138,48 @@ let polarChart = new Chart(
     document.getElementById('polarChart'),
     configPolarChart
 )
+
+// -------------------------------------------------------------------------- Vertical Nav
+
+
+// Get the H1 heading
+const slide1 = document.getElementById('slide-1')
+const slide2 = document.getElementById('slide-2')
+const slide3 = document.getElementById('slide-3')
+const container = document.querySelector('.slides')
+const href1 = document.getElementById('aSlide-1')
+const href2 = document.getElementById('aSlide-2')
+const href3 = document.getElementById('aSlide-3')
+
+// Get it's position in the viewport
+const bounding = container.getBoundingClientRect()
+
+let isInViewport = function (elem) {
+    let bounding = elem.getBoundingClientRect()
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 40  &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+}
+
+container.addEventListener('scroll', e => {
+    if (isInViewport(slide1)) {
+        href1.classList.add("sliderActive")
+    } else {
+        href1.classList.remove("sliderActive")
+    }
+
+    if (isInViewport(slide2)) {
+        href2.classList.add("sliderActive")
+    } else {
+        href2.classList.remove("sliderActive")
+    }
+
+    if (isInViewport(slide3)) {
+        href3.classList.add("sliderActive")
+    } else {
+        href3.classList.remove("sliderActive")
+    }
+})

@@ -151,6 +151,24 @@ main {
     border: none;
 }
 
-#list .active > article > h2 {
+#list .active>article>h2 {
     font-weight: 900;
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    #list .noteTitle>div>a {
+        padding: 5px 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #list .noteTitle>div:first-child>a {
+        padding: 5px 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .userElement {
+        height: auto !important;
+    }
 }

@@ -122,6 +122,7 @@
 .sessionElement>section {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     font-family: 'Lato', sans-serif;
     background-color: var(--background-highlight);
     border-radius: 15px;
@@ -253,4 +254,12 @@
     justify-content: center;
     align-items: center;
     font-size: 0.9em;
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+
+    .sessionElement > section > div:first-child, .sessionElement > section > div:last-child{
+        padding-top: 45px;
+    }
+
 }

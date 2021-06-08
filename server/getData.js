@@ -17,7 +17,43 @@ async function getData() {
         })
 }
 
+async function getUsers(location) {
+    return firebase
+        .database()
+        .ref('nursingHome/' + location + '/users')
+        .once('value')
+        .then(snapshot => {
+            let data = snapshot.val()
+            return data
+        })
+}
+
+async function getUserData(location, user) {
+    return firebase
+        .database()
+        .ref('nursingHome/' + location + '/users/' + user)
+        .once('value')
+        .then(snapshot => {
+            let data = snapshot.val()
+            return data
+        })
+}
+
+async function getNotes(location, user) {
+    return firebase
+        .database()
+        .ref('nursingHome/' + location + '/users/' + user + '/notes')
+        .once('value')
+        .then(snapshot => {
+            let data = snapshot.val()
+            return data
+        })
+}
+
 
 module.exports = {
-    getData
+    getData,
+    getUsers,
+    getUserData,
+    getNotes
 }

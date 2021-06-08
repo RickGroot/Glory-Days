@@ -42,5 +42,18 @@
   }
   
   .sort > a:nth-child(5){
-    background-color: var(--background-highlight);
+    background-color: var(--brown);
   }
+
+  /* iPad mini of iPad */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .sort{
+    display: block;
+  }
+  
+  .sort > a {
+    margin: 1em 0;
+    width: 80%;
+    height: 130px;
+  }
+}

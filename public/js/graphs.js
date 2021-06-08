@@ -37,6 +37,11 @@ const emotions = [
     'GEAGITEERD'
 ]
 
+Chart.defaults.font.size = 14
+Chart.defaults.font.weight= 500
+Chart.defaults.color= "#5c5141"
+Chart.defaults.font.family='Lato'
+console.log(Chart.defaults)
 
 // -------------------------------------------------------------------------- Line Chart Config
 
@@ -52,6 +57,7 @@ const dataLineChart = {
     datasets: [{
         label: 'Positiviteit gedurende een sessie',
         borderColor: 'rgba(' + khaki + ', 0.8)',
+        backgroundColor: 'rgba(' + khaki + ', 0.3)',
         borderWidth: 5,
         fill: true,
         lineTension: 0.3,
@@ -124,7 +130,9 @@ const dataBarChart2 = {
     datasets: [{
         label: 'Bar Chart',
         data: [1, 3, 3, 9, 12, 9, 14, 24, 30, 34, 28, 21, 12, 4],
-        backgroundColor: 'rgb(' + khaki + ')'
+        backgroundColor: 'rgb(' + khaki + ')',
+        color:  "#FF5733"
+      
     }]
 }
 
@@ -135,7 +143,7 @@ const configBarChart2 = {
         responsive: true,
         plugins: {
             legend: {
-                display: false
+                display: false,
             },
             scales: {
                 y: {

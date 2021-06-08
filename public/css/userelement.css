@@ -1,7 +1,6 @@
 .userElement {
   --block-width: 45%;
   --padding: 5%;
-  /* background-color: var(--background-highlight); */
   position: fixed;
   padding: 0 var(--padding) 0 0;
   right: 0;
@@ -10,7 +9,6 @@
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
   width: calc(50% - var(--padding));
-  /* height: 590px; */
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -45,7 +43,7 @@
   width: 20%;
   height: 35px;
   line-height: 33px;
-  border-radius: 5%;
+  border-radius: 10px;
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 0.9em;
@@ -126,7 +124,6 @@
   height: 150px;
   margin-right: 50px;
   border-radius: 10px;
-  background: #eee;
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -175,6 +172,7 @@
   margin: 0 0 0.5rem 0;
   position: relative;
   font-family: 'Lato', sans-serif;
+  opacity: 50%;
 }
 
 .slider>a:active {
@@ -185,9 +183,8 @@
   background: #000;
 }
 
-.slider>a:first-child,
-.slider>a:nth-child(3) {
-  opacity: 50%;
+.sliderActive{
+  opacity: 100% !important;
 }
 
 .userElement .container h2 {
@@ -208,20 +205,20 @@
   position: relative;
   width: var(--block-width);
   height: 150px;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%);
   text-transform: uppercase;
   font-weight: 400;
   border-radius: 10px;
 }
 
-.container>article:nth-of-type(1) {
-  background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/1504175);
-}
-
-.container>article:nth-of-type(2) {
-  background-image: linear-gradient(0deg, rgba(36, 52, 58, 1) 0%, rgba(36, 52, 58, 1) 6%, rgba(36, 52, 58, 0) 100%), url(https://source.unsplash.com/collection/3458583);
+.container>article>img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: -1;
 }
 
 .container>article div {
@@ -241,3 +238,43 @@
   margin: 0;
 }
 
+/* iPad mini of iPad */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .userElement > div:nth-child(2), 
+  .container{
+    flex-direction: column;
+  }
+  
+  .userElement > div:first-child > a{
+    width: 35%;
+  }
+
+  .userElement > div:nth-child(2) > a,
+  .container > article {
+    width: 100%;
+    margin: 0.5em 0;
+    height: 75px;
+  }
+
+  .container > article {
+    height: 100px;
+  }
+
+  .userElement .container h2 {
+    flex: 0;
+  }
+
+  .slides > div {
+    height: 180px;
+  }
+}
+
+/* iPad Pro 10.5inch*/
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+
+}
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+  
+}

@@ -1,9 +1,8 @@
 const {
-    userData
-} = require('./data');
-
-const {
-    getData
+    getData,
+    getUsers,
+    getNotes,
+    getUserData
 } = require('./getData')
 
 // ------------------------------------------------------------------------------------------- Render functions
@@ -45,8 +44,7 @@ async function location(req, res) {
 // -------------------------------- Userlist with sort options
 async function userSort(req, res) {
     let location = req.params.location
-    let data = await getData()
-    let users = data[location].users
+    let users = await getUsers(location)
 
     res.render('userList', {
         title: 'Mijn patiënten',
@@ -63,8 +61,7 @@ async function userSort(req, res) {
 async function userList(req, res) {
     let location = req.params.location
     let userKey = req.params.patient
-    let data = await getData()
-    let users = data[location].users
+    let users = await getUsers(location)
 
     res.render('userList', {
         title: 'Mijn patiënten',
@@ -84,9 +81,8 @@ async function userList(req, res) {
 async function userSessions(req, res) {
     let location = req.params.location
     let userKey = req.params.patient
-    let data = await getData()
-    let users = data[location].users
-    let sessions = data[location].users[userKey].sessions
+    let users = await getUsers(location)
+    let sessions = users[userKey].sessions
 
     res.render('userList', {
         title: 'Herrinering patiënten',
@@ -107,9 +103,8 @@ async function userSessions(req, res) {
 async function noteSort(req, res) {
     let location = req.params.location
     let userKey = req.params.patient
-    let data = await getData()
-    let notes = data[location].users[userKey].notes
-    
+    let notes = await getNotes(location, userKey)
+
     res.render('noteList', {
         title: 'Mijn patiënten',
         userList: true,
@@ -127,8 +122,7 @@ async function noteList(req, res) {
     let location = req.params.location
     let noteKey = req.params.id
     let userKey = req.params.patient
-    let data = await getData()
-    let notes = data[location].users[userKey].notes
+    let notes = await getNotes(location, userKey)
 
     res.render('noteList', {
         title: 'Mijn patiënten',
@@ -150,8 +144,7 @@ async function newNote(req, res) {
     let location = req.params.location
     let noteKey = req.params.id
     let userKey = req.params.patient
-    let data = await getData()
-    let notes = data[location].users[userKey].notes
+    let notes = await getNotes(location, userKey)
 
     res.render('noteList', {
         title: 'Mijn patiënten',
@@ -171,9 +164,8 @@ async function newNote(req, res) {
 async function memories(req, res) {
     let location = req.params.location
     let userKey = req.params.patient
-    let data = await getData()
-    let userData = data[location].users[userKey]
-    
+    let userData = await getUserData(location, userKey)
+
     res.render('memories', {
         title: userData.firstName + ' || Glory Days',
         patient: true,
