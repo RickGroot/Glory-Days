@@ -48,7 +48,7 @@ Heeft alle bestanden die nodig zijn in de repo.
 
 ## De meegegeven data
 Hier is een voorbeeld van de data die in de database staat, en wordt opgehaald voor dit project.
-```
+```json
 "nursinghome": {
             "users": [{
                 "about": "about",
