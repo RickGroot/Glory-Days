@@ -1,79 +1,79 @@
 .userElement {
-    --block-width: 45%;
-    --title-height: 80px;
-    --padding: 5%;
-    --padding-scroll: 20px;
-    /* background-color: var(--background-highlight); */
-    position: fixed;
-    padding-left: 0;
-    padding-right: calc(var(--padding) - var(--padding-scroll));
-    right: var(--padding-scroll);
-    bottom: var(--padding);
-    top: calc(var(--nav-height) + var(--padding));
-    border-top-left-radius: 5%;
-    border-bottom-left-radius: 5%;
-    width: calc(50% - var(--padding));
-    height: 590px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    font-family: 'Lato', sans-serif;
-    overflow-y:scroll;
-  }
-  
-  .userElement h1 {
-    font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-  }
+  --block-width: 45%;
+  --title-height: 80px;
+  --padding: 5%;
+  --padding-scroll: 20px;
+  /* background-color: var(--background-highlight); */
+  position: fixed;
+  padding-left: 0;
+  padding-right: calc(var(--padding) - var(--padding-scroll));
+  right: var(--padding-scroll);
+  bottom: var(--padding);
+  top: calc(var(--nav-height) + var(--padding));
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  width: calc(50% - var(--padding));
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-family: 'Lato', sans-serif;
+  overflow-y: scroll;
+}
 
-  .userElement h2 {
-    font-size: 1em;
-    margin-top: 0;
-  }
-  
-  .userElement h3 {
-    font-size: 1em;
-    margin: 0;
-    font-weight: 300;
-    color: var(--khaki);
-  }
+.userElement h1 {
+  font-size: 1.5em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
 
-  .userElement img {
-    width: var(--image-size);
-    height: var(--image-size);
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1em;
-  }
+.userElement h2 {
+  font-size: 1em;
+  margin-top: 0;
+}
 
-  section.container{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-  }
-  
-  .userElement>div:first-child {
-    position: fixed;
-    width: inherit;
-    height: var(--title-height);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 5;
-    background: linear-gradient(white 0% 80%, transparent 100%);
-  }
+.userElement h3 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: 300;
+  color: var(--khaki);
+}
 
-  .userElement::-webkit-scrollbar {
-    background-color: var(--background-highlight);
-    background: transparent;
-    border-radius: 10px;
-    padding: 30px 0;
-    height: 60vh;
-    width: 8px;
+.userElement img {
+  width: var(--image-size);
+  height: var(--image-size);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+section.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userElement>div:first-child {
+  position: fixed;
+  width: inherit;
+  height: var(--title-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  background: linear-gradient(white 0% 80%, transparent 100%);
+}
+
+.userElement::-webkit-scrollbar {
+  background-color: var(--background-highlight);
+  background: transparent;
+  border-radius: 10px;
+  padding: 30px 0;
+  height: 60vh;
+  width: 8px;
 }
 
 .userElement::-webkit-scrollbar-track-piece:start {
@@ -82,29 +82,37 @@
 }
 
 .userElement::-webkit-scrollbar-thumb {
-    background-color: var(--khaki);
-    border-radius: 10px;
+  background-color: var(--khaki);
+  border-radius: 10px;
 }
 
-.tekst{
-    padding-top: var(--title-height);
-    margin: 0 0 1em 0;
-  }
-  
-  .userElement .container h2 {
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 0.2em;
-    flex: 0 0 100%;
-  }
+.tekst {
+  padding-top: var(--title-height);
+  margin: 0 0 1em 0;
+}
 
-  .label{
-      border: 2px solid var(--orange);
-      padding: 0.3em;
-      text-transform: uppercase;
-      font-family: 'Lato', sans-serif;
-      color: var(--orange);
-      border-radius: 10px;
-      font-size: 0.8em;
-      text-align: center;
+.userElement .container h2 {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 0.2em;
+  flex: 0 0 100%;
+}
+
+.label {
+  border: 2px solid var(--orange);
+  padding: 0.3em;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  color: var(--orange);
+  border-radius: 10px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+  .userElement {
+    height: auto;
+    top: calc(var(--nav-height) - 10px);
+    padding-bottom: 1em;
   }
-  
+}

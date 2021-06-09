@@ -48,3 +48,9 @@ nav ul li img {
     border-radius: 50%;
     object-fit: cover;
 }
+
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+    nav{
+        height: var(--nav-height);
+    }
+}

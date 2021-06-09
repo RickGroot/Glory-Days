@@ -183,7 +183,7 @@
   background: #000;
 }
 
-.sliderActive{
+.sliderActive {
   opacity: 100% !important;
 }
 
@@ -240,23 +240,24 @@
 
 /* iPad mini of iPad */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-  .userElement > div:nth-child(2), 
-  .container{
+
+  .userElement>div:nth-child(2),
+  .container {
     flex-direction: column;
   }
-  
-  .userElement > div:first-child > a{
+
+  .userElement>div:first-child>a {
     width: 35%;
   }
 
-  .userElement > div:nth-child(2) > a,
-  .container > article {
+  .userElement>div:nth-child(2)>a,
+  .container>article {
     width: 100%;
     margin: 0.5em 0;
     height: 75px;
   }
 
-  .container > article {
+  .container>article {
     height: 100px;
   }
 
@@ -264,17 +265,103 @@
     flex: 0;
   }
 
-  .slides > div {
+  .slides>div {
     height: 180px;
   }
 }
 
 /* iPad Pro 10.5inch*/
 @media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+  .userElement>div:nth-child(2),
+  .container {
+    flex-direction: column;
+  }
 
+  .userElement>div:first-child>a {
+    width: 35%;
+  }
+
+  .userElement>div:nth-child(2)>a,
+  .container>article {
+    width: 100%;
+    margin: 0.5em 0;
+    height: 75px;
+  }
+
+  .container>article {
+    height: 100px;
+  }
+
+  .userElement .container h2 {
+    flex: 0;
+  }
+
+}
+
+@media all and (device-width: 1112px) and (device-height: 834px) and (orientation:landscape) {
+  .slides > div{
+    height: 200px;
+  }
+}
+
+
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
+
+  .userElement{
+    top:  calc(var(--nav-height) + 25px);
+  }
+
+
+  .userElement > div:nth-child(2) > a{
+    height: 125px;
+  }
+
+  .slides > div{
+    height: 250px;
+  }
 }
 
 /* iPad Pro 12.9inch*/
 @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+  .userElement {
+    top: var(--nav-height);
+    padding-top: calc(8em - var(--nav-height) + 30px);
+  }
   
+  .userElement>div:nth-child(2),
+  .container {
+    flex-direction: column;
+  }
+
+  .userElement>div:first-child>a {
+    width: 35%;
+  }
+
+  .userElement>div:nth-child(2)>a,
+  .container>article {
+    width: 100%;
+    margin: 0.5em 0;
+    height: 75px;
+  }
+
+  .container>article {
+    height: 100px;
+  }
+
+  .userElement .container h2 {
+    flex: 0;
+  }
+
+  .slides > div{
+    height: 280px;
+  }
+
+  .userElement > div:nth-child(2) > a, .container > article{
+    height: 133px;
+  }
+
+  .userElement > div:first-child > a{
+    width:100px
+  }
+
 }

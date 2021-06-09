@@ -1,59 +1,94 @@
 .sort {
-    position: fixed;
-    top: var(--nav-height);
-    right: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: 50%;
-    padding-top: calc(8em - var(--nav-height));
-  }
-  
-  .sort h1 {
-    grid-area: 1 / 1 / 2 / 3;
-    font-size: 2em;
-    margin-top: 0em;
-  }
-  
-  .sort > a{
-    color: white;
-    text-transform: uppercase;
-    height: 200px;
-    width: 175px;
-    border-radius: 20px;
-    display: inline-flex;
-    align-items: flex-end;
-    padding: 20px;
-    font-family: 'Lato', sans-serif;
-  }
-  
-  .sort > a:nth-child(2){
-    background-color: var(--orange);
-  }
-  
-  .sort > a:nth-child(3){
-    background-color: var(--khaki);
-  }
-  
-  .sort > a:nth-child(4){
-    background-color: var(--green);
-  }
-  
-  .sort > a:nth-child(5){
-    background-color: var(--brown);
-  }
+  position: fixed;
+  top: var(--nav-height);
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 50%;
+  padding-top: calc(8em - var(--nav-height));
+}
 
-  /* iPad mini of iPad */
+.sort h1 {
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: 2em;
+  margin-top: 0em;
+}
+
+.sort>a {
+  color: white;
+  text-transform: uppercase;
+  height: 200px;
+  width: 175px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: flex-end;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.sort>a:nth-child(2) {
+  background-color: var(--orange);
+}
+
+.sort>a:nth-child(3) {
+  background-color: var(--khaki);
+}
+
+.sort>a:nth-child(4) {
+  background-color: var(--green);
+}
+
+.sort>a:nth-child(5) {
+  background-color: var(--brown);
+}
+
+/* iPad mini of iPad */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-  .sort{
+  .sort {
     display: block;
   }
-  
-  .sort > a {
+
+  .sort>a {
     margin: 1em 0;
     width: 80%;
     height: 130px;
+  }
+}
+
+/* iPad pro 11 inch */
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+  .sort {
+    display: block;
+  }
+
+  .sort>a {
+    margin: 1em 0;
+    width: 80%;
+    height: 130px;
+  }
+}
+
+/* iPad pro 13 inch */
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
+  .sort>a {
+    width: 225px;
+    height: 250px;
+  }
+}
+
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+  .sort {
+    display: block;
+    top: var(--nav-height);
+    padding-top: calc(8em - var(--nav-height) + 30px);
+  }
+
+  .sort>a {
+    margin: 2.5em 0;
+    width: 80%;
+    height: 150px;
   }
 }

@@ -20,47 +20,47 @@ main {
     font-family: 'Lato', sans-serif;
     align-items: center;
     justify-content: center;
-    margin-top: 175px;
+    margin-top: var(--title-height);
     padding-left: 10px;
 }
 
 #alphabet>p {
-    margin: 0;
+    margin: 0.1em 0;
     font-size: 0.7em;
 }
 
 #list h1 {
-    margin: 0;  
+    margin: 0;
     display: block;
     z-index: 5;
     font-size: 2em;
 }
 
-#list .search{
+#list .search {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 var(--padding-left);
-  
+
 }
 
-#list .search svg{
+#list .search svg {
     width: 10%;
     height: 10%;
     fill: orange;
 }
 
-#list .search svg g path{
+#list .search svg g path {
     fill: var(--orange);
 }
 
-#list .search form{
+#list .search form {
     margin-left: 1em;
     margin-top: 2%;
     width: 80%;
 }
 
-#list .search form input{
+#list .search form input {
     border: none;
     border-bottom: 2px solid var(--orange);
     width: 100%;
@@ -68,18 +68,18 @@ main {
     font-weight: 700;
 }
 
-#list .search form input::placeholder{
+#list .search form input::placeholder {
     color: var(--orange);
 }
 
-#list .patientTitle{
+#list .patientTitle {
     background: linear-gradient(white 0% 90%, transparent 100%);
     position: fixed;
     width: 50%;
     height: var(--title-height);
 }
 
-#list .patientTitle > div:first-child{
+#list .patientTitle>div:first-child {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -90,7 +90,7 @@ main {
     margin-bottom: 0.8em;
 }
 
-#list .patientTitle > div > a {
+#list .patientTitle>div>a {
     padding: 12px 50px;
     border-radius: 10px;
     text-align: center;
@@ -145,17 +145,64 @@ main {
     /* border: 2px solid var(--background-highlight); */
 }
 
-#list .active > article > h2 {
+#list .active>article>h2 {
     font-weight: 900;
     /* font-size: 1.4em; */
 }
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-    #alphabet > p{
+    #alphabet>p {
         margin: 0.52em 0;
     }
 
-    #list .patientTitle > div > a{
+    #list .patientTitle>div>a {
         padding: 10px 30px;
-    } 
-  }
+    }
+}
+
+/* iPad pro 11 inch */
+@media all and (device-width: 1112px) and (device-height: 834px) and (orientation:landscape) {
+    #alphabet>p {
+        margin: 0.25em 0;
+    }
+}
+
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+    :root {
+        --nav-height: 7vh;
+    }
+
+    #alphabet>p {
+        margin: 0.52em 0;
+    }
+
+    #list .patientTitle>div>a {
+        padding: 10px 30px;
+    }
+}  
+
+/* iPad pro 13 inch */
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
+    #alphabet>p {
+        margin: 0.4em 0;
+    }
+}
+
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+    :root {
+        --nav-height: 100px;
+    }
+
+    #list .patientTitle > div:first-child {
+        padding-top: calc(8em - var(--nav-height) + 30px);
+    }
+
+    #list {
+        --title-height: 190px;
+        margin-top: 100px;
+    }
+
+    #alphabet>p {
+        margin: 1em 0;
+    }
+}

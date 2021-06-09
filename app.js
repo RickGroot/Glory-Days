@@ -13,6 +13,9 @@ const hbs = exphbs.create({
         ifEquals: function (a, b, options) {
             if (a == b) { return options.fn(this); }
             return options.inverse(this);
+        },
+        toLowerCase: function (str) {
+            return str.toLowerCase()
         }
     }
 })

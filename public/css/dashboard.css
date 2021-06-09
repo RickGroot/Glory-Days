@@ -228,7 +228,7 @@ section>article {
 
     }
 
-    section:first-child > div:nth-child(2) > canvas{
+    section:first-child>div:nth-child(2)>canvas {
         padding: 0 2em;
     }
 
@@ -253,5 +253,151 @@ section>article {
     section:nth-child(2) article:nth-child(1) {
         grid-area: 2 / 2 / 3 / 3;
     }
+
+}
+
+
+/* iPad pro 11 inch */
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+    main {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    section:first-child {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        width: 80vw;
+        margin: 0 auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+    }
+
+    section:first-child>div>h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    section:first-child>div>canvas {
+        width: 80vw;
+
+        margin: 0 auto;
+        scroll-snap-align: start;
+
+    }
+
+    section:first-child>div:nth-child(2)>canvas {
+        padding: 0 2em;
+    }
+
+    section:nth-child(2) {
+        --padding: 60px;
+        position: relative;
+        width: calc(100vw - 2 * var(--padding));
+        padding: 0 var(--padding);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section:nth-child(2) article:nth-child(1) {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    section:nth-child(2) article:nth-child(2) {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    section:nth-child(2) article:nth-child(1) {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+}
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
+    section:nth-child(2)> article:nth-child(2){
+        margin: 5em auto;
+    }
+
+    section:nth-child(2)> article{
+        width: 350px;
+    }
+
+    .emotionTable > div {
+        width: 100%;
+    }
+}
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+    main {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    section:first-child {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        width: 80vw;
+        margin: 0 auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding: 0;
+    }
+
+    section:first-child>div>h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    section:first-child>div>canvas {
+        width: 80vw;
+
+        margin: 0 auto;
+        scroll-snap-align: start;
+
+    }
+
+    section:first-child>div:nth-child(2)>canvas {
+        padding: 0 2em;
+    }
+
+    section:nth-child(2) {
+        --padding: 60px;
+        position: relative;
+        width: calc(100vw - 2 * var(--padding));
+        padding: 0 var(--padding);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    section:nth-child(2) article:nth-child(1) {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    section:nth-child(2) article:nth-child(2) {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    section:nth-child(2) article:nth-child(1) {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    
+ 
 
 }

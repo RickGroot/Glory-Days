@@ -33,21 +33,21 @@
         <h3>Herinneringen met positieve emoties voor {{firstName}}</h3>
         <section>
             {{#each memories.positive}}
-            {{> article emotion=feeling title=title }}
+            {{> article emotion=feeling title=title image=image}}
             {{/each}}
         </section>
 
         <h3>Herinneringen die {{firstName}} als minder positief ervaarde.</h3>
         <section>
             {{#each memories.ok}}
-            {{> article emotion=feeling title=title }}
+            {{> article emotion=feeling title=title image=image}}
             {{/each}}
         </section>
 
         <h3> Herinneringen met negatieve emoties voor {{firstName}}</h3>
         <section>
             {{#each memories.negative}}
-            {{> article emotion=feeling title=title }}
+            {{> article emotion=feeling title=title image=image}}
             {{/each}}
         </section>
     </section>

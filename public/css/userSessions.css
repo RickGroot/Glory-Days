@@ -59,13 +59,13 @@
     background: linear-gradient(white 0% 80%, transparent 100%);
 }
 
-.sessionElement > div > h1 {
-  font-weight: 900;
+.sessionElement>div>h1 {
+    font-weight: 900;
 }
 
-.sessionElement > section > div:nth-child(2) > h1{
-  font-weight: 900;
-  font-size: 1.5em
+.sessionElement>section>div:nth-child(2)>h1 {
+    font-weight: 900;
+    font-size: 1.5em
 }
 
 .sessionElement>div:first-child>a {
@@ -258,8 +258,27 @@
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
 
-    .sessionElement > section > div:first-child, .sessionElement > section > div:last-child{
+    .sessionElement>section>div:first-child,
+    .sessionElement>section>div:last-child {
         padding-top: 45px;
     }
 
+}
+
+/* iPad pro 11 inch */
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+
+    .sessionElement>section>div:first-child,
+    .sessionElement>section>div:last-child {
+        padding-top: 33px;
+    }
+
+}
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+    .sessionElement {
+        top: var(--nav-height);
+        padding-top: calc(8em - var(--nav-height) + 30px);
+    }
 }

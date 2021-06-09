@@ -16,52 +16,118 @@ const minor = {
 <img align='right' src="https://github.com/RickGroot/Glory-Days/blob/main/assets/logo.jpg?raw=true" width="230" style="background: white">
 Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de huidige Iphone App van Glory Days. De huidige Iphone variant is gemaakt voor familie die in samenwerking met de alzheimer patiënt zijn favoriete muziek gaat uitzoeken. Wij gaan dus aan de gang aan de Ipad variant die niet bedoeld is voor de familie maar voor de echte verzorgers van Alzheimer patiënten. Hiervoor moeten kijken naar de behoefte van verzorgers voor de applicatie. Zo is het ook voor ons de uitdaging om een al bestaande iphone variant te upscalen tot ipad variant waarbij wij de huidige stijl in acht nemen. Verders moeten wij nog kijken naar extra opties van de ipad en extra functies voor de verzorgers.
 
+## Het geleverde werk
+Wij hebben samen een prototype gemaakt volledig in de stijl van GloryDays door gebruik te maken van NodeJS. Het prototype is gekoppeld aan FireBase waarbij wij alle data fetchen uit een database. De pagina's zijn opgesteld door het gebruik van handlebars. Het gemaakte werk is het beste te zien op ipad formaat, welke maakt niet uit. Wij hebben ons hierop gefocussed en hebben het responsive gemaakt voor zowel landscape als portrait.
 
-## Inhoud
-* [Persona](#persona)
-* [User scenario](#user-scenario)
-* [Job stories](#job-stories)
-* [File structure](#file-structure)
 
-## Persona
-![Sarah](https://github.com/RickGroot/Glory-Days/blob/main/assets/persona.jpg?raw=true)
-
-## User scenario
-Sarah komt aan bij haar tehuis genaamd zonnepark. Ze moet hier voor de rest van de week werken, ze werkt hier om de week en de andere week bij tehuis zonnestraal. Ze begint de week hier door te kijken in de GloryDays app zodat ze ziet hoe de statistieken hiervan ervoor staan.  Ze selecteert eerst haar tehuis waar ze nu is. Nu ziet ze direct alle belangrijke informatie betreft de patienten en Glory Days. 85% van de gebruikers heeft een positieve ervaring gehad, dat is een stijging van 4% ten opzichte van vorige week. Dit is goed nieuws, Sarah is nu alleen benieuwd naar de slechte ervaringen om die te verhelpen. Hierom gaat Sarah kijken in de lijst van de positieve ervaringen en sorteert ze de lijst van laag naar hoog. Ze ziet dat Arie een slechte ervaring had met 55%. Hierom gaat ze naar het profiel van Arie kijken, hier ziet ze dat zijn gebruikuren vaak om 20:00 zijn. Hierom besluit Sarah om rond 20:00 langs bij Arie te gaan en te kijken of zij hem een betere ervaring kan bieden met Glory Days.
-
-## Job Stories
-- **Wanneer ik** het Glory Days dashboard open **wil ik** direct de positiviteit van alle patienten zien **zodat ik** kan stellen wie er een goede en slechte ervaring met de app heeft.
-- **Wanneer ik** het Glory Days dashboard open **wil ik** een lijst met alle patienten beschikbaar hebben **zodat ik** specifiek kan zoeken naar een patient
-- **Wanneer ik** het Glory Days dashboard open **wil ik** specifieke informatie kunnen vinden van specifieke patienten **zodat ik** direct kan zien hoe een patient ervoor staat m.b.t de app.
-- **Wanneer ik** het Glory Days dashboard open **wil ik** een specifiek tehuis selecteren waar ik op het moment werk **zodat ik** alle patienten van een specifiek tehuis kan inzien
-- **Wanneer ik** een grafiek bekijk van de positiviteit m.b.t de app in percentages **wil ik** een optie hebben om te sorteren **zodat ik** de grafiek kan afstellen naar mijn eigen keuzes en bijv alfabetisch alles kan inzien.
-- **Wanneer ik** het Glory Days dashboard open **wil ik** een inzicht krijgen m.b.t de stijging of daling in positiviteit **zodat ik** direct kan zien of de afgelopen week goed beviel of niet.
-
-## File structure
+## De Code
 > *app.js*  
 
-Start of the application, located at the root of this project.
+Start van de applicatie, staat in de root van het project.
 
 > *package.json*  
 
-Holds all scripts and packages that are used for this project.
+Bevat alle scripts en packeges die zijn gebruikt voor dit project.
 
 > */views*  
 
-Contains all handlebars views, elements and partials. Some elements and partials are divided into subfolders.
+Bevat alle handlebars views, elements en partials. Sommige elementen en partials zijn onderverdeeld in subfolders.
 
 > */server*  
 
-This folder is used for all server side code. It contains the render.js file, and helper files for the server.
+Hier bevindt zich alle server side code. Het bevat een render.js bestand en helper bestanden voor de server.
 
 > */public*  
 
-Contains all client-side files. This folder is divided to multiple subfolders, css, js and img. These folders contain all the files that are used client-side and that coud be stored in cache.
+Bevat alle client-side bestanden. De folder is onderverdeeld in verschillende subfolders. CSS, JS en img. Deze folders bevatten alle bestanden die gebruikt worden op de client-side en die worden ook gestored in de cache.
 
 > */assets*  
 
-Has all the files that make this repo shine.
+Heeft alle bestanden die nodig zijn in de repo.
 
+
+## De meegegeven data
+Hier is een voorbeeld van de data die in de database staat, en wordt opgehaald voor dit project.
+```
+"nursinghome": {
+            "users": [{
+                "about": "about",
+                "age": "99",
+                "firstName": "name",
+                "lastName": "name",
+                "memories": {
+                    "negative": [{
+                        "feeling": "feeling",
+                        "image": "img",
+                        "title": "title"
+                    }],
+                    "ok": [{
+                        "feeling": "feeling",
+                        "image": "img",
+                        "title": "title"
+                    }],
+                    "positive": [{
+                        "feeling": "feeling",
+                        "image": "img",
+                        "title": "title"
+                    }]
+                },
+                "nationality": "Nederlands",
+                "notes": [{
+                    "author": "author",
+                    "date": "99-99",
+                    "text": "text",
+                    "title": "title",
+                    "userType": "user"
+                }],
+                "pic": "profilepic",
+                "sessions": [{
+                    "date": "99-99",
+                    "duration": "duration",
+                    "endfeeling": "endfeeling",
+                    "songs": [{
+                        "artist": "artist",
+                        "song": "song"
+                    }],
+                    "startfeeling": "startfeeling"
+                }]
+            },
+
+```
+
+
+
+
+## Installeer deze repo
+Navigeer naar een map naar keuze, hierin kunt u de code pullen en het project zelf inzien.
+```bash
+cd pad/naar/map
+```
+Pull de code via git naar deze map
+```bash
+git init
+
+git remote add origin https://github.com/RickGroot/Glory-Days.git
+
+git pull origin main
+```
+De code staat nu in uw eigen map. Nu hoeft er alleen maar een database worden gekoppeld.  
+Ga naar firebase en maak daar een eigen realtime database aan. In deze database kan een JSON-file worden geïmporteerd, hier is een [voorbeeld van de JSON data](https://github.com/RickGroot/Glory-Days/blob/main/database-example.json). Deze kunt u uploaden naar de realtime database.  
+Vervolgens moet u de database koppelen aan de applicatie. Pas de [.env.example file](https://github.com/RickGroot/Glory-Days/blob/main/.env.example) aan naar .env, of maak een .env bestand aan in de root van het project, en voeg daar de volgende verlden aan toe: 
+```env
+API_KEY={hier uw key}
+DATABASE_URL={hier de URL}
+APP_ID={hier uw ID}
+MESSAGING_SENDER_ID={hier uw ID}
+```
+Plaats de juiste keys en id's in dit bestand. De correcte informatie is te vinden in uw firebase. Ga naar uw firebase console, en ga naar de project settings. Scroll naar beneden naar het kopje **SDK setup and configuration** en klik op **Config**. Hier staan alle velden die nodig zijn voor het project.  
+
+Start het project vervolgens op met een van de volgende scripts in de console:
+```bash
+npm run dev
+
+npm start
+```
 
 # Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
