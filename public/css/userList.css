@@ -189,10 +189,6 @@ main {
 }
 
 @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
-    :root {
-        --nav-height: 100px;
-    }
-
     #list .patientTitle > div:first-child {
         padding-top: calc(8em - var(--nav-height) + 30px);
     }
