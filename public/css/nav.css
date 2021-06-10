@@ -1,4 +1,3 @@
-
 nav {
     z-index: 10;
     background-color: white;
@@ -33,14 +32,14 @@ nav ul li:not(:last-child) {
     margin-right: 1.5em;
 }
 
-nav .active{
+nav .active {
     color: var(--orange)
 }
 
 nav ul:last-child li:last-child {
- 
+
     width: var(--image-size);
-    height: var(--image-size);   
+    height: var(--image-size);
 }
 
 nav ul li img {
@@ -51,12 +50,21 @@ nav ul li img {
 }
 
 @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
-    
+
     :root {
         --nav-height: 100px;
     }
 
-    nav{
+    nav {
         height: var(--nav-height);
+    }
+}
+
+@media only screen and (min-width: 1748px) {
+    nav {
+        margin: 0 auto;
+        width: 80vh;
+        height: 10%;
+        top: 4.8vh;
     }
 }

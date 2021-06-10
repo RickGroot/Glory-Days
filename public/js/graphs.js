@@ -1,4 +1,3 @@
-console.log('JS connected!')
 if ('serviceWorker' in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker.register('/sw.js')
@@ -38,10 +37,9 @@ const emotions = [
 ]
 
 Chart.defaults.font.size = 14
-Chart.defaults.font.weight= 500
-Chart.defaults.color= "#5c5141"
-Chart.defaults.font.family='Lato'
-console.log(Chart.defaults)
+Chart.defaults.font.weight = 500
+Chart.defaults.color = "#5c5141"
+Chart.defaults.font.family = 'Lato'
 
 // -------------------------------------------------------------------------- Line Chart Config
 
@@ -83,7 +81,7 @@ const configLineChart = {
 const dataBarChart = {
     labels: emotions,
     datasets: [{
-        label: 'emoties',
+        label: 'Aantal',
         data: [65, 59, 80, 81, 56, 55, 40, 55, 40, 35, 40, 20],
         backgroundColor: 'rgb(' + khaki + ')'
     }]
@@ -128,11 +126,11 @@ const dataBarChart2 = {
         '00:00'
     ],
     datasets: [{
-        label: 'Bar Chart',
+        label: 'Aantal',
         data: [1, 3, 3, 9, 12, 9, 14, 24, 30, 34, 28, 21, 12, 4],
         backgroundColor: 'rgb(' + khaki + ')',
-        color:  "#FF5733"
-      
+        color: "#FF5733"
+
     }]
 }
 
@@ -171,3 +169,41 @@ let myBarChart2 = new Chart(
     document.getElementById('myBarChart2'),
     configBarChart2
 )
+
+
+// -------------------------------------------------------------------------- Desktop notification
+let mainBackground = document.querySelector('.ipadBackground')
+let altBackground = document.querySelector('.transparentBG')
+
+mainBackground.addEventListener('click', e => {
+    toggleNotification(e)
+})
+
+altBackground.addEventListener('click', e => {
+    toggleNotification(e)
+})
+
+function toggleNotification(e) {
+    let body = document.querySelector('body')
+    let main = document.querySelector('main')
+    let nav = document.querySelector('nav')
+
+    let cont = document.createElement('section')
+    let image = document.createElement('img')
+    let heading = document.createElement('h1')
+    let sub = document.createElement('p')
+    let headingText = document.createTextNode('Dit is een iPad applicatie')
+    let subText = document.createTextNode('Switch naar een iPad of zet de browser viewport op een iPad formaat.')
+
+    cont.classList.add('popup')
+    image.setAttribute("src", "/img/logo.png")
+    heading.appendChild(headingText)
+    sub.appendChild(subText)
+    cont.appendChild(image)
+    cont.appendChild(heading)
+    cont.appendChild(sub)
+
+    main.classList.add('blur')
+    nav.classList.add('blur')
+    body.appendChild(cont)
+}

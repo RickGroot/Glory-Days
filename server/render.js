@@ -35,7 +35,7 @@ async function location(req, res) {
         title: 'Kies uw locatie || Glory Days',
         dashboard: true,
         css: ['global', 'location'],
-        js: ['graphs'],
+        js: [],
         nursing: nursing
     })
 }
@@ -51,7 +51,7 @@ async function userSort(req, res) {
         sort: true,
         location: location,
         css: ['global', 'userList', 'sort', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
         users: users
     })
 }
@@ -69,7 +69,7 @@ async function userList(req, res) {
         sortbtn: true,
         location: location,
         css: ['global', 'userList', 'userelement', 'nav'],
-        js: ['userList', 'index'],
+        js: ['userList'],
         users: users,
         data: users[userKey],
         userKey: userKey,
@@ -90,7 +90,7 @@ async function userSessions(req, res) {
         session: true,
         location: location,
         css: ['global', 'userList', 'userSessions', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
         users: users,
         data: users[userKey],
         userKey: userKey,
@@ -110,7 +110,7 @@ async function noteSort(req, res) {
         sort: true,
         location: location,
         css: ['global', 'noteList', 'sort', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
         notes: notes,
         userKey: userKey,
     })
@@ -130,7 +130,7 @@ async function noteList(req, res) {
         noteElem: true,
         location: location,
         css: ['global', 'noteList', 'noteElement', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
         notes: notes,
         data: notes[noteKey],
         userKey: userKey,
@@ -152,7 +152,7 @@ async function newNote(req, res) {
         newnote: true,
         location: location,
         css: ['global', 'noteList', 'newNoteElement', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
         notes: notes,
         userKey: userKey,
         noteKey: noteKey
@@ -171,7 +171,7 @@ async function memories(req, res) {
         location: location,
         memories: true,
         css: ['memories', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
         firstName: userData.firstName,
         lastName: userData.lastName,
         pic: userData.pic,
@@ -192,7 +192,7 @@ async function settings(req, res) {
         settingsPage: true,
         location: location,
         css: ['global', 'settings', 'nav'],
-        js: ['userList', 'index'],
+        js: [],
     })
 }
 

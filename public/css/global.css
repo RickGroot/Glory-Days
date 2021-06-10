@@ -16,7 +16,8 @@ html {
     background-color: var(--background-white);
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,29 +28,29 @@ html, body {
 }
 
 /* --------------------------------------------------------------------------------- headers & texts */
-h1{
+h1 {
     font-weight: 400;
 }
 
-a{
+a {
     text-decoration: none;
     font-size: inherit;
     color: inherit;
 }
 
-h3{
+h3 {
     font-family: 'Lato', sans-serif;
     color: white;
     font-weight: 400;
 }
 
-.paragraph{
+.paragraph {
     font-family: 'Lato', sans-serif;
     color: var(--khaki);
     font-weight: 400;
 }
 
-.emotion{
+.emotion {
     font-family: 'Lato', sans-serif;
     color: var(--orange);
     text-transform: uppercase;
