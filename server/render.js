@@ -15,12 +15,11 @@ function home(req, res) {
 }
 
 // -------------------------------- Dashboard page
-
 function dashboard(req, res) {
     let location = req.params.location
 
     res.render('dashboard', {
-        title: 'Glory Days Dashboard',
+        title: 'Dashboard ' + location + ' || Glory Days',
         dashboard: true,
         location: location,
         css: ['global', 'dashboard', 'nav'],
@@ -33,7 +32,7 @@ async function location(req, res) {
     let nursing = await getData()
 
     res.render('location', {
-        title: 'Glory Days Dashboard',
+        title: 'Kies uw locatie || Glory Days',
         dashboard: true,
         css: ['global', 'location'],
         js: ['graphs'],
@@ -47,7 +46,7 @@ async function userSort(req, res) {
     let users = await getUsers(location)
 
     res.render('userList', {
-        title: 'Mijn patiënten',
+        title: 'Patiënten ' + location + ' || Glory Days',
         userList: true,
         sort: true,
         location: location,
@@ -64,7 +63,7 @@ async function userList(req, res) {
     let users = await getUsers(location)
 
     res.render('userList', {
-        title: 'Mijn patiënten',
+        title: 'Patiënten ' + location + ' || Glory Days',
         userList: true,
         userElem: true,
         sortbtn: true,
@@ -85,7 +84,7 @@ async function userSessions(req, res) {
     let sessions = users[userKey].sessions
 
     res.render('userList', {
-        title: 'Herrinering patiënten',
+        title: 'Recente sessies ' + users[userKey].firstName + ' || Glory Days',
         userList: true,
         sortbtn: true,
         session: true,
@@ -106,7 +105,7 @@ async function noteSort(req, res) {
     let notes = await getNotes(location, userKey)
 
     res.render('noteList', {
-        title: 'Mijn patiënten',
+        title: 'Patiënt notities || Glory Days',
         userList: true,
         sort: true,
         location: location,
@@ -125,7 +124,7 @@ async function noteList(req, res) {
     let notes = await getNotes(location, userKey)
 
     res.render('noteList', {
-        title: 'Mijn patiënten',
+        title: 'Patiënt notities || Glory Days',
         userList: true,
         sortbtn: true,
         noteElem: true,
@@ -147,7 +146,7 @@ async function newNote(req, res) {
     let notes = await getNotes(location, userKey)
 
     res.render('noteList', {
-        title: 'Mijn patiënten',
+        title: 'Nieuwe notitie || Glory Days',
         userList: true,
         sortbtn: true,
         newnote: true,
@@ -167,7 +166,7 @@ async function memories(req, res) {
     let userData = await getUserData(location, userKey)
 
     res.render('memories', {
-        title: userData.firstName + ' || Glory Days',
+        title: 'Herinneringen van ' + userData.firstName + ' || Glory Days',
         patient: true,
         location: location,
         memories: true,
@@ -184,9 +183,22 @@ async function memories(req, res) {
     })
 }
 
+// -------------------------------- Settings page
+async function settings(req, res) {
+    let location = req.params.location
+
+    res.render('settings', {
+        title: 'Instellingen || Glory Days',
+        settingsPage: true,
+        location: location,
+        css: ['global', 'settings', 'nav'],
+        js: ['userList', 'index'],
+    })
+}
+
 // -------------------------------- Page with charts
 function chart(req, res) {
-    res.render('chart', {
+    res.render('Charts || Glory Days', {
         title: 'Mijn chart',
         css: ['global', 'chart'],
         js: ['index'],
@@ -196,7 +208,7 @@ function chart(req, res) {
 
 // -------------------------------- Offline page
 function offline(req, res) {
-    res.render('offline', {
+    res.render('U bent offline || Glory Days', {
         title: 'Glory Days || You are offline',
         css: ['main']
     })
@@ -205,7 +217,7 @@ function offline(req, res) {
 // -------------------------------- Not-found page
 function error(req, res) {
     res.status(404).render('not-found', {
-        title: 'Glory Days || 404 Not Found',
+        title: 'Pagina niet gevonden || Glory Days',
         css: ['main']
     })
 }
@@ -222,6 +234,7 @@ module.exports = {
     chart,
     dashboard,
     memories,
+    settings,
     offline,
     location,
     error

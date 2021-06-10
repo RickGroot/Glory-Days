@@ -33,6 +33,7 @@ const {
     newNote,
     location,
     memories,
+    settings,
     offline,
     error
 } = require('./server/render');
@@ -56,6 +57,7 @@ app
     .get('/:location/patientlijst/sessies/:patient', userSessions)
     .get('/:location/patientlijst/:patient', userList)
     .get('/locatie', location)
+    .get('/settings/:location', settings)
     .get('/:location/herinneringen/:patient', memories)
     .get('/chart', chart)
     .get('/offline', offline)

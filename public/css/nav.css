@@ -55,7 +55,7 @@ nav ul li img {
     :root {
         --nav-height: 100px;
     }
-    
+
     nav{
         height: var(--nav-height);
     }
