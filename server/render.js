@@ -198,8 +198,8 @@ async function settings(req, res) {
 
 // -------------------------------- Page with charts
 function chart(req, res) {
-    res.render('Charts || Glory Days', {
-        title: 'Mijn chart',
+    res.render('charts', {
+        title: 'Charts || Glory Days',
         css: ['global', 'chart'],
         js: ['index'],
         users: users
@@ -208,8 +208,8 @@ function chart(req, res) {
 
 // -------------------------------- Offline page
 function offline(req, res) {
-    res.render('U bent offline || Glory Days', {
-        title: 'Glory Days || You are offline',
+    res.render('offline', {
+        title: 'U bent offline || Glory Days',
         css: ['main']
     })
 }
