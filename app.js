@@ -22,7 +22,6 @@ const hbs = exphbs.create({
 
 // ------------------------------------------------------------------------------------------- Importing files
 const {
-    home,
     userList,
     userSort,
     userSessions,
@@ -48,7 +47,7 @@ app
 
 // ------------------------------------------------------------------------------------------- Express routes
 app
-    .get('/', home)
+    .get('/', location)
     .get('/:location/dashboard', dashboard)
     .get('/:location/patientlijst', userSort)
     .get('/:location/notitielijst/:patient', noteSort)
@@ -56,7 +55,7 @@ app
     .get('/:location/notitielijst/:patient/:id', noteList)
     .get('/:location/patientlijst/sessies/:patient', userSessions)
     .get('/:location/patientlijst/:patient', userList)
-    .get('/locatie', location)
+    // .get('/locatie', location)
     .get('/settings/:location', settings)
     .get('/:location/herinneringen/:patient', memories)
     .get('/chart', chart)

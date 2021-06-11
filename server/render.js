@@ -6,27 +6,6 @@ const {
 } = require('./getData')
 
 // ------------------------------------------------------------------------------------------- Render functions
-// -------------------------------- Home page
-function home(req, res) {
-    res.render('home', {
-        title: 'Glory Days',
-        css: ['main']
-    })
-}
-
-// -------------------------------- Dashboard page
-function dashboard(req, res) {
-    let location = req.params.location
-
-    res.render('dashboard', {
-        title: 'Dashboard ' + location + ' || Glory Days',
-        dashboard: true,
-        location: location,
-        css: ['global', 'dashboard', 'nav'],
-        js: ['graphs'],
-    })
-}
-
 // -------------------------------- Pick location page
 async function location(req, res) {
     let nursing = await getData()
@@ -37,6 +16,17 @@ async function location(req, res) {
         css: ['global', 'location'],
         js: [],
         nursing: nursing
+    })
+}
+
+// -------------------------------- Dashboard page
+function dashboard(req, res) {
+    res.render('dashboard', {
+        title: 'Dashboard ' + location + ' || Glory Days',
+        dashboard: true,
+        location: req.params.location,
+        css: ['global', 'dashboard', 'nav'],
+        js: ['graphs'],
     })
 }
 
@@ -185,12 +175,10 @@ async function memories(req, res) {
 
 // -------------------------------- Settings page
 async function settings(req, res) {
-    let location = req.params.location
-
     res.render('settings', {
         title: 'Instellingen || Glory Days',
         settingsPage: true,
-        location: location,
+        location: req.params.location,
         css: ['global', 'settings', 'nav'],
         js: [],
     })
@@ -224,7 +212,6 @@ function error(req, res) {
 
 // ------------------------------------------------------------------------------------------- Export
 module.exports = {
-    home,
     userList,
     userSort,
     userSessions,
