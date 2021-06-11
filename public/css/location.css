@@ -20,8 +20,6 @@ div{
 
 a {
     position: relative;
-    display: inline-flex;
-    align-items: flex-end;
     border-radius: 10%;
     display: block;
     width: 250px;
@@ -31,17 +29,56 @@ a {
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     font-size: 2em;
+    padding: 20px;
+    display: inline-flex;
+    align-items: flex-end;
 }
 
 a:nth-child(2){
     background-color: var(--khaki);
 }
 
-a > h1 {
-    font-size:0.9em;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-left: 0.5em;
-    font-weight: 300;
+
+.ipadBackground {
+    display: none;
+}
+
+
+@media only screen and (min-width: 1748px) {
+
+    img{
+        width: 10%;
+    }
+
+    a{
+        width: 225px;
+        height: 225px;
+    }
+
+
+    a:nth-child(1){
+        margin-left: 24vw;
+    }
+
+    a:nth-child(2){
+        margin-right: 24vw;
+    }
+
+    .ipadBackground {
+        display: block;
+        background-image: url('/img/ipadmockupwhite2.png');
+        position: fixed;
+        top: 2%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 80%;
+        height: 80%;
+        z-index: -21;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+
 }

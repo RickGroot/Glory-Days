@@ -24,9 +24,14 @@ main {
     padding-left: 10px;
 }
 
-#alphabet>p {
+#alphabet>a {
     margin: 0.1em 0;
     font-size: 0.7em;
+}
+
+#alphabet > a:visited{
+    font-weight: 900 !important;
+    font-size: 2em !important;
 }
 
 #list h1 {
@@ -151,7 +156,7 @@ main {
 }
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-    #alphabet>p {
+    #alphabet>a {
         margin: 0.52em 0;
     }
 
@@ -162,7 +167,7 @@ main {
 
 /* iPad pro 11 inch */
 @media all and (device-width: 1112px) and (device-height: 834px) and (orientation:landscape) {
-    #alphabet>p {
+    #alphabet>a {
         margin: 0.25em 0;
     }
 }
@@ -172,7 +177,7 @@ main {
         --nav-height: 7vh;
     }
 
-    #alphabet>p {
+    #alphabet>a {
         margin: 0.52em 0;
     }
 
@@ -183,7 +188,7 @@ main {
 
 /* iPad pro 13 inch */
 @media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
-    #alphabet>p {
+    #alphabet>a {
         margin: 0.4em 0;
     }
 }
@@ -198,7 +203,7 @@ main {
         margin-top: 100px;
     }
 
-    #alphabet>p {
+    #alphabet>a{
         margin: 1em 0;
     }
 }

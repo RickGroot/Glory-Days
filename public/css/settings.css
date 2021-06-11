@@ -70,7 +70,7 @@ main>section:nth-child(1) div:nth-child(1) h2 {
 }
 
 #menuOptions section:not(:first-child) {
-    border-top: 3px solid var(--brown);
+    border-top: 3px solid var(--background-highlight);
 }
 
 #menuOptions section.active {
@@ -90,38 +90,76 @@ main>section:nth-child(1) div:nth-child(1) h2 {
     margin: var(--padding);
     padding: 15px 0;
     margin-top: 0;
+    text-transform: uppercase;
     background-color: var(--orange);
+    font-family: 'Lato', sans-serif;
     border-radius: 10px;
     color: white;
 }
 
 main>section:nth-child(2) {
+    --padding: 80px;
     background-color: white;
     width: 60vw;
-    border-left: 5px solid var(--background-highlight)
+    border-left: 5px solid var(--background-highlight);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
 main>section:nth-child(2)>div:nth-child(1) {
+    margin: 0 var(--padding);
+    margin-top: 40px;
+    width: calc(100% - 2 * var(--padding));
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: center;
 }
 
-main>section:nth-child(2)>div:nth-child(2) {
+#settingContent {
     display: inline-flex;
     flex-direction: column;
-    width: 50%
+    width: calc(100% - 2 * var(--padding));
+    height: 350px;
+    margin: 0 var(--padding);
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 main>section:nth-child(2)>div:nth-child(3) {
     display: inline-flex;
     flex-direction: column;
     width: 40%;
+    margin-top: auto;
+}
+
+#settingContent>div:nth-child(1) {
+    height: 100%;
+}
+
+#settingContent>div:nth-child(1)>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#settingContent div:nth-child(2) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 main>section:nth-child(2)>div:nth-child(1)>h1 {
     font-size: 2em;
+    margin: 0;
 }
 
 main>section:nth-child(2)>div:nth-child(1)>h2 {
@@ -129,13 +167,15 @@ main>section:nth-child(2)>div:nth-child(1)>h2 {
     font-weight: 400;
     font-family: 'Lato', sans-serif;
     color: var(--orange);
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 main>section:nth-child(2)>div:nth-child(1)>svg>path {
     fill: var(--orange);
 }
 
-main>section:nth-child(2)>div:nth-child(2)>h2 {
+#settingContent h2 {
     font-size: 0.8em;
     font-weight: 500;
     font-family: 'Lato', sans-serif;
@@ -143,14 +183,19 @@ main>section:nth-child(2)>div:nth-child(2)>h2 {
     text-transform: uppercase;
 }
 
-main>section:nth-child(2)>div:nth-child(2)>img {
+#settingContent img {
+    border-radius: 50%;
     width: 20%;
 }
 
-main>section:nth-child(2)>div:nth-child(3)>a {
-    height: 125px;
-    margin: 2em 0;
-    width: 175px;
+#settingContent div:nth-child(2)>a:first-child {
+    margin-bottom: 3em;
+}
+
+#settingContent div:nth-child(2)>a {
+    height: 100px;
+    margin: 0;
+    width: auto;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -159,37 +204,193 @@ main>section:nth-child(2)>div:nth-child(3)>a {
     align-items: flex-end;
     padding: 20px;
     border-radius: 20px;
+
 }
 
-main>section:nth-child(2)>div:nth-child(3)>a:nth-child(1) {
+#settingContent a:nth-child(1) {
     background-color: var(--green);
 }
 
-main>section:nth-child(2)>div:nth-child(3)>a:nth-child(2) {
+#settingContent a:nth-child(2) {
     background-color: var(--orange);
 }
 
 main>section:nth-child(2)>a {
     display: block;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     text-transform: uppercase;
-    width: 300px;
-    font-size: 1.3em;
-    height: 100px;
+    width: 350px;
+    padding: 15px 0;
+    margin: auto auto 60px;
+    font-size: 1em;
     color: white;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
     background-color: var(--khaki);
 }
 
-form > input{
+label {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+form>input {
     border: none;
     border-bottom: 2px solid var(--khaki);
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 200px;
+
+}
+
+form>label {
+    padding: 0 0 10px 0;
+}
+
+form>label:not(:first-child) {
+    padding: 20px 0 10px 0;
+}
+
+/* iPad mini of iPad */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    main>section:nth-child(1) {
+        --padding: 30px;
+    }
+
+    main > section:nth-child(2) > div:nth-child(1) {
+        margin-top: 30pxp;
+    }
+
+    #settingContent {
+        flex-direction: column;
+    }
+
+    form {
+        width: 300px;
+        margin-bottom: 2em;
+    }
+
+    #settingContent div:nth-child(2) {
+        width: 100%;
+    }
+
+    #settingContent div:nth-child(2)>a {
+        width: calc(100% - 2* 20px);
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    main > section:nth-child(2) > a {
+        margin: auto auto 30px;
+        width: 300px;
+    }
+}
+
+@media all and (device-width: 1112px) and (device-height: 834px) and (orientation:landscape) {
+    form {
+        width: 275px;
+    }
+}
+
+/* iPad Pro 10.5inch*/
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+    main>section:nth-child(1) {
+        --padding: 30px;
+    }
+
+    main > section:nth-child(2) > div:nth-child(1) {
+        margin-top: 30pxp;
+    }
+
+    #settingContent {
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    #settingContent div:nth-child(2) {
+        width: 100%;
+    }
+
+    #settingContent div:nth-child(2)>a {
+        width: calc(100% - 2* 20px);
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    main > section:nth-child(2) > a {
+        margin: auto auto 30px;
+        width: 350px;
+    }
+
+
+}    
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
+
+    form {
+        width: 300px;
+    }
+
+    #settingContent {
+        margin-top: 4em;
+    }
+
+    #settingContent div:nth-child(2)>a {
+        width: 250px;
+        height: 400px;
+    }
+}
+
+
+/* iPad Pro 12.9inch*/
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+    main > section:nth-child(2) {
+        --padding: 100px;
+    }
+    
+    main>section:nth-child(1) {
+        --padding: 30px;
+    }
+
+    main > section:nth-child(2) > div:nth-child(1) {
+        margin-top: 30pxp;
+    }
+
+    #settingContent {
+        flex-direction: column;
+
+    }
+
+    form {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    #settingContent div:nth-child(2) {
+        width: 100%;
+    }
+
+    #settingContent div:nth-child(2)>a {
+        width: calc(100% - 2* 20px);
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    main > section:nth-child(2) > a {
+        margin: auto auto 30px;
+        width: 400px;
+    }
+
+
 }

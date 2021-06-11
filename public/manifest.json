@@ -10,14 +10,25 @@
     "description": "Connect with your loved one by reliving memories through music",
     "icons": [
         {
+            "src": "/img/fav/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/fav/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
             "src": "/img/fav/android-chrome-192x192.png",
             "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/fav/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
-        },{
-            "src": "/img/fav/splash-screen-768x768.png",
-            "sizes": "768x768",
-            "type": "image/png"
         }
     ]
   }

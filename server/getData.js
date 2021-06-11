@@ -50,7 +50,6 @@ async function getNotes(location, user) {
         })
 }
 
-
 module.exports = {
     getData,
     getUsers,

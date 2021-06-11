@@ -397,9 +397,6 @@ section>article {
     section:nth-child(2) article:nth-child(1) {
         grid-area: 2 / 2 / 3 / 3;
     }
-
-
-
 }
 
 

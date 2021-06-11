@@ -22,7 +22,7 @@ async function location(req, res) {
 // -------------------------------- Dashboard page
 function dashboard(req, res) {
     res.render('dashboard', {
-        title: 'Dashboard ' + location + ' || Glory Days',
+        title: 'Dashboard ' + req.params.location + ' || Glory Days',
         dashboard: true,
         location: req.params.location,
         css: ['global', 'dashboard', 'nav'],
@@ -198,7 +198,7 @@ function chart(req, res) {
 function offline(req, res) {
     res.render('offline', {
         title: 'U bent offline || Glory Days',
-        css: ['main']
+        css: ['global', 'main']
     })
 }
 
@@ -206,7 +206,7 @@ function offline(req, res) {
 function error(req, res) {
     res.status(404).render('not-found', {
         title: 'Pagina niet gevonden || Glory Days',
-        css: ['main']
+        css: ['global', 'main']
     })
 }
 

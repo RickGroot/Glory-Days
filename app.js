@@ -16,6 +16,9 @@ const hbs = exphbs.create({
         },
         toLowerCase: function (str) {
             return str.toLowerCase()
+        },
+        firstLetter: function(str) {
+            return str.charAt(0).toUpperCase()
         }
     }
 })

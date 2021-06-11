@@ -1,31 +1,31 @@
 <section id="list">
     <div id="alphabet">
-        <p>A</p>
-        <p>B</p>
-        <p>C</p>
-        <p>D</p>
-        <p>E</p>
-        <p>F</p>
-        <p>G</p>
-        <p>H</p>
-        <p>I</p>
-        <p>J</p>
-        <p>K</p>
-        <p>L</p>
-        <p>M</p>
-        <p>N</p>
-        <p>O</p>
-        <p>P</p>
-        <p>Q</p>
-        <p>R</p>
-        <p>S</p>
-        <p>T</p>
-        <p>U</p>
-        <p>V</p>
-        <p>W</p>
-        <p>X</p>
-        <p>Y</p>
-        <p>Z</p>
+        <a href="#A">A</a>
+        <a href="#B">B</a>
+        <a href="#C">C</a>
+        <a href="#D">D</a>
+        <a href="#E">E</a>
+        <a href="#F">F</a>
+        <a href="#G">G</a>
+        <a href="#H">H</a>
+        <a href="#I">I</a>
+        <a href="#J">J</a>
+        <a href="#K">K</a>
+        <a href="#L">L</a>
+        <a href="#M">M</a>
+        <a href="#N">N</a>
+        <a href="#O">O</a>
+        <a href="#P">P</a>
+        <a href="#Q">Q</a>
+        <a href="#R">R</a>
+        <a href="#S">S</a>
+        <a href="#T">T</a>
+        <a href="#U">U</a>
+        <a href="#V">V</a>
+        <a href="#W">W</a>
+        <a href="#X">X</a>
+        <a href="#Y">Y</a>
+        <a href="#Z">Z</a>
     </div>
     <div class="patientTitle">
         <div>
@@ -55,7 +55,7 @@
     </div>
     <section id="users">
         {{#each users}}
-        <a href="{{#if ../userElem}}.{{/if}}{{#if ../session}}../.{{/if}}./{{location }}patientlijst/{{ @key }}" class="user{{#ifEquals @key ../userKey}} active{{/ifEquals}}">
+        <a href="{{#if ../userElem}}.{{/if}}{{#if ../session}}../.{{/if}}./{{location }}patientlijst/{{ @key }}" class="user{{#ifEquals @key ../userKey}} active{{/ifEquals}}" id="{{firstLetter this.firstName}}">
             <article class="">
                 <img src="{{this.pic}}" alt="">
                 <h2>{{this.firstName}} {{this.lastName}}</h2>
