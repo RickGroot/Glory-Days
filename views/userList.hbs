@@ -1,16 +1,16 @@
 {{> nav }}
 
 <main>
-{{> patientList }}
-{{#if userElem}}
-{{> userElement}}
-{{/if}}
+    {{> patientList }}
+    {{#if userElem}}
+    {{> userElement}}
+    {{/if}}
 
-{{#if sort}}
-{{> patientSortElement}}
-{{/if}}
+    {{#if sort}}
+    {{> patientSortElement}}
+    {{/if}}
 
-{{#if session}}
-{{> userSessionsElement}}
-{{/if}}
+    {{#if session}}
+    {{> userSessionsElement}}
+    {{/if}}
 </main>

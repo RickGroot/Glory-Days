@@ -2,10 +2,26 @@
 const cacheName = 'v1';
 
 const cacheAssets = [
-	// 'css/index.css',
-	// 'js/index-min.js',
-	// '/manifest.json',
-	// '/',
+	'css/global.css',
+	'css/dashboard.css',
+	'css/location.css',
+	'css/main.css',
+	'css/memories.css',
+	'css/nav.css',
+	'css/newNoteElement.css',
+	'css/noteElement.css',
+	'css/noteList.css',
+	'css/settings.css',
+	'css/sort.css',
+	'css/userelement.css',
+	'css/userList.css',
+	'css/userSessions.css',
+	'js/sw.js',
+	'js/userList.js',
+	'js/graphs.js',
+	'/img/logo.png',
+	'/manifest.json',
+	'/',
 	'/offline',
 ];
 

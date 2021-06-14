@@ -18,7 +18,8 @@
     </div>
     <section id="notes">
         {{#each notes}}
-        <a href="{{#if ../noteElem}}.{{/if}}{{#if ../newnote}}.{{/if}}./{{location}}{{../userKey}}/{{@key}}" class="note{{#ifEquals @key ../noteKey}} active{{/ifEquals}}">
+        <a href="{{#if ../noteElem}}.{{/if}}{{#if ../newnote}}.{{/if}}./{{location}}{{../userKey}}/{{@key}}"
+            class="note{{#ifEquals @key ../noteKey}} active{{/ifEquals}}">
             <article class="">
                 <h2>{{this.title}}</h2>
                 <p>{{this.text}}</p>

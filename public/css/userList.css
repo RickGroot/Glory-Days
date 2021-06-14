@@ -29,7 +29,7 @@ main {
     font-size: 0.7em;
 }
 
-#alphabet > a:visited{
+#alphabet>a:visited {
     font-weight: 900 !important;
     font-size: 2em !important;
 }
@@ -184,7 +184,7 @@ main {
     #list .patientTitle>div>a {
         padding: 10px 30px;
     }
-}  
+}
 
 /* iPad pro 13 inch */
 @media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
@@ -194,7 +194,7 @@ main {
 }
 
 @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
-    #list .patientTitle > div:first-child {
+    #list .patientTitle>div:first-child {
         padding-top: calc(8em - var(--nav-height) + 30px);
     }
 
@@ -203,7 +203,7 @@ main {
         margin-top: 100px;
     }
 
-    #alphabet>a{
+    #alphabet>a {
         margin: 1em 0;
     }
 }

@@ -11,13 +11,15 @@ const hbs = exphbs.create({
     partialsDir: ['views/partials', 'views/elements', 'views/partials/lists', 'views/partials/listBlocks'],
     helpers: {
         ifEquals: function (a, b, options) {
-            if (a == b) { return options.fn(this); }
+            if (a == b) {
+                return options.fn(this);
+            }
             return options.inverse(this);
         },
         toLowerCase: function (str) {
             return str.toLowerCase()
         },
-        firstLetter: function(str) {
+        firstLetter: function (str) {
             return str.charAt(0).toUpperCase()
         }
     }
@@ -25,6 +27,7 @@ const hbs = exphbs.create({
 
 // ------------------------------------------------------------------------------------------- Importing files
 const {
+    styleGuide,
     userList,
     userSort,
     userSessions,
@@ -51,6 +54,7 @@ app
 // ------------------------------------------------------------------------------------------- Express routes
 app
     .get('/', location)
+    .get('/styleguide', styleGuide)
     .get('/:location/dashboard', dashboard)
     .get('/:location/patientlijst', userSort)
     .get('/:location/notitielijst/:patient', noteSort)
@@ -58,7 +62,6 @@ app
     .get('/:location/notitielijst/:patient/:id', noteList)
     .get('/:location/patientlijst/sessies/:patient', userSessions)
     .get('/:location/patientlijst/:patient', userList)
-    // .get('/locatie', location)
     .get('/settings/:location', settings)
     .get('/:location/herinneringen/:patient', memories)
     .get('/chart', chart)
@@ -66,6 +69,5 @@ app
     .get('*', error)
 
 // ------------------------------------------------------------------------------------------- Run app on port
-app.listen(process.env.PORT || port, () => {
-    console.log(`Glory Days development site online at http://localhost:${port}`)
+app.listen(process.env.PORT || port, () => {  console.log(`Glory Days development site online at http://localhost:${port}`)
 })

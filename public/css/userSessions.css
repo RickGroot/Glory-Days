@@ -268,10 +268,18 @@
         padding-top: 45px;
     }
 
-    .sessionElement>section>div:first-child>h1, .sessionElement>section>div:last-child>h1{
+    .sessionElement>section>div:first-child>h1,
+    .sessionElement>section>div:last-child>h1 {
         font-size: 0.8em;
     }
 
+    .sessionElement>div:first-child>a {
+        padding: 12px 10px;
+    }
+
+    .sessionElement>section>div>img {
+        width: 100%;
+    }
 }
 
 /* iPad pro 11 inch */

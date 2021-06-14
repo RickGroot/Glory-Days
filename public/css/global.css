@@ -15,6 +15,7 @@
 html {
     background-color: var(--background-white);
     scroll-behavior: smooth;
+    height: -webkit-fill-available;
 }
 
 html,
@@ -26,6 +27,8 @@ body {
     font-weight: 400;
     font-style: normal;
     color: var(--khaki);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 /* --------------------------------------------------------------------------------- headers & texts */

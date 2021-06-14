@@ -1,3 +1,7 @@
+body {
+    min-height: auto;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -263,7 +267,7 @@ form>label:not(:first-child) {
         --padding: 30px;
     }
 
-    main > section:nth-child(2) > div:nth-child(1) {
+    main>section:nth-child(2)>div:nth-child(1) {
         margin-top: 30pxp;
     }
 
@@ -286,7 +290,7 @@ form>label:not(:first-child) {
         border-radius: 10px;
     }
 
-    main > section:nth-child(2) > a {
+    main>section:nth-child(2)>a {
         margin: auto auto 30px;
         width: 300px;
     }
@@ -304,7 +308,7 @@ form>label:not(:first-child) {
         --padding: 30px;
     }
 
-    main > section:nth-child(2) > div:nth-child(1) {
+    main>section:nth-child(2)>div:nth-child(1) {
         margin-top: 30pxp;
     }
 
@@ -327,13 +331,13 @@ form>label:not(:first-child) {
         border-radius: 10px;
     }
 
-    main > section:nth-child(2) > a {
+    main>section:nth-child(2)>a {
         margin: auto auto 30px;
         width: 350px;
     }
 
 
-}    
+}
 
 /* iPad Pro 12.9inch*/
 @media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
@@ -355,15 +359,15 @@ form>label:not(:first-child) {
 
 /* iPad Pro 12.9inch*/
 @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
-    main > section:nth-child(2) {
+    main>section:nth-child(2) {
         --padding: 100px;
     }
-    
+
     main>section:nth-child(1) {
         --padding: 30px;
     }
 
-    main > section:nth-child(2) > div:nth-child(1) {
+    main>section:nth-child(2)>div:nth-child(1) {
         margin-top: 30pxp;
     }
 
@@ -387,7 +391,7 @@ form>label:not(:first-child) {
         border-radius: 10px;
     }
 
-    main > section:nth-child(2) > a {
+    main>section:nth-child(2)>a {
         margin: auto auto 30px;
         width: 400px;
     }

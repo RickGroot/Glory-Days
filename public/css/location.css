@@ -1,4 +1,8 @@
-img{
+body {
+    min-height: auto;
+}
+
+img {
     width: 20%;
     display: block;
     margin: 0 auto;
@@ -6,17 +10,15 @@ img{
     margin-top: var(--nav-height)
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-div{
+div {
     display: flex;
     flex-direction: row;
     justify-content: space-around
 }
-
-
 
 a {
     position: relative;
@@ -34,7 +36,7 @@ a {
     align-items: flex-end;
 }
 
-a:nth-child(2){
+a:nth-child(2) {
     background-color: var(--khaki);
 }
 
@@ -46,21 +48,21 @@ a:nth-child(2){
 
 @media only screen and (min-width: 1748px) {
 
-    img{
+    img {
         width: 10%;
     }
 
-    a{
+    a {
         width: 225px;
         height: 225px;
     }
 
 
-    a:nth-child(1){
+    a:nth-child(1) {
         margin-left: 24vw;
     }
 
-    a:nth-child(2){
+    a:nth-child(2) {
         margin-right: 24vw;
     }
 
@@ -79,6 +81,6 @@ a:nth-child(2){
         background-position: center;
         background-size: contain;
     }
-    
+
 
 }

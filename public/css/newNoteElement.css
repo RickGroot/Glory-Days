@@ -18,7 +18,7 @@
   padding-top: 0;
 }
 
-.userElement > form > h1{
+.userElement>form>h1 {
   margin-top: 0;
   font-weight: 400;
   font-size: 2em;
@@ -61,7 +61,7 @@ input::placeholder {
 form>textarea {
   width: calc(100% - 2 * 10px);
   height: auto;
-  margin-top:1.5em;
+  margin-top: 1.5em;
   border: none;
   padding: 10px;
   border: none;
@@ -70,14 +70,14 @@ form>textarea {
   font-weight: 700;
 }
 
-.textareacontainer{
+.textareacontainer {
   margin-top: 50px;
 }
 
-.textareacontainer > strong {
+.textareacontainer>strong {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
-  font-size:1.5em;
+  font-size: 1.5em;
 }
 
 .textarea {
@@ -127,39 +127,39 @@ fieldset {
 
 fieldset input {
   border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-fieldset > label{
-    border: 2px solid var(--orange);
-    color: var(--orange);
-    border-radius: 10px;
-    width: 125px;
-    padding: 0.3em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 0.8em;
-    text-transform: uppercase;
+fieldset>label {
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  border-radius: 10px;
+  width: 125px;
+  padding: 0.3em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-transform: uppercase;
 }
 
 
-fieldset > label:last-child{
-    border: 2px solid var(--khaki);
-    color: var(--khaki);
-    margin-top: 10px;
+fieldset>label:last-child {
+  border: 2px solid var(--khaki);
+  color: var(--khaki);
+  margin-top: 10px;
 }
 
-input:checked + label {
+input:checked+label {
   background-color: var(--orange);
   color: white;
 }
 
-fieldset input:last-of-type:checked + label {
+fieldset input:last-of-type:checked+label {
   background-color: var(--khaki);
 }

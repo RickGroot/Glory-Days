@@ -29,10 +29,10 @@
     </div>
     <div class="patientTitle">
         <div>
-        <h1>Patiënten</h1>
-        {{#if sortbtn}}
-        <a href="/{{location}}/patientlijst">Sorteer</a>
-        {{/if}}
+            <h1>Patiënten</h1>
+            {{#if sortbtn}}
+            <a href="/{{location}}/patientlijst">Sorteer</a>
+            {{/if}}
         </div>
 
         <div class="search">
@@ -55,7 +55,8 @@
     </div>
     <section id="users">
         {{#each users}}
-        <a href="{{#if ../userElem}}.{{/if}}{{#if ../session}}../.{{/if}}./{{location }}patientlijst/{{ @key }}" class="user{{#ifEquals @key ../userKey}} active{{/ifEquals}}" id="{{firstLetter this.firstName}}">
+        <a href="{{#if ../userElem}}.{{/if}}{{#if ../session}}../.{{/if}}./{{location }}patientlijst/{{ @key }}"
+            class="user{{#ifEquals @key ../userKey}} active{{/ifEquals}}" id="{{firstLetter this.firstName}}">
             <article class="">
                 <img src="{{this.pic}}" alt="">
                 <h2>{{this.firstName}} {{this.lastName}}</h2>

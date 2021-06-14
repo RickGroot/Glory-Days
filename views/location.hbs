@@ -1,15 +1,15 @@
    <canvas class="ipadBackground"></canvas>
-<main>
-    <img src="../img/profile.jpg" alt="Sarah de stoephoer">
-    <h1>Goedemorgen, in welk tehuis bevindt je je nu?
-    </h1>
+   <main>
+       <img src="../img/profile.jpg" alt="Profiel afbeelding">
+       <h1>Goedemorgen, in welk tehuis bevindt je je nu?
+       </h1>
 
-    <div>
-        {{#each nursing}}
-        <a href="/{{@key}}/dashboard">
-             {{@key}} 
-        </a>
-        {{/each}}
-    </div>
+       <div>
+           {{#each nursing}}
+           <a href="/{{@key}}/dashboard">
+               {{@key}}
+           </a>
+           {{/each}}
+       </div>
 
-</main>
+   </main>

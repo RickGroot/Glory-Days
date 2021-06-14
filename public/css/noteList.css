@@ -178,7 +178,7 @@ main {
     #list {
         --title-height: 140px;
     }
-    
+
     #list .noteTitle>div>a {
         padding: 8px 16px;
         height: 30px;
@@ -203,7 +203,7 @@ main {
         margin-top: 100px;
     }
 
-    #list .noteTitle > div:first-child {
+    #list .noteTitle>div:first-child {
         padding-top: calc(8em - var(--nav-height) + 30px);
     }
 }

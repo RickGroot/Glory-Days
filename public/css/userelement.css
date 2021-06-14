@@ -264,10 +264,14 @@
   .slides>div {
     height: 180px;
   }
+  .userElement>div:first-child>a {
+    padding: 15px 11px;
+  }
 }
 
 /* iPad Pro 10.5inch*/
 @media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait) {
+
   .userElement>div:nth-child(2),
   .container {
     flex-direction: column;
@@ -295,7 +299,7 @@
 }
 
 @media all and (device-width: 1112px) and (device-height: 834px) and (orientation:landscape) {
-  .slides > div{
+  .slides>div {
     height: 200px;
   }
 }
@@ -303,16 +307,16 @@
 
 @media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
 
-  .userElement{
-    top:  calc(var(--nav-height) + 25px);
+  .userElement {
+    top: calc(var(--nav-height) + 25px);
   }
 
 
-  .userElement > div:nth-child(2) > a{
+  .userElement>div:nth-child(2)>a {
     height: 125px;
   }
 
-  .slides > div{
+  .slides>div {
     height: 250px;
   }
 }
@@ -323,7 +327,7 @@
     top: var(--nav-height);
     padding-top: calc(8em - var(--nav-height) + 30px);
   }
-  
+
   .userElement>div:nth-child(2),
   .container {
     flex-direction: column;
@@ -348,16 +352,17 @@
     flex: 0;
   }
 
-  .slides > div{
+  .slides>div {
     height: 280px;
   }
 
-  .userElement > div:nth-child(2) > a, .container > article{
+  .userElement>div:nth-child(2)>a,
+  .container>article {
     height: 133px;
   }
 
-  .userElement > div:first-child > a{
-    width:100px
+  .userElement>div:first-child>a {
+    width: 100px
   }
 
 }

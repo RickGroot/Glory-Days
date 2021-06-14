@@ -14,7 +14,7 @@ async function location(req, res) {
         title: 'Kies uw locatie || Glory Days',
         dashboard: true,
         css: ['global', 'location'],
-        js: [],
+        js: ['sw'],
         nursing: nursing
     })
 }
@@ -26,7 +26,7 @@ function dashboard(req, res) {
         dashboard: true,
         location: req.params.location,
         css: ['global', 'dashboard', 'nav'],
-        js: ['graphs'],
+        js: ['sw', 'graphs'],
     })
 }
 
@@ -41,7 +41,7 @@ async function userSort(req, res) {
         sort: true,
         location: location,
         css: ['global', 'userList', 'sort', 'nav'],
-        js: [],
+        js: ['sw'],
         users: users
     })
 }
@@ -59,7 +59,7 @@ async function userList(req, res) {
         sortbtn: true,
         location: location,
         css: ['global', 'userList', 'userelement', 'nav'],
-        js: ['userList'],
+        js: ['sw', 'userList'],
         users: users,
         data: users[userKey],
         userKey: userKey,
@@ -80,7 +80,7 @@ async function userSessions(req, res) {
         session: true,
         location: location,
         css: ['global', 'userList', 'userSessions', 'nav'],
-        js: [],
+        js: ['sw'],
         users: users,
         data: users[userKey],
         userKey: userKey,
@@ -100,7 +100,7 @@ async function noteSort(req, res) {
         sort: true,
         location: location,
         css: ['global', 'noteList', 'sort', 'nav'],
-        js: [],
+        js: ['sw'],
         notes: notes,
         userKey: userKey,
     })
@@ -120,7 +120,7 @@ async function noteList(req, res) {
         noteElem: true,
         location: location,
         css: ['global', 'noteList', 'noteElement', 'nav'],
-        js: [],
+        js: ['sw'],
         notes: notes,
         data: notes[noteKey],
         userKey: userKey,
@@ -142,7 +142,7 @@ async function newNote(req, res) {
         newnote: true,
         location: location,
         css: ['global', 'noteList', 'newNoteElement', 'nav'],
-        js: [],
+        js: ['sw'],
         notes: notes,
         userKey: userKey,
         noteKey: noteKey
@@ -161,7 +161,7 @@ async function memories(req, res) {
         location: location,
         memories: true,
         css: ['memories', 'nav'],
-        js: [],
+        js: ['sw'],
         firstName: userData.firstName,
         lastName: userData.lastName,
         pic: userData.pic,
@@ -180,17 +180,24 @@ async function settings(req, res) {
         settingsPage: true,
         location: req.params.location,
         css: ['global', 'settings', 'nav'],
-        js: [],
+        js: ['sw'],
     })
 }
 
 // -------------------------------- Page with charts
 function chart(req, res) {
-    res.render('charts', {
+    res.render('chart', {
         title: 'Charts || Glory Days',
         css: ['global', 'chart'],
-        js: ['index'],
-        users: users
+        js: ['index']
+    })
+}
+
+// -------------------------------- Styleguide page
+function styleGuide(req, res) {
+    res.render('styleguide', {
+        title: 'Styleguide || Glory Days',
+        css: ['global', 'styleguide']
     })
 }
 
@@ -198,7 +205,7 @@ function chart(req, res) {
 function offline(req, res) {
     res.render('offline', {
         title: 'U bent offline || Glory Days',
-        css: ['global', 'main']
+        css: ['sw', 'global', 'main']
     })
 }
 
@@ -206,15 +213,17 @@ function offline(req, res) {
 function error(req, res) {
     res.status(404).render('not-found', {
         title: 'Pagina niet gevonden || Glory Days',
-        css: ['global', 'main']
+        css: ['global', 'main'],
+        js: ['sw']
     })
 }
 
 // ------------------------------------------------------------------------------------------- Export
 module.exports = {
     userList,
-    userSort,
     userSessions,
+    styleGuide,
+    userSort,
     noteSort,
     noteList,
     newNote,

@@ -1,1 +1,0 @@
-console.log("JS connected!"),"serviceWorker"in navigator&&window.addEventListener("load",()=>{navigator.serviceWorker.register("/sw.js").then(e=>e.update()).catch(e=>{console.log("Registration failed with "+e)})});
