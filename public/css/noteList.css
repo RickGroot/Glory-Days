@@ -19,7 +19,7 @@ main {
 }
 
 #list .noteTitle {
-    background: linear-gradient(white 0% 90%, transparent 100%);
+    background: linear-gradient(white 0% 90%, rgba(255, 255, 255, 0) 100%);
     position: fixed;
     width: 50%;
     height: var(--title-height);

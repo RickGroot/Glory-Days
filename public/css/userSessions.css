@@ -55,7 +55,7 @@
     flex-direction: row;
     align-items: center;
     z-index: 5;
-    background: linear-gradient(white 0% 80%, transparent 100%);
+    background: linear-gradient(white 0% 90%, rgba(255, 255, 255, 0) 100%);
 }
 
 .sessionElement>div>h1 {
