@@ -20,6 +20,9 @@ Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de 
 ## Het geleverde werk
 Wij hebben samen een prototype gemaakt volledig in de stijl van GloryDays door gebruik te maken van NodeJS. Het prototype is gekoppeld aan FireBase waarbij wij alle data fetchen uit een database. De pagina's zijn opgesteld door het gebruik van handlebars. Het gemaakte werk is het beste te zien op ipad formaat, welke maakt niet uit. Wij hebben ons hierop gefocussed en hebben het responsive gemaakt voor zowel landscape als portrait.
 
+## Live link
+Bekijk hier het [live prototype](glorydays.herokuapp.com/) van het Glory Days dashboard.
+
 ## De Code
 ```
 glory-days                              
@@ -194,8 +197,13 @@ Hier is een voorbeeld van de data die in de database staat, en wordt opgehaald v
                     "startfeeling": "startfeeling"
                 }]
             },
-
 ```
+
+## Extra links
+* [Styleguide](glorydays.herokuapp.com/styleguide), de belangrijkste elementen uit de mobile app op een rijtje in de browser.
+* [Charts](glorydays.herokuapp.com/chart), onderzoek naar welke chart types er allemaal mogelijk zijn in de browser.
+* [GitHub](https://github.com/RickGroot/Glory-Days), link naar project repository.
+* [Figma](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=0%3A1), de sketches en ideeën die we hebben gehad voor dit project ([definitief design](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=0%3A1), [dashboard iteratie](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=71%3A0), [iPhone naar iPad](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=13%3A0)).
 
 ## Installeer dit project
 Navigeer naar een map naar keuze, hierin kunt u de code pullen en het project zelf inzien.
