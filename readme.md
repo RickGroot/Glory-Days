@@ -13,7 +13,8 @@ const minor = {
 ```
 
 ## Opdracht
-<img align='right' src="https://github.com/RickGroot/Glory-Days/blob/main/public/img/logo.png?raw=true" width="230" style="background: white">
+<img align='right' src="https://github.com/RickGroot/Glory-Days/blob/main/public/img/logo.png?raw=true" width="230" style="background: white">  
+
 Wij, Rick en Max gaan voor Good Good Not Bad werken aan een Ipad variant van de huidige Iphone App van Glory Days. De huidige Iphone variant is gemaakt voor familie die in samenwerking met de alzheimer patiënt zijn favoriete muziek gaat uitzoeken. Wij gaan dus aan de gang aan de Ipad variant die niet bedoeld is voor de familie maar voor de echte verzorgers van Alzheimer patiënten. Hiervoor moeten kijken naar de behoefte van verzorgers voor de applicatie. Zo is het ook voor ons de uitdaging om een al bestaande iphone variant te upscalen tot ipad variant waarbij wij de huidige stijl in acht nemen. Verders moeten wij nog kijken naar extra opties van de ipad en extra functies voor de verzorgers.
 
 ## Het geleverde werk
@@ -122,7 +123,6 @@ glory-days
 ├─ package-lock.json                    
 ├─ package.json                         
 └─ readme.md                                              
-
 ```
 > *app.js*  
 
@@ -147,7 +147,6 @@ Bevat alle client-side bestanden. De folder is onderverdeeld in verschillende su
 > */assets*  
 
 Heeft alle bestanden die nodig zijn in de repo.
-
 
 ## De meegegeven data
 Hier is een voorbeeld van de data die in de database staat, en wordt opgehaald voor dit project.
@@ -198,10 +197,7 @@ Hier is een voorbeeld van de data die in de database staat, en wordt opgehaald v
 
 ```
 
-
-
-
-## Installeer deze repo
+## Installeer dit project
 Navigeer naar een map naar keuze, hierin kunt u de code pullen en het project zelf inzien.
 ```bash
 cd pad/naar/map
@@ -214,8 +210,13 @@ git remote add origin https://github.com/RickGroot/Glory-Days.git
 
 git pull origin main
 ```
-De code staat nu in uw eigen map. Nu hoeft er alleen maar een database worden gekoppeld.  
-Ga naar firebase en maak daar een eigen realtime database aan. In deze database kan een JSON-file worden geïmporteerd, hier is een [voorbeeld van de JSON data](https://github.com/RickGroot/Glory-Days/blob/main/database-example.json). Deze kunt u uploaden naar de realtime database.  
+De code staat nu in uw eigen map. Navigeer naar de map, en installeer vervolgens alle modules. 
+```bash
+cd Glory-Days
+
+npm install
+```
+Nu hoeft er alleen maar een database worden gekoppeld. Ga naar firebase en maak daar een eigen realtime database aan. In deze database kan een JSON-file worden geïmporteerd, hier is een [voorbeeld van de JSON data](https://github.com/RickGroot/Glory-Days/blob/main/database-example.json). Deze kunt u uploaden naar de realtime database.  
 Vervolgens moet u de database koppelen aan de applicatie. Pas de [.env.example file](https://github.com/RickGroot/Glory-Days/blob/main/.env.example) aan naar .env, of maak een .env bestand aan in de root van het project, en voeg daar de volgende verlden aan toe: 
 ```env
 API_KEY={hier uw key}
