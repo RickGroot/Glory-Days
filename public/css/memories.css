@@ -162,7 +162,6 @@ h3 {
     color: var(--orange)
 }
 
-
 .over > a {
     background-color: var(--orange);
     text-decoration: none;
@@ -172,7 +171,6 @@ h3 {
     text-align: center;
     font-family: 'Lato', sans-serif;
     display: inline-block;
-    
     margin-top: 2em;
 }
 
@@ -184,13 +182,13 @@ h3 {
     justify-content: space-between;
 }
 
-button {
+#patientbtns > a {
     display: inline-flex;
     align-items: flex-end;
     padding: 20px;
-    width: 19vw;
+    width: 15vw;
     border-radius: 20px;
-    height: 18vh;
+    height: 14vh;
     color: white;
     border: none;
     font-family: 'Lato', sans-serif;
@@ -199,11 +197,11 @@ button {
     font-size: clamp(1em, 1.5vw, 1.2em);
 }
 
-button:nth-of-type(1) {
+#patientbtns > a:nth-of-type(1) {
     background-color: var(--green);
 }
 
-button:nth-of-type(2) {
+#patientbtns > a:nth-of-type(2) {
     background-color: var(--khaki);
 }
 
@@ -316,7 +314,7 @@ article div {
         font-size: 1.8em;
     }
 
-    button {
+    #patientbtns > a {
         font-size: clamp(1em, 1.5vw, 1.4em);
     }
 }
@@ -354,8 +352,8 @@ article div {
         flex-direction: column;
     }
 
-    #patientbtns button {
-        width: 100%;
+    #patientbtns a {
+        width: calc(100% - 2 * 20px);
         height: 80px;
         margin: 1em 0;
     }
@@ -399,8 +397,8 @@ article div {
         flex-direction: column;
     }
 
-    #patientbtns button {
-        width: 100%;
+    #patientbtns a {
+        width: calc(100% - 2 * 20px);
         height: 80px;
         margin: 1em 0;
     }
@@ -469,8 +467,8 @@ article div {
         flex-direction: column;
     }
 
-    #patientbtns button {
-        width: 100%;
+    #patientbtns a {
+        width: calc(100% - 2 * 20px);
         height: 150px;
         margin: 1em 0;
     }

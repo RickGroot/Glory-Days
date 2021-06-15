@@ -121,10 +121,13 @@
     background-color: var(--background-highlight);
     border-radius: 15px;
     margin: 2em 0;
+    min-height: 150px;
 }
 
 .sessionElement>section>div>img {
     width: 75%;
+    max-height: calc(100% - 30px);
+    object-fit: contain;
     position: absolute;
     bottom: 25px;
     left: 0;
@@ -204,6 +207,7 @@
     justify-content: center;
     border-radius: 5%;
     margin: 0 0 0.5rem 0;
+    margin-top: auto;
     position: relative;
     font-family: 'Lato', sans-serif;
 }
@@ -225,7 +229,7 @@
 }
 
 .slides h1 {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .slides::-webkit-scrollbar {

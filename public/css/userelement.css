@@ -241,6 +241,10 @@
   .container {
     flex-direction: column;
   }
+  
+  .userElement {
+    top: 12vh;
+  }
 
   .userElement>div:first-child>a {
     width: 35%;
@@ -265,7 +269,7 @@
     height: 180px;
   }
   .userElement>div:first-child>a {
-    padding: 15px 11px;
+    padding: 10px 11px;
   }
 }
 
@@ -362,7 +366,7 @@
   }
 
   .userElement>div:first-child>a {
-    width: 100px
+    width: auto;
   }
 
 }

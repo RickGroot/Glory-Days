@@ -53,6 +53,7 @@ section.container {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin: 1em;
 }
 
 .userElement>div:first-child {
@@ -88,7 +89,7 @@ section.container {
 
 .tekst {
   padding-top: var(--title-height);
-  margin: 0 0 1em 0;
+  margin: 0;
 }
 
 .userElement .container h2 {
