@@ -5,7 +5,7 @@
   padding: 0 var(--padding) 0 0;
   right: 0;
   bottom: var(--padding);
-  top: calc(var(--nav-height) + var(--padding));
+  top: 16vh;
   border-top-left-radius: 5%;
   border-bottom-left-radius: 5%;
   width: calc(50% - var(--padding));

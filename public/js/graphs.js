@@ -54,7 +54,6 @@ const configLineChart = {
     type: 'line',
     data: dataLineChart,
     options: {
-        responsive: true,
         plugins: {
             legend: {
                 display: false
@@ -78,7 +77,6 @@ const configBarChart = {
     type: 'bar',
     data: dataBarChart,
     options: {
-        responsive: true,
         plugins: {
             legend: {
                 display: false
@@ -125,7 +123,6 @@ const configBarChart2 = {
     type: 'bar',
     data: dataBarChart2,
     options: {
-        responsive: true,
         plugins: {
             legend: {
                 display: false,
@@ -142,17 +139,17 @@ const configBarChart2 = {
 
 
 // -------------------------------------------------------------------------- Render Charts
-let myLineChart = new Chart(
+window.onload =  new Chart(
     document.getElementById('myLineChart'),
     configLineChart
 )
 
-let myBarChart = new Chart(
+window.onload = new Chart(
     document.getElementById('myBarChart'),
     configBarChart
 )
 
-let myBarChart2 = new Chart(
+window.onload = new Chart(
     document.getElementById('myBarChart2'),
     configBarChart2
 )

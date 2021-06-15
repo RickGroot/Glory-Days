@@ -42,9 +42,6 @@ const dataLineChart = {
 const configLineChart = {
     type: 'line',
     data: dataLineChart,
-    options: {
-        responsive: true
-    }
 }
 
 // -------------------------------------------------------------------------- Bar Chart Config
@@ -77,7 +74,6 @@ const configBarChart = {
     type: 'bar',
     data: dataBarChart,
     options: {
-        responsive: true,
         scales: {
             y: {
                 beginAtZero: true
@@ -112,7 +108,6 @@ const configPolarChart = {
     type: 'polarArea',
     data: dataPolarChart,
     options: {
-        responsive: true,
         plugins: {
             legend: {
                 position: 'left'
@@ -122,17 +117,17 @@ const configPolarChart = {
 }
 
 // -------------------------------------------------------------------------- Render Charts
-let lineChart = new Chart(
+window.onload = new Chart(
     document.getElementById('lineChart'),
     configLineChart
 )
 
-let barChart = new Chart(
+window.onload = new Chart(
     document.getElementById('barChart'),
     configBarChart
 )
 
-let polarChart = new Chart(
+window.onload = new Chart(
     document.getElementById('polarChart'),
     configPolarChart
 )
