@@ -236,7 +236,7 @@ npm start
 ## Documenten
 * [Design rationale](https://github.com/RickGroot/Glory-Days/wiki/Design-rationale)
 * [Product biografie Rick](https://www.notion.so/Glory-Days-86b3ba607103479eabdfc47ca8f6b941)
-* [Product biografie Max]()
+* [Product biografie Max](https://www.notion.so/Product-Biografie-45212559494e4774a5db3760c7240c0b)
 
 # Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
