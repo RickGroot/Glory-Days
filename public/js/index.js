@@ -156,7 +156,7 @@ const dataDoughnutChart = {
     ],
     datasets: [{
         label: 'Doughnut',
-        data: [300, 500, ],
+        data: [300, 500],
         backgroundColor: [
             'rgba(' + orange + ', 0.8)',
             'rgba(' + green + ', 0.9)'
