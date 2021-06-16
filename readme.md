@@ -15,7 +15,16 @@ const minor = {
 ## Opdracht
 <img align='right' src="https://github.com/RickGroot/Glory-Days/blob/main/public/img/logo.png?raw=true" width="230" style="background: white">  
 
-Wij, Rick en Max gaan voor GoodGoodNotBad werken aan een iPad variant van de huidige iPhone App van Glory Days. De huidige iPhone variant is gemaakt voor familie die in samenwerking met de alzheimer patiënt zijn favoriete muziek gaat uitzoeken. Wij gaan dus aan de gang aan de Ipad variant die niet bedoeld is voor de familie maar voor de echte verzorgers van Alzheimer patiënten. Hiervoor is een overzichtelijk dashboard gewenst die de stijl van de huidige iPhone applicatie behoudt. Het dashboard moet zowel inzicht geven in het gebruik van Glory Days in een tehuis als details van specifieke patiënten.
+Wij, Rick Groot en Max Mulder hebben tijdens de meesterproef van de minor web-development gewerkt
+                    voor het bedrijf GoodGoodNotBad. GoodGoodNotBad is een bedrijf dat zich inzet voor mensen met
+                    alzheimers door middel van de applicatie genaamd Glory Days. GoodGoodNotBad heeft om patienten met
+                    alzheimers te helpen Glory Days ontwikkeld die herinneringen van alzheimers patienten samenvoegt
+                    met muziek. Muziek heeft namenlijk een positief effect op mensen met alzheimers waardoor ze vaak
+                    weer oude herinneringen kunnen ophalen. Hiervoor hebben ze een iPhone applicatie die bedoelt is voor
+                    familie leden. Wij moesten aan de slag met een iPad variant gemaakt voor pro-verzorgers op basis van
+                    de huidige iPhone variant. Hiervoor is een overzichtelijk dashboard gewenst die de stijl van de huidige 
+                    iPhone applicatie behoudt. Het dashboard moet zowel inzicht geven in het gebruik van Glory Days in een 
+                    tehuis als details van specifieke patiënten.
 
 ## Het geleverde werk
 Wij hebben samen een prototype gemaakt volledig in de stijl van GloryDays door gebruik te maken van NodeJS. Het prototype is gekoppeld aan FireBase waarbij wij alle data fetchen uit een database. De pagina's zijn opgesteld door het gebruik van handlebars. Het gemaakte werk is het beste te zien op ipad formaat, welke maakt niet uit. Wij hebben ons hierop gefocussed en hebben het responsive gemaakt voor zowel landscape als portrait.
