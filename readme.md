@@ -252,6 +252,7 @@ npm start
 
 
 ## Documenten
+* [Document voor overdracht](https://github.com/RickGroot/Glory-Days/blob/main/assets/OverdrachtGloryDays.pdf)
 * [Design rationale](https://github.com/RickGroot/Glory-Days/wiki/Design-rationale)
 * [Product biografie Rick](https://www.notion.so/Glory-Days-86b3ba607103479eabdfc47ca8f6b941)
 * [Product biografie Max](https://www.notion.so/Product-Biografie-Glory-Days-09a5a33f70454d149abdbd23095fec98)
