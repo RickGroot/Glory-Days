@@ -80,7 +80,7 @@
   }
 }
 
-@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+@media all and (device-width: 1024px) and (device-height: 1366px) and (min-width: 950px) and (orientation:portrait) {
   .sort {
     display: block;
     top: var(--nav-height);
@@ -91,19 +91,5 @@
     margin: 2.5em 0;
     width: 80%;
     height: 150px;
-  }
-}
-
-
-/* Samsung Tab A7 */
-@media all and (device-width: 1200px) and (device-height: 2000px) and (orientation:portrait) {
-  .sort {
-    display: block;
-  }
-
-  .sort>a {
-    margin: 1em 0;
-    width: 80%;
-    height: 130px;
   }
 }
