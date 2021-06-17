@@ -71,6 +71,7 @@
   }
 }
 
+
 /* iPad pro 13 inch */
 @media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
   .sort>a {
@@ -90,5 +91,19 @@
     margin: 2.5em 0;
     width: 80%;
     height: 150px;
+  }
+}
+
+
+/* Samsung Tab A7 */
+@media all and (device-width: 600px) and (device-height: 1000px) and (orientation:portrait) {
+  .sort {
+    display: block;
+  }
+
+  .sort>a {
+    margin: 1em 0;
+    width: 80%;
+    height: 130px;
   }
 }
