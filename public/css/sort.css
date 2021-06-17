@@ -96,7 +96,7 @@
 
 
 /* Samsung Tab A7 */
-@media all and (device-width: 600px) and (device-height: 1000px) and (orientation:portrait) {
+@media all and (device-width: 1200px) and (device-height: 2000px) and (orientation:portrait) {
   .sort {
     display: block;
   }
