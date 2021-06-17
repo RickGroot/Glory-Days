@@ -245,8 +245,8 @@ npm start
 ```
 
 ## Extra links
-* [Styleguide](glorydays.herokuapp.com/styleguide), de belangrijkste elementen uit de mobile app op een rijtje in de browser.
-* [Charts](glorydays.herokuapp.com/chart), onderzoek naar welke chart types er allemaal mogelijk zijn in de browser.
+* [Styleguide](https://glorydays.herokuapp.com/styleguide), de belangrijkste elementen uit de mobile app op een rijtje in de browser.
+* [Charts](https://glorydays.herokuapp.com/chart), onderzoek naar welke chart types er allemaal mogelijk zijn in de browser.
 * [GitHub](https://github.com/RickGroot/Glory-Days), link naar project repository.
 * [Figma](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=0%3A1), de sketches en ideeën die we hebben gehad voor dit project ([definitief design](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=0%3A1), [dashboard iteratie](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=71%3A0), [iPhone naar iPad](https://www.figma.com/file/vBOgKOwW04DIQf3NooQr4m/Glory-Days?node-id=13%3A0)).
 
