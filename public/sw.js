@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------------------- Cached assets and version
-const cacheName = 'v2.2.1';
+const cacheName = 'v3';
 
 const cacheAssets = [
 	'css/global.css',
