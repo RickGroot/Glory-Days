@@ -434,7 +434,7 @@ article div {
 }
 
 /* iPad Pro 12.9inch*/
-@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait) {
+@media all and (min-device-width: 1024px) and (min-device-height: 1366px) and (orientation:portrait) {
     .achtergrond {
         top: -100px;
         left: -200px !important;

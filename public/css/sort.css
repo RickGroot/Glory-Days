@@ -73,7 +73,7 @@
 
 
 /* iPad pro 13 inch */
-@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape) {
+@media all and (min-device-width: 1366px) and (min-device-height: 1024px) and (orientation:landscape) {
   .sort>a {
     width: 225px;
     height: 250px;
