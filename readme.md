@@ -17,9 +17,9 @@ const minor = {
 
 Wij, Rick Groot en Max Mulder hebben tijdens de meesterproef van de minor web-development gewerkt
                     voor het bedrijf GoodGoodNotBad. GoodGoodNotBad is een bedrijf dat zich inzet voor mensen met
-                    alzheimers door middel van de applicatie genaamd Glory Days. GoodGoodNotBad heeft om patienten met
-                    alzheimers te helpen Glory Days ontwikkeld die herinneringen van alzheimers patienten samenvoegt
-                    met muziek. Muziek heeft namenlijk een positief effect op mensen met alzheimers waardoor ze vaak
+                    Alzheimer door middel van de applicatie genaamd Glory Days. GoodGoodNotBad heeft om patienten met
+                    Alzheimer te helpen Glory Days ontwikkeld die herinneringen van Alzheimer patienten samenvoegt
+                    met muziek. Muziek heeft namenlijk een positief effect op mensen met Alzheimer waardoor ze vaak
                     weer oude herinneringen kunnen ophalen. Hiervoor hebben ze een iPhone applicatie die bedoelt is voor
                     familie leden. Wij moesten aan de slag met een iPad variant gemaakt voor pro-verzorgers op basis van
                     de huidige iPhone variant. Hiervoor is een overzichtelijk dashboard gewenst die de stijl van de huidige 
